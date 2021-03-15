@@ -1,3 +1,8 @@
+---
+layout: cj4
+title: Testing Templates
+---
+
 # Working Title MSFS Mods
 
 [![Github All Releases download count](https://img.shields.io/github/downloads/Working-Title-MSFS-Mods/fspackages/total?style=flat-square)](https://github.com/Working-Title-MSFS-Mods/fspackages/releases)
