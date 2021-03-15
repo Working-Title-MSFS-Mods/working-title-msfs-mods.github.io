@@ -1,0 +1,68 @@
+body {
+    background: #000;
+    color: #fff;
+}
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 0;
+}
+
+.cover.full{
+    min-height: 100vh;
+}
+
+.spacer{
+    flex: 0.75;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-slanted {
+    -ms-transform: skewX(-35.5deg);
+    -webkit-transform: skewX(-35.5deg);
+    transform: skewX(-35.5deg);
+}
+
+.btn-slanted>span {
+    -ms-transform: skewX(35.5deg);
+    -webkit-transform: skewX(35.5deg);
+    transform: skewX(35.5deg);
+    display: inline-block;
+}
+
+.btn-sliding {
+    border-left: 2px solid #fff;
+    position: relative;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.btn-sliding>span {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-sliding:hover>span {
+    color: #000;
+}
+
+.btn-sliding:before {
+    content: "";
+    width: 100%;
+    height: calc(100% + 2px);
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: -1px;
+    left: -100%;
+}
+
+.btn-sliding:hover:before {
+    left: -1px;
+}
