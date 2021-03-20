@@ -275,18 +275,7 @@ a:hover {
 
 .whitesection .btn-sliding {
     border-left: 2px solid #000;
-}
-
-.whitesection .btn-sliding:before {
-    background-color: #000;
-}
-
-.whitesection .btn-sliding>span {
-    color: #000;
-}
-
-.whitesection .btn-sliding:hover>span {
-    color: #fff;
+    background: #000;
 }
 
 .footerbar {
