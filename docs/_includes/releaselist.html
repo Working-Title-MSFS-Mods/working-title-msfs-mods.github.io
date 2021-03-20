@@ -29,8 +29,12 @@
     https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/cj4-{{include.current}}.zip
 {% endcapture %}
 
+{% capture downloadtext %}
+    <span style="padding: 0 1rem">Download This Version<br>({{ include.current }})</span>
+{% endcapture %}
+
 <div class="releaselist">
-    <p>{% include button.html text="Download this Version" url=downloadurl blank=false %}</p>
+    <p>{% include button.html text=downloadtext url=downloadurl blank=false fullwidth=true %}</p>
     <br>
     <br>
     {% if include.current == latest %}
