@@ -1,5 +1,6 @@
 ---
 layout: cj4
+permalink: /cj4/
 title: Intro
 coverimage: cover.jpg
 ---
