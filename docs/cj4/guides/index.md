@@ -18,12 +18,12 @@ Thanks to our QA tester Sean and community member SeeBread, we can also offer a 
 
 ## Repainter's Guide
 Thanks to TheFlieger we have a new guide for painters available here that helps address the panel.cfg problems with some liveries.
-{% include button.html text="Repainter's Guide" url="/cj4/guides/repainter" blank=false %}
+{% include button.html text="Repainter's Guide" url="/cj4/guides/repainter" %}
 
 
 ## Guide on SimVars
 Because of the custom autopilot that our mod uses, cockpit builders and other users with external hardware can no longer use the default K Events to trigger AP modes. Here is a list of the Sim Variables involved, which can be addressed by a number of dedicated software modules.
-{% include button.html text="Guide on SimVars" url="/cj4/guides/simvars" blank=false %}
+{% include button.html text="Guide on SimVars" url="/cj4/guides/simvars" %}
 
 
 ## Discord
