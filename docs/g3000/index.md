@@ -1,16 +1,14 @@
 ---
-layout: cj4
+layout: g3000
 permalink: /g3000/
 title: Intro
-coverimage: gx.jpg
+coverimage: g3000.jpg
 ---
 
 # Working Title G3000
-
-### Latest version: v0.4.2
-
-### Description
-This is a mod for MSFS2020 that aims to improve the in-game G3000 and G5000. The goal is to bring functionality closer to the real-life units, with a focus on both features and layout/UI.
+This is a mod for MSFS2020 that aims to improve the in-game G3000 and G5000. The goal is to bring functionality closer to the real-life units, with a focus on both features and layout/UI.<br>{% for post in site.categories["g3000"] limit:1 %}
+<a class="btn btn-slanted btn-sliding" href="https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/g3000-{{post.title}}.zip"><span>Download Latest Version ({{post.title}})</span></a> <a class="btn btn-slanted btn-sliding" href="/g3000/releases"><span>Changelog and Older Versions</span></a>
+{% endfor %}
 
 This mod was created with cross-compatibility in mind. It modifies the minimum number of base files possible to achieve its goals, so it should be compatible with most other mods, including all other WorkingTitle mods. However, because of the nature of the mod, it will conflict with other mods that make changes to the G3000.
 
