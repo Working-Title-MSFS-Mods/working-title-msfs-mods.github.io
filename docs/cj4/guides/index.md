@@ -17,4 +17,4 @@ Thanks to TheFlieger we have a new guide for painters available here that helps 
 If those guides do not answer your questions, you can always pose them on our Discord server below.
 Please do however read the Guides extensively beforehand.
 
-{% include button.html text="Discord" url="https://discord.com/invite/Fa6w2xK" %}
+{% include button.html text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}

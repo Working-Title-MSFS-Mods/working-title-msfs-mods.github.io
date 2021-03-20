@@ -278,6 +278,10 @@ a:hover {
     background: #000;
 }
 
+.whitesection .btn-slanted{
+    margin: 0 15px;
+}
+
 .footerbar {
     position: relative;
     min-height: 60px;
