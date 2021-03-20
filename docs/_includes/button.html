@@ -1,5 +1,5 @@
 <a href="{{ include.url }}" class="btn btn-slanted btn-sliding"
-{% if include.blank %}
+{% if include.blank == "true" %}
 target="_blank"
 {% endif %}
 ><span>{{ include.text }}</span></a>
