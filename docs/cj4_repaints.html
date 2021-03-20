@@ -45,7 +45,7 @@ coverimage: repaints.jpg
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>Preview</th>
+            <!-- <th>Preview</th> -->
             <th>Name</th>
             <th>Creator</th>
             <th>Download</th>
@@ -54,11 +54,11 @@ coverimage: repaints.jpg
     <tbody>
         {% for exterior in site.data.exteriors %}
         <tr>
-            <th></th>
-            <th>{{ exterior.name }}</th>
-            <th>{{ exterior.creator }}</th>
-            <th><a href="{{ exterior.url }}" target="_blank"
-                    class="btn btn-slanted btn-sliding"><span>Download</span></a></th>
+            <!-- <td></td> -->
+            <td>{{ exterior.name }}</td>
+            <td>{{ exterior.creator }}</td>
+            <td><a href="{{ exterior.url }}" target="_blank"
+                    class="btn btn-slanted btn-sliding"><span>Download</span></a></td>
         </tr>
         {% endfor %}
     </tbody>

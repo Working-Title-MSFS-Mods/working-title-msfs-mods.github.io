@@ -151,7 +151,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2vh 0;
-    background: rgba(0,0,0,0.6) url(../img/cover.jpg);
+    background: rgba(0, 0, 0, 0.6) url(../img/cover.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     background-position-x: 48%;
@@ -271,6 +271,22 @@ a:hover {
 
 .btn-sliding:hover:before {
     left: -1px;
+}
+
+.whitesection .btn-sliding {
+    border-left: 2px solid #000;
+}
+
+.whitesection .btn-sliding:before {
+    background-color: #000;
+}
+
+.whitesection .btn-sliding>span {
+    color: #000;
+}
+
+.whitesection .btn-sliding:hover>span {
+    color: #fff;
 }
 
 .footerbar {
