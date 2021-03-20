@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Working Title CJ4 - {{ page.title }}</title>
+  <title>Working Title CJ4 - Changelog {{ page.title }}</title>
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -37,10 +37,15 @@
   </div>
   <div class="section whitesection">
     <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="contentbox col">
+      <div class="row">
+        <div class="col-sm-9">
           {{ content}}
         </div>
+        <div class="col-sm-3">
+          {% assign version = page.title %}
+          {% include releaselist.html category="cj4" current=version %}
+        </div>
+      </div>
       </div>
       <img src="/img/bottom.png" class="scroll up" onclick="customscroll('content-top')" title="Scroll Up">
     </div>
