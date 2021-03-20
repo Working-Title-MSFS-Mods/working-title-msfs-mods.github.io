@@ -1,17 +1,43 @@
 ---
 layout: cj4
 permalink: /cj4/issues
-title: FAQ & Issues
+title: Known Issues
 coverimage: masterwarn.jpg
 coverposition: left bottom
 ---
 
 # Known Issues
 
-* PTCH mode will not level off at an altitude and it can have some quirky behaviors.  This is currently a sim AP issue.
-* Some external applications that use the GPS/Flight plan SimVars may not function correctly or as expected when FP Sync is off.
-* Loading and saving flights can have bad results.
-* Custom liveries can render FADEC inoperative if they ship with a panel.cfg. Painters should reference our new [Repainter's Guide](/cj4/guide/repainter) for solutions.
-* Autopilot modes cannot be triggered via keybindings or controllers and must currently be triggered in the cockpit with the mouse. External binding applications are adding support for LVars and HEvents. Used SimVars are documented in our [Guide on SimVars](/cj4/guides/simvars)
-* Sometimes a heading to altitude instruction on takeoff will display further than the first RNAV fix on an RNAV departure procedure; in these cases the workaround is to cross-check the DP chart and remove the erroneous waypoint either by deleting the heading to altitude fix or dropping the first RNAV fix onto the magenta line in the LEGS page.
-* Due to sim autopilot bank rate limitations, the aircraft may overshoot on certain RNP approaches with tight turns. If you encounter this, we recommend hand flying the approach with the given lateral and vertical guidance.
+<div class="accordion accordion-flush" id="accordion">
+{% capture issue %}
+I have linked my Navigraph account but it still says **NO CHARTS AVAILABLE** when I press the `CHARTS` button?
+{% endcapture %}
+{% capture answer %}
+When you hit `CHART`, which will always show NO CHART AVAILABLE, because you haven't selected a chart yet. Once you hit `LWR MENU` after hitting CHART, then you'll see the chart menu where you can select a chart.
+{% endcapture %}
+{% include question.html id="nocharts" q=issue a=answer %}
+
+
+{% capture issue %}
+My **cockpit is invisible**.
+{% endcapture %}
+{% capture answer %}
+{% for post in site.categories["cj4"] limit:1 %}
+{% assign latest = post.title %}
+{% endfor %}
+Check that you are using the latest version ({{latest}}) of the mod.<br>
+v0.8.2 or earlier are no longer compatible with the current version of [Microsoft Flight Simulator](https://flightsimulator.com).
+{% endcapture %}
+{% include question.html id="test" q=issue a=answer %}
+
+
+{% capture issue %}
+My **throttles do not move**.
+{% endcapture %}
+{% capture answer %}
+This issue can ben cause by two different things.<br>
+a) You are using an incompatible livery. Use default livery or one from the known list of working ones in #media discord channel.<br>
+b) Check the `Documents` folder on your PC for a file called `SimConnect.cfg` and delete it.
+{% endcapture %}
+{% include question.html id="throttlestuck" q=issue a=answer %}
+</div>
