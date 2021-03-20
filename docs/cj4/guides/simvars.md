@@ -2,7 +2,8 @@
 layout: cj4
 permalink: /cj4/guides/simvars
 title: Guide on SimVars
-coverimage: repaint.jpg
+coverimage: cockpit.jpg
+coverposition: center 45%
 ---
 # Sim Variables
 _This list is always subject to change_

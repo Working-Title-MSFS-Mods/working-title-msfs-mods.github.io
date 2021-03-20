@@ -1,60 +1,48 @@
 ---
 layout: cj4
-permalink: /g3000/
+permalink: /gx/
 title: Intro
-coverimage: g3000.jpg
+coverimage: gx.jpg
 ---
-# Working Title G3000
+# Working Title G3X
 
-### Latest version: v0.4.2
+*This is current for version 0.1.0-pre3.*
 
-### Description
-This is a mod for MSFS2020 that aims to improve the in-game G3000 and G5000. The goal is to bring functionality closer to the real-life units, with a focus on both features and layout/UI.
+This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.
 
-This mod was created with cross-compatibility in mind. It modifies the minimum number of base files possible to achieve its goals, so it should be compatible with most other mods, including all other WorkingTitle mods. However, because of the nature of the mod, it will conflict with other mods that make changes to the G3000.
+Note that this is a working release, not a final one.  Everything should be stable and functional but there may be a few rough edges encountered.  Part of the reason we want to get this into folks hands is to help discover those rough edges since there is less knowledge and documentation available on these systems than on the more popular G1000 and G3000.  Please make liberal use of our usual haunts of the [Avsim](https://www.avsim.com/forums/forum/863-microsoft-flight-simulator-2020/) and [MSFS](https://forums.flightsimulator.com/c/aircraft/propellers-twin-props/151) forums, our [Discord server](https://discord.gg/UFbpQsu) and our [issues tracker at github](https://github.com/Working-Title-MSFS-Mods/fspackages/issues) for feedback and suggestions.
 
-### Installation
-Download `workingtitle-g3000-v0.4.2.zip` from the Github release page. Do not download the Source code files unless you are sure you want those.
+## G3X Touch Main Enhancements
 
-To install, copy the `workingtitle-g3000` folder from the zip file into your `Community` directory.
+* Map menu page with numerous new features:
+  * North up, track up, and DTK up options
+  * NEXRAD and topo overlays
+  * Multiple zoom options including auto-zoom on touchscreen
+* Completely new autopilot control system via touchscreen
+* Completely new menu system supporting independent per-page menus
+* Redesigned PFD with wind data information and CAS system
+* Graphical overhaul: more authentic, less ugly blue gradient
+* Optional simulation of GAP-26 regulated pitot heater (see [pitot.md](pitot.md))
 
-If you want to enable the road display for the navigation map, you must also download `workingtitle-g3000-roaddata-v0.1.0.zip` from the Github release page. To install the road data package, copy the `workingtitle-g3000-roaddata` folder from the zip file into your `Community` directory. Requires 1.3 GB of hard drive space.
+## G3X Touch Instructions
 
-### Configuration File
-Certain mod settings can be customized via a configuration file which is located at `workingtitle-g3000\html_ui\WTg3000.cfg`. Documentation for the various settings can be found in the file itself. If you make changes to the file while the game is running, you must restart the game for the changes to take effect.
+The G3X Touch system in the sim has some big differences in operation from the real one, and part of this mods's goal is to get it a bit closer to reality.  For best operation, please note the following items:
+* The "select page" menu is now accessed by touching the page list at the bottom of the MFD
+* The menu button on MFD pages now summons that page's menu, if it exists
+* The AFCS menu is accessed by touching the autopilot info panel on the PFD
+* The PFD menu is accessed by touching the HSI or pushing the menu button in full-screen PFD mode
+* CAS notifications can be dismissed by either pushing the back button or touching the CAS panel
 
-#### Release Highlights for v0.4.2
+## Features to come
 
-Now compatible with game patch 1.14.5.0 (Sim Update 3).
+As noted above, this is a working release.  There are a number of features that will be delivered soon, but this was functional enough we wanted to allow people to start using it.  Things that will are planned for implementation soon include:
 
-**Fixes**
-- \[PFD\] Fixed regression where PFD softkey functions related to changing inset map settings were not working as intended.
+* A Main Menu with access to all key system functions
+* A system set up menu with various settings, including screen brightness
+* Range rings and compass arc on the MFD map
+* An more comprehensive data bar at the top of the screen
+* Full-featured radio control either via the data bar or a dedicated menu page
+* Flight plan import from SimBrief
+* Automated update checks and notifications
 
-### Known Issues
-- \[Compatibility\] Using this mod with the WorkingTitle GX mod may result in various flight planning bugs, such as blank waypoint entries in the GTC active flight plan page and avionics freeze when initiating a Direct To to an approach waypoint.
-- \[PFD\] (Vanilla issue) Co-pilot PFD softkeys are nonfunctional in the TBM 930.
-- \[NavMap\] Airspaces are currently not available to display. The way the game loads data for these features is unreliable at best, and more time is needed to come up with a satisfactory solution to rendering them. Expect them to be added back at a later date.
-- \[NavMap\] The flight plan renderer currently does not draw turn anticipation arcs or turn to intercept legs. These will be added later.
-- \[NavMap\] All airport waypoints are shown as if they are serviced, regardless of whether they actually are. This is because waypoint data from the game is currently missing this information.
-- \[NavMap\] Airport waypoint symbols will only show around a certain geographic distance from the center of the map (this does not apply to airports that are part of the active flight plan). This is due to the way the game searches for airports (the number of results is limited for performance reasons and there is no option to filter the search e.g. by size to reduce the performance penalty).
-- \[Weather Radar\] When NEXRAD is enabled for the navigation map in the right MFD pane, the weather radar display in the left MFD pane will have artifacts. This does not occur with the opposite arrangement (i.e. NEXRAD enabled in left MFD pane, weather radar in right MFD pane). The bug also occurs when enabling NEXRAD for the PFD inset map. A workaround for now is to simply disable NEXRAD or to enable it in the left pane instead of the right (and disable it for the PFD inset map) if you wish to use it in conjunction with the weather radar.
-- \[Misc\] MSFS will take an increased amount of time to fully shut down (up to several minutes) when closing the game after starting a flight that uses the road data package. The game window will still close promptly, but the game process will run in the background and game audio can be heard. The process is not frozen and will eventually shut down on its own, however if you wish to speed up the process, you can manually end-task or end-process MSFS through Task Manager.
-
-### FAQ
-- **Q**: I copied the mod folder to my Community folder but don't get any of the new features. What do I do?
-  - **A**: Make sure you downloaded the *correct* mod folder. It should be named `workingtitle-g3000` and be contained in a .zip file named `workingtitle-g3000-v[version number]`.
-- **Q**: Why do I no longer have synthetic vision on the PFD after installing the mod?
-  - **A**: The mod introduces the option to toggle synthetic vision on/off and the setting defaults to off. To turn it back on, use the touchscreen controllers and navigate to PFD Home -> PFD Settings -> SVT Terrain Enable. Alternatively, *for the TBM 930 only*, use the PFD softkeys to navigate to PFD Settings -> Altitude Overlays -> Synthetic Terrain.
-- **Q**: When I copy the mod folder to my Community folder, why do I get an error saying the file path name is too long?
-  - **A**: This is a Windows issue. By default, Windows limits file paths to 260 characters. You can disable this limit by modifying the system registry (not as scary as it sounds). Tutorials for how to do so can easily be found with a Google (or Bing) search.
-- **Q**: Why do I sometimes get low performance/FPS with the mod?
-  - **A**: The single largest performance sink (when it comes to avionics) is the navigational map. The mod actually uses a completely new code base for the navmap that is _more_ performant than the default. However, the mod also allows many more features to be drawn on the map than is possible with the unmodded map (as well as allowing for two independent navmaps to be displayed on the MFD), which is where performance can start to suffer. Generally, the more _waypoints_ and _text labels_ drawn on the map, the greater the impact on performance.
-- **Q**: Does the mod support VNAV or inputting airways into the flight plan?
-  - **A**: Not yet. Support will be coming with a future update.
-
-### Credits
-- Custom city database is sourced from simplemaps (simplemaps.com/data/world-cities) under the CC Attribution 4.0 license.
-- Border data is sourced from Natural Earth (www.naturalearthdata.com).
-- Thank you to StuTozer/ElectrikKar for allowing us to integrate his Touchscreen Restyled Mod.
-- This mod uses the Roboto font (designed by Christian Robertson), licensed under Apache 2.0.
-- This mod uses the d3-array, d3-geo, and topojson libraries.
+Plus hopefully more.  I'd love to have a fully configurable data bar with a better information density and a variety of data fields available at some point.   What else do you want?  Let us know!

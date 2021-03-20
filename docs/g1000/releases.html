@@ -1,13 +1,13 @@
 ---
-layout: cj4
-permalink: /cj4/releases
+layout: g1000
+permalink: /g1000/releases
 title: Releases
-coverimage: cockpit.jpg
+coverimage: g1000.jpg
 ---
 
 <div class="row">
   <div class="col-sm-9">
-    {% for post in site.categories["cj4"] limit:1 %}
+    {% for post in site.categories["g1000"] limit:1 %}
     <script type="text/javascript">
       window.location.href = "{{ post.url }}"
     </script>
@@ -18,6 +18,6 @@ coverimage: cockpit.jpg
     {% endfor %}
   </div>
   <div class="col-sm-3">
-    {% include releaselist.html category="cj4" mode="all" %}
+    {% include releaselist.html category="g1000" mode="all" %}
   </div>
 </div>

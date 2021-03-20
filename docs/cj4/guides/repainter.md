@@ -2,7 +2,8 @@
 layout: cj4
 permalink: /cj4/guides/repainter
 title: Repainter's Guide
-coverimage: repaint.jpg
+coverimage: cockpit.jpg
+coverposition: center 45%
 ---
 
 # Repainter's Guide

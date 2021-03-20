@@ -1,5 +1,5 @@
 ---
-layout: cj4
+layout: g1000
 permalink: /g1000/
 title: Intro
 coverimage: g1000.jpg
@@ -60,8 +60,8 @@ We are also already underway with a revamp of the entire G1000 UI which will all
 
 ## Comments, issues, bug reports
 
-If you run any any trouble, want to make suggestions for further improvements, or just have something to say about this mod, you can reach the creators via the [Working Title MSFS Mods](https://github.com/Working-Title-MSFS-Mods) github org.  Bug reports or feature requests should go to the [fspackages issue board](https://github.com/Working-Title-MSFS-Mods/fspackages/issues).   We also generally hang out on Avsim and the official MSFS forum.
+If you run any any trouble, want to make suggestions for further improvements, or just have something to say about this mod, you can reach the creators via our [Github](https://github.com/Working-Title-MSFS-Mods).  Bug reports or feature requests should go to the [Github Issue Board](https://github.com/Working-Title-MSFS-Mods/fspackages/issues). We also generally hang out on Avsim and the official MSFS forum.
 
 ## Credits
 
-We have received help from many people in the community, in the form of bug reports, information on real-word behavior, or actual contributions of code.  Of particular help have been [@tavip](https://github.com/tavip) (Octavian Purdila) and [@jonasbeaver](https://github.com/jonasbeaver) -- the former for numerous contributions of code, the latter for being a font of wisdom and offering to help tame our backlog of issues.  Great thanks goes to them, and to everyone else who has helped the Working Title team with this and our other projects.
+We have received help from many people in the community, in the form of bug reports, information on real-word behavior, or actual contributions of code. Of particular help have been [@tavip](https://github.com/tavip) (Octavian Purdila) and [@jonasbeaver](https://github.com/jonasbeaver) -- the former for numerous contributions of code, the latter for being a font of wisdom and offering to help tame our backlog of issues.  Great thanks goes to them, and to everyone else who has helped the Working Title team with this and our other projects.
