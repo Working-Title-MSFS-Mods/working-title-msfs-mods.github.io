@@ -1,21 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Working Title CJ4 - {{ page.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" asnyc
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
+</head>
+
+<body>
   </head>
+
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-    <h1>{{ page.title }}</h1>
-    <section>
-      {{ content }}
-    </section>
-    <footer>
-      &copy; to me
-    </footer>
+    <div class="topbar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <a href="index.php"><img src="../img/wt-logo-white.png"></a>
+          </div>
+          <div class="col col-md-6 d-lg-none text-end">
+            <span class="menutoggle">Menu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menubar">
+      <div class="menu container-fluid">
+        <div class="row justify-content-end">
+          <div class="menuitem col-12 active">
+            <a class="btn btn-slanted btn-sliding" href="/cj4"><span>Intro</span></a>
+          </div>
+          <div class="menuitem col-12">
+            <a class="btn btn-slanted btn-sliding" href="/cj4/releases"><span>Releases</span></a>
+          </div>
+          <div class="menuitem col-12">
+            <a class="btn btn-slanted btn-sliding" href="/cj4/guides"><span>Guides</span></a>
+          </div>
+          <div class="menuitem col-12">
+            <a class="btn btn-slanted btn-sliding" href="/cj4/repaints"><span>Repaints</span></a>
+          </div>
+          <div class="menuitem col-12">
+            <a class="btn btn-slanted btn-sliding" href="/cj4/issues"><span>Known Issues</span></a>
+          </div>
+          <div class="menuitem col-12">
+            <a class="btn btn-slanted btn-sliding"
+              href="https://github.com/Working-Title-MSFS-Mods/fspackages/"><span>Github</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentbar">
+      <div id="cover" class="section coversection">
+        <h1>{{ page.title }}</h1>
+        <!-- <img src="../img/bottom.png" class="scroll" onclick="customscroll('content-top')" title="Scroll down"> -->
+      </div>
+      <style>
+        #cover {
+          background: rgba(0,0,0,0.2) url(../img/{{ page.coverimage }});
+          background-size: cover;
+          background-blend-mode: multiply;
+          background-position: center center;
+        }
+      </style>
+    </div>
+    <div class="section whitesection">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="contentbox col">
+            {{ content}}
+          </div>
+        </div>
+        <img src="../img/bottom.png" class="scroll up" onclick="customscroll('content-top')" title="Scroll Up">
+      </div>
   </body>
+
 </html>

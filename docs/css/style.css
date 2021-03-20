@@ -3,22 +3,224 @@ body {
     color: #fff;
 }
 
-.cover{
+#ghostery-purple-box {
+    display: none !important
+}
+
+.topbar, .menubar {
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 70;
+    position: fixed;
+    width: 100%;
+    height: 68px;
+    transition: background linear 500ms;
+}
+
+.topbar.dark {
+    background: #000;
+}
+
+.topbar.active {
+    background: #fff;
+    color: #000;
+}
+
+.topbar img {
+    height: 50px;
+    margin-top: 9px;
+    margin-left: -5px;
+    transition: all ease-in-out 400ms;
+}
+
+.topbar.active img {
+    filter: invert();
+}
+
+@media only screen and (min-width: 992px) {
+    .topbar img {
+        height: 150px;
+        margin-left: -5px;
+        transition: all ease-in-out 400ms;
+    }
+    .topbar.dark img {
+        height: 50px;
+        margin-left: -5px;
+    }
+}
+
+.menutoggle {
+    cursor: pointer;
+    height: 68px;
+    line-height: 68px;
+}
+
+.menuitem {
+    text-align: right;
+    padding: 15px;
+    display: inline-block;
+    transition: all ease-out 400ms;
+}
+
+@media (max-width: 992px) {
+    .menubar {
+        position: fixed;
+        top: 68px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        transition: right ease-out 400ms;
+        background: #000;
+    }
+    .menubar .container {
+        max-width: none;
+    }
+    .menubar.active {
+        right: 0;
+    }
+    .footeritem {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menuitem {
+        flex-grow: 0;
+        width: auto;
+        flex-basis: auto;
+    }
+}
+
+.section {
+    position: relative;
+    overflow-x: auto;
+    margin-bottom: 50px;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.23);
+    color: #000;
+    min-height: 25vh;
+    width: 100%;
+}
+
+.section table {
+    color: #000;
+}
+
+.section:last-of-type {
+    margin-bottom: 0;
+}
+
+.coversection {
+    margin: 0;
+}
+
+.coversection {
+    text-align: right;
+    padding: 10% 5%;
+    position: relative;
+    color: #fff;
+}
+
+.coversection:not(#cover_home) {
+    overflow: hidden;
+}
+
+.coversection:not(#cover_home) h1 {
+    font-size: 10vw;
+    position: absolute;
+    bottom: -2.6vw;
+    right: 5%;
+}
+
+@media (max-width: 992px) {
+    .coversection:not(#cover_home) h1 {
+        font-size: 15vw;
+        bottom: -4.6vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .coversection {
+        min-height: 50vh;
+    }
+}
+
+.cover {
     display: flex;
     flex-direction: column;
     padding: 2vh 0;
-    /* background: rgba(0,0,0,0.6) url(../img/cover.jpg); */
+    background: rgba(0,0,0,0.6) url(../img/cover.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     background-position-x: 48%;
 }
 
-.cover.full{
+.cover.full {
     min-height: 100vh;
 }
 
-.spacer{
+.spacer {
     flex: 0.75;
+}
+
+.scroll {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    width: 60px;
+    cursor: pointer;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+    .scroll {
+        display: none;
+    }
+}
+
+.scroll.up {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.whitesection {
+    padding: 25px;
+    background: #fff;
+}
+
+.whitesection .scroll {
+    filter: invert(1);
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: calc( 18px + 4vw);
+}
+
+p {
+    margin-bottom: 3%;
+}
+
+a, a:active, a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section a {
+    color: #000;
+}
+
+a:hover {
+    color: #ecc273;
+    text-decoration: none;
 }
 
 .btn {
@@ -69,4 +271,19 @@ body {
 
 .btn-sliding:hover:before {
     left: -1px;
+}
+
+.footerbar {
+    position: relative;
+    min-height: 60px;
+}
+
+.footerbar a, .footerbar a:hover {
+    margin-right: 25px;
+}
+
+.footerbar .container-fluid {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
