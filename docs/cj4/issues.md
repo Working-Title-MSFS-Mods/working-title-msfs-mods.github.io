@@ -3,6 +3,7 @@ layout: cj4
 permalink: /cj4/issues
 title: Known Issues
 coverimage: masterwarn.jpg
+coverposition: left bottom
 ---
 
 # Working Title CJ4

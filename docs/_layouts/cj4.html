@@ -65,7 +65,9 @@
           background: rgba(0,0,0,0.2) url(/img/{{ page.coverimage }});
           background-size: cover;
           background-blend-mode: multiply;
-          background-position: center center;
+          {% if page.coverposition %}
+          background-position: {{page.coverposition}};
+          {% endif %}
         }
       </style>
     </div>
