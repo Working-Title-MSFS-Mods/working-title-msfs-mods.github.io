@@ -1,7 +1,7 @@
 ---
 layout: cj4
 permalink: /cj4/issues
-title: Known Issues
+title: FAQ & Issues
 coverimage: masterwarn.jpg
 coverposition: left bottom
 ---
