@@ -3,13 +3,16 @@ layout: cj4
 permalink: /cj4/
 title: Intro
 coverimage: cover.jpg
+latestversion: 0.11.3
 ---
 
 # Working Title CJ4
 The Working Title CJ4 is an improvement mod for the default Citation CJ4 that comes with the [Microsoft Flight Simulator](https://flightsimulator.com).
 
 ## DOWNLOAD
-Latest Version: [v0.11.3](https://github.com/Working-Title-MSFS-Mods/fspackages/releases/tag/cj4-v0.11.3)
+Latest Version: v{{page.latestversion}}
+<a class="btn btn-slanted btn-sliding"
+              href="https://github.com/Working-Title-MSFS-Mods/fspackages/releases/tag/cj4-v{{page.latestversion}}"><span>Latest Version: v{{page.latestversion}}</span></a>
 
 ## KEY FEATURES
 
