@@ -10,9 +10,7 @@ latestversion: 0.11.3
 The Working Title CJ4 is an improvement mod for the default Citation CJ4 that comes with the [Microsoft Flight Simulator](https://flightsimulator.com).
 
 <a class="btn btn-slanted btn-sliding"
-              href="https://github.com/Working-Title-MSFS-Mods/fspackages/releases/tag/cj4-v{{page.latestversion}}"><span>Download Latest Version (v{{page.latestversion}})</span></a>
-
-<a class="btn btn-slanted btn-sliding"
+              href="https://github.com/Working-Title-MSFS-Mods/fspackages/releases/tag/cj4-v{{page.latestversion}}"><span>Download Latest Version (v{{page.latestversion}})</span></a> <a class="btn btn-slanted btn-sliding"
               href="/cj4/releases"><span>Changelog and Older Versions</span></a>
 
 ## KEY FEATURES

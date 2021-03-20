@@ -48,11 +48,11 @@ Removes the dynamically set registration altogether. Use this option if you want
 alias=Asobo_CJ4\panel.noreg
 ```
 
-# SUBMIT
+## SUBMIT
 If you have followed those steps and wish to have your livery featured in our [List of Compatible Liveries](https://docs.google.com/spreadsheets/d/1-FZh5ZNXsSoHZFRcvkQwa-PHuBSk1QRTt7eYvx7Q4xU/edit?usp=sharing), you can fill out the following form.
 
 [Submit your livery for review](https://forms.gle/kz9mNdQWWxCk1TvDA)
 
 
-# ⚠️ NOTE
+## ⚠️ NOTE
 Be aware, that if you decide to use a `panel.whitereg` or `panel.noreg` fallback, your liveries will **not** work with the default CJ4 anymore.
