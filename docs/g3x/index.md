@@ -1,14 +1,15 @@
 ---
-layout: cj4
-permalink: /gx/
+layout: g3x
+permalink: /g3x/
 title: Intro
-coverimage: gx.jpg
+coverimage: g3x.jpg
 ---
 # Working Title G3X
 
-*This is current for version 0.1.0-pre3.*
+This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.<br>{% for post in site.categories["g3x"] limit:1 %}
+<a class="btn btn-slanted btn-sliding" href="https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/gx-{{post.title}}.zip"><span>Download Latest Version ({{post.title}})</span></a> <a class="btn btn-slanted btn-sliding" href="/g3x/releases"><span>Changelog and Older Versions</span></a>
+{% endfor %}
 
-This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.
 
 Note that this is a working release, not a final one.  Everything should be stable and functional but there may be a few rough edges encountered.  Part of the reason we want to get this into folks hands is to help discover those rough edges since there is less knowledge and documentation available on these systems than on the more popular G1000 and G3000.  Please make liberal use of our usual haunts of the [Avsim](https://www.avsim.com/forums/forum/863-microsoft-flight-simulator-2020/) and [MSFS](https://forums.flightsimulator.com/c/aircraft/propellers-twin-props/151) forums, our [Discord server](https://discord.gg/UFbpQsu) and our [issues tracker at github](https://github.com/Working-Title-MSFS-Mods/fspackages/issues) for feedback and suggestions.
 
