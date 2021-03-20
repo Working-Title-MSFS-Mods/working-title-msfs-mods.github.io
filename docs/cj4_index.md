@@ -83,4 +83,5 @@ This list is incomplete, but thanks to everyone that contributed from inside and
 * Slip (QA)
 * Syntax (QA)
 * Windhover (QA)
+* Jukebox (Website pictures)
 * AND others!
