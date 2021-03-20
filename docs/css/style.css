@@ -214,17 +214,12 @@ p {
 }
 
 a, a:active, a:focus {
-    color: #fff;
+    color: #4586e6;
     text-decoration: none;
-}
-
-.section a {
-    color: #000;
 }
 
 a:hover {
-    color: #ecc273;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .btn {

@@ -13,11 +13,7 @@
     }
 
     .releaselist li.active {
-        background: #000;
-    }
-
-    .releaselist li.active a {
-        color: #fff !important;
+        font-weight: bold;
     }
 </style>
 
@@ -26,11 +22,11 @@
 {% endfor %}
 
 {% capture downloadurl %}
-    https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/cj4-{{include.current}}.zip
+https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/{{include.category}}-{{include.current}}.zip
 {% endcapture %}
 
 {% capture downloadtext %}
-    <span style="padding: 0 1rem">Download This Version<br>({{ include.current }})</span>
+<span style="padding: 0 1rem">Download This Version<br>({{ include.current }})</span>
 {% endcapture %}
 
 <div class="releaselist">
