@@ -9,8 +9,9 @@ coverposition: left bottom
 # Known Issues
 
 <div class="accordion accordion-flush" id="accordion">
+
 {% capture issue %}
-I have linked my Navigraph account but it still says **NO CHARTS AVAILABLE** when I press the `CHARTS` button?
+## I have linked my Navigraph account but it still says **NO CHARTS AVAILABLE** when I press the `CHARTS` button.
 {% endcapture %}
 {% capture answer %}
 When you hit `CHART`, which will always show NO CHART AVAILABLE, because you haven't selected a chart yet. Once you hit `LWR MENU` after hitting CHART, then you'll see the chart menu where you can select a chart.
@@ -19,7 +20,7 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 
 
 {% capture issue %}
-My **cockpit is invisible**.
+## My **cockpit is invisible**.
 {% endcapture %}
 {% capture answer %}
 {% for post in site.categories["cj4"] limit:1 %}
@@ -32,7 +33,7 @@ v0.8.2 or earlier are no longer compatible with the current version of [Microsof
 
 
 {% capture issue %}
-My **throttles do not move**.
+## My **throttles do not move**.
 {% endcapture %}
 {% capture answer %}
 This issue can ben cause by two different things.<br>
