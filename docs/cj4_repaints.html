@@ -1,0 +1,65 @@
+---
+layout: cj4
+permalink: /cj4/repaints
+title: Repaints
+coverimage: repaints.jpg
+---
+
+<h1>Repaints</h1>
+<p>The community has produced a host of amazing texture modifications over the last month. Sadly, not all of them are
+    compatible to our CJ4 mod at this time.<br>
+    Below you will find a list of all interior and exterior repaints that have been confirmed to be compatible with the
+    Working Title CJ4.</p>
+<h3>Submit or Create a Compatible Repaint</h3>
+<p>If you know of a repaint that is not listed below, feel free to submit its details. If we can confirm its
+    compatibility, we will add it to the list.</p>
+<a href="https://forms.gle/kz9mNdQWWxCk1TvDA" target="_blank" class="btn btn-slanted btn-sliding"><span>Submit a
+        Repaint</span></a>
+<p>If you are a repainter and wish to learn more about working with the Working Title CJ4, visit our Repainter's Guide
+    below.</p>
+<a href="/cj4/guides/repainter" target="_blank" class="btn btn-slanted btn-sliding"><span>Repainter's Guide</span></a>
+
+<h2>Interior Repaints</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Preview</th>
+            <th>Name</th>
+            <th>Creator</th>
+            <th>Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for interior in site.data.interiors %}
+        <tr>
+            <th></th>
+            <th>{{ interior.name }}</th>
+            <th>{{ interior.creator }}</th>
+            <th><a href="{{ interior.url }}" target="_blank"
+                    class="btn btn-slanted btn-sliding"><span>Download</span></a></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h2>Exterior Repaints</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Preview</th>
+            <th>Name</th>
+            <th>Creator</th>
+            <th>Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for exterior in site.data.exteriors %}
+        <tr>
+            <th></th>
+            <th>{{ exterior.name }}</th>
+            <th>{{ exterior.creator }}</th>
+            <th><a href="{{ exterior.url }}" target="_blank"
+                    class="btn btn-slanted btn-sliding"><span>Download</span></a></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
