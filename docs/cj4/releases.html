@@ -1,0 +1,14 @@
+---
+layout: cj4
+permalink: /cj4/releases
+title: Releases
+coverimage: cover.jpg
+---
+
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>

@@ -67,6 +67,8 @@
           background-blend-mode: multiply;
           {% if page.coverposition %}
           background-position: {{page.coverposition}};
+          {% else %}
+          background-position: center;
           {% endif %}
         }
       </style>
