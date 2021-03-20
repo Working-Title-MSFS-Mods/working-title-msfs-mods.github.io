@@ -6,8 +6,9 @@ coverimage: cover.jpg
 ---
 
 # Working Title CJ4
+The Working Title CJ4 is an improvement mod for the default Citation CJ4 that comes with the [Microsoft Flight Simulator](https://flightsimulator.com).
 
-## UPDATES
+## DOWNLOAD
 Latest Version: [v0.11.3](https://github.com/Working-Title-MSFS-Mods/fspackages/releases/tag/cj4-v0.11.3)
 
 ## KEY FEATURES
@@ -48,18 +49,17 @@ This is a beta, and as such you will surely encounter bugs and problems with the
 ## OTHER MODS
 Because of how the Community folder works, this mod will conflict with any other mod that includes one or more of the same files in the package. We have not included aircraft.cfg or any exterior textures so that the livery mods should work along side this mod. We have incorporated mods, such as the lighting mod from Uwajimaya. You can see where we've included these in the release notes.
 
-### INSTALLING
+### INSTALLATION
 Download the release zip file and extract the enclosed folder workingtitle-aircraft-cj4 into your Community folder to enable this mod.
 
 ### OPERATING NOTES
-Thanks to our amazing QA team, and especially to community member Slip, for crafting, curating and maintaining the Working Title CJ4 User Guide:
+Thanks to our amazing QA team, and especially to community member Slip for crafting, curating and maintaining the Working Title CJ4 User Guide:
+[Operator's Guide](https://docs.google.com/document/d/1qzxPMTSQRkvau8QOi7xUqNvjx9rbww_qHlso5AT5OnI)
 
-[CJ4 User Guide](https://docs.google.com/document/d/1qzxPMTSQRkvau8QOi7xUqNvjx9rbww_qHlso5AT5OnI)
-
+By popular demand, there is also a matching SimBrief profile for this mod available.
 [SIMBRIEF PROFILE](https://www.simbrief.com/system/dispatch.php?sharefleet=eyJ0cyI6IjE2MDI1MzkxMTUxODMiLCJiYXNldHlwZSI6IkMyNUMiLCJjb21tZW50cyI6IldPUktJTkcgVElUTEUgQ0o0IiwiaWNhbyI6IkMyNUMiLCJuYW1lIjoiQ0lUQVRJT04gQ0o0IiwiZW5naW5lcyI6IkZKNDQtNEEiLCJyZWciOiJONTI1V1QiLCJmaW4iOiIyNTQiLCJzZWxjYWwiOiIiLCJoZXhjb2RlIjoiIiwiY2F0IjoiTSIsInBlciI6IkIiLCJlcXVpcCI6IlNERTJFM0ZHSFJXWFlaIiwidHJhbnNwb25kZXIiOiJMQjEiLCJwYm4iOiJBMUIyQzJEMkQzTzJPM1MyIiwiZXh0cmFybWsiOiIiLCJtYXhwYXgiOiI3Iiwid2d0dW5pdHMiOiJMQlMiLCJvZXciOiIxMDI4MCIsIm16ZnciOiIxMjUwMCIsIm10b3ciOiIxNzExMCIsIm1sdyI6IjE1NjYwIiwibWF4ZnVlbCI6IjU3NjIiLCJwYXh3Z3QiOiIxNzAiLCJkZWZhdWx0Y2kiOiIiLCJmdWVsZmFjdG9yIjoiUDAwIiwiY3J1aXNlb2Zmc2V0IjoiUDAwMDAifQ--)
 
-Thanks to TheFlieger we have a new guide for painters available here that helps address the panel.cfg problems with some liveries: [REPAINT_README.md](https://github.com/Working-Title-MSFS-Mods/fspackages/blob/main/docs/workingtitle-cj4/REPAINT_README.md)
-
+Thanks to TheFlieger we have a new guide for painters available here that helps address the panel.cfg problems with some liveries: [Repainter's Guide](/cj4/guides/repainter)
 
 ### CREDITS
 This list is incomplete, but thanks to everyone that contributed from inside and outside the Working Title team.
