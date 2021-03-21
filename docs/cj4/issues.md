@@ -194,7 +194,7 @@ RF and DME ARC legs are not yet supported in the Working Title CJ4, but we are l
 ## I have linked my Navigraph account but it still says **NO CHARTS AVAILABLE** when I press the `CHARTS` button.
 {% endcapture %}
 {% capture answer %}
-When you hit `CHART`, which will always show NO CHART AVAILABLE, because you haven't selected a chart yet. Once you hit `LWR MENU` after hitting CHART, then you'll see the chart menu where you can select a chart.
+When you hit `CHART`, which will always show NO CHART AVAILABLE, because you haven't selected a chart yet. Once you hit `LWR MENU` after hitting `CHART`, then you'll see the chart menu where you can select a chart.
 {% endcapture %}
 {% include question.html id="nocharts" q=issue a=answer %}
 
