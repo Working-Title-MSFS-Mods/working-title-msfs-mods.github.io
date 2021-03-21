@@ -1,18 +1,16 @@
 {% if include.version %}
-    {% assign release = site.categories[{{include.category}}] | find: "title", {{include.version}} %}
-    {% if release.tagdeviation %}
-        {% assign tag = release.tagdeviation %}
-    {% else %}
-        {% assign tag = release.title %}
-    {% endif %}
-    {% assign version = release.title %}
-    cat: {{include.category}}<br>
-    inver: {{include.version}}<br>
-    rel: {{release.title}}<br>
-    tag: {{tag}}<br>
-    {% capture downloadtext %}
-        <span style="padding: 0 1rem">Download This Version<br>({{ version }})</span>
-    {% endcapture %}
+    {% assign releases = site.categories[{{include.category}}] | where:"title",{{include.version}} %}
+    {% for release in releases limit:1 %}
+        {% if release.tagdeviation %}
+            {% assign tag = release.tagdeviation %}
+        {% else %}
+            {% assign tag = release.title %}
+        {% endif %}
+        {% assign version = release.title %}
+        {% capture downloadtext %}
+            <span style="padding: 0 1rem">Download This Version<br>({{ version }})</span>
+        {% endcapture %}
+    {% endfor %}
 {% else %}
     {% for post in site.categories[{{include.category}}] limit:1 %}
         {% if post.tagdeviation %}
