@@ -8,7 +8,7 @@ coverposition: left bottom
 
 # Known Issues
 
-<div class="accordion accordion-flush" id="accordion">
+<div class="accordion accordion-flush mb-4" id="accordion">
 <h3>General</h3>
 
 {% capture issue %}
@@ -158,3 +158,9 @@ Autopilot modes cannot be triggered via keybindings or controllers and must curr
 {% endcapture %}
 {% include question.html id="simvars" q=issue a=answer %}
 </div>
+
+
+## Discord
+If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
+Please do however read the Guides extensively beforehand.
+{% include button.html text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}
