@@ -6,9 +6,13 @@
         {% assign tag = release.title %}
     {% endif %}
     {% assign version = release.title %}
-{% capture downloadtext %}
-<span style="padding: 0 1rem">Download This Version<br>({{ version }})</span>
-{% endcapture %}
+    cat: {{include.category}}<br>
+    inver: {{include.version}}<br>
+    rel: {{release.title}}<br>
+    tag: {{tag}}<br>
+    {% capture downloadtext %}
+        <span style="padding: 0 1rem">Download This Version<br>({{ version }})</span>
+    {% endcapture %}
 {% else %}
     {% for post in site.categories[{{include.category}}] limit:1 %}
         {% if post.tagdeviation %}
