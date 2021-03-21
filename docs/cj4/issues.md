@@ -108,7 +108,7 @@ This is not an issue but intended behaviour. In real life, you would only use PL
 {% endcapture %}
 {% capture answer %}
 If the non-US airport you are requesting weather for has a published METAR in real life, then it is very likely, that your weather source is set to FAA (Aviation administration limited to the US).
-1) Go to IDX > PAGE 2 > MOD SET > PAGE 2 > METAR SOURCE and toggle the setting from *FAA* to *VATSIM*
+1) Go to IDX -> PAGE 2 -> MOD SET -> PAGE 2 -> METAR SOURCE and toggle the setting from *FAA* to *VATSIM*
 {% endcapture %}
 {% include question.html id="faaweather" q=issue a=answer %}
 

@@ -6,14 +6,14 @@ coverimage: g1000.jpg
 ---
 
 # Working Title G1000
-Welcome to the latest version of the Working Title G1000 for Microsoft Flight Simulator. This mod provides a raft of bug-fixes and enhancements to the stock G1000 used in many of the sim's general aviation planes.<br>{% for post in site.categories["g1000"] limit:1 %}
+Welcome to the latest version of the Working Title G1000 for [Microsoft Flight Simulator](https://flightsimulator.com). This mod provides a raft of bug-fixes and enhancements to the stock G1000 used in many of the sim's general aviation planes.<br>{% for post in site.categories["g1000"] limit:1 %}
 <a class="btn btn-slanted btn-sliding" href="https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/g1000-{{post.title}}.zip"><span>Download Latest Version ({{post.title}})</span></a> <a class="btn btn-slanted btn-sliding" href="/g1000/releases"><span>Changelog and Older Versions</span></a>
 {% endfor %}
 
 Version 0.3.0 is developed for version 1.9.3.0 of the base sim, the version released on 29 September 2020.  Previous versions of the G1000 mod will not work with this version of the sim.
 
-This mod can be installed just like any other MSFS mod:  simply drag the `workingtitle-g1000` folder from the zip file into your flight simulator's `Community` directory.
-
+## Installation
+This mod can be installed just like any other MSFS mod:  simply drag the `workingtitle-g1000` folder from the zip file into your flight simulator's `Community` directory.<br>
 **Note:  Due to some changes in file structure it is important that you do not install v0.3.0 of this mod over an earlier version.**  If you had v0.2.0 or v0.2.1 installed please delete them completely before installing this version to avoid any potential problems.
 
 ## Key Changes
@@ -47,10 +47,6 @@ This is a somewhat complicated feature.  If you want to read more about it, chec
 ### Graphical updates
 
 Our UI experts have put a lot of effort into redoing a large chunk of the interface to bring it closer to reality.  You will find colors that are much more authentic along with adjustments to fonts and layout in a number of places that make your G1000 feel a little bit more like a real one.
-
-### And more...
-
-That's just the big ticket items.  There is plenty we have tweaked.  For full details, check out [CHANGES.md](CHANGES.md).
 
 ## What's next?
 
