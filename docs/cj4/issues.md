@@ -51,6 +51,14 @@ This is a limitation of this simulator's CJ4 model. While the necessary animatio
 {% endcapture %}
 {% include question.html id="nodoors" q=issue a=answer %}
 
+{% capture issue %}
+## I get **unexpected behaviour after loading/saving flight**.
+{% endcapture %}
+{% capture answer %}
+There are a lot of variables the Working Title CJ4 mod relies on that are not saved or loaded during the normal sim flight management. Because of this there is no workaround other than avoiding to load/save flights with the sim interface.
+{% endcapture %}
+{% include question.html id="loadingflights" q=issue a=answer %}
+
 
 
 <h3>Flight Controls</h3>
@@ -94,6 +102,16 @@ a) Make sure your flight model is set to  *Modern*.<br>
 b) Check the deadzone on your controller.
 {% endcapture %}
 {% include question.html id="constantbank" q=issue a=answer %}
+
+
+{% capture issue %}
+## My **plane overshoots tight turns in RNP approaches**.
+{% endcapture %}
+{% capture answer %}
+These overshoots are caused by the current autopilot bank rate limitations in the simulator and occur mostly in tight turns.<br>
+If you encounter this issue, we recommend hand flying the approach with the given lateral and vertical guidance.
+{% endcapture %}
+{% include question.html id="rnpovershoot" q=issue a=answer %}
 
 
 
@@ -145,10 +163,18 @@ At the moment, it is not possible to have the MFDs at different settings, becaus
 <h3>Navdata</h3>
 
 {% capture issue %}
+## I'm departing but a **"Heading to Altitude" fix doesn't switch after reaching the altitude**.
+{% endcapture %}
+{% capture answer %}
+Sometimes a heading to altitude instruction on takeoff will display further than the first RNAV fix on an RNAV departure procedure; in these cases the workaround is to cross-check the DP chart and remove the erroneous waypoint either by deleting the heading to altitude fix or dropping the first RNAV fix onto the magenta line in the LEGS page.
+{% endcapture %}
+{% include question.html id="hdgtoalt" q=issue a=answer %}
+
+{% capture issue %}
 ## I'm planning an approach but the **airport doesn't have any approaches** in the FMS.
 {% endcapture %}
 {% capture answer %}
-This is a Navdata issue of the Base Simulator.
+This is a Navdata issue of the Base Simulator and can't be fixed by us.
 {% endcapture %}
 {% include question.html id="noapproaches" q=issue a=answer %}
 
@@ -172,7 +198,6 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 {% endcapture %}
 {% include question.html id="nocharts" q=issue a=answer %}
 
-
 {% capture issue %}
 ## I can't connect to **SimBrief**, because I always get the message **WRONG PILOTID**.
 {% endcapture %}
@@ -186,6 +211,15 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 3) Now you must recall your flightplan.  Go to IDX -> Page 2 -> ROUTE MENU -> FPLN RECALL.  Once the flight plan has been imported, you'll be sent to the FPLN page to execute the changes. 
 {% endcapture %}
 {% include question.html id="wrongpilotid" q=issue a=answer %}
+
+{% capture issue %}
+## My **external application can't load the Flightplan from the simulator**.
+{% endcapture %}
+{% capture answer %}
+Some external applications that use the GPS/Flight plan SimVars may indeed not function correctly or as expected when FP SYNC is off.<br>
+To turn FP SYNC on, Press IDX -> Page 2 -> MOD SET -> FP SYNC.
+{% endcapture %}
+{% include question.html id="fpsync" q=issue a=answer %}
 
 
 
