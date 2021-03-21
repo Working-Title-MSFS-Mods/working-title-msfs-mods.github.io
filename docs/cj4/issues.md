@@ -69,7 +69,7 @@ The likely scenario is that you were climbing at too low an airspeed. Once you r
 {% endcapture %}
 {% capture answer %}
 This issue can be caused by two different things.<br>
-a) Make sure your flight model is set to  `Modern`.<br>
+a) Make sure your flight model is set to  *Modern*.<br>
 b) Check the deadzone on your controller.
 {% endcapture %}
 {% include question.html id="constantbank" q=issue a=answer %}
@@ -100,7 +100,7 @@ This might come as a surprise, but you are using an incompatible livery. Use the
 {% capture answer %}
 This is not an issue but intended behaviour. In real life, you would only use PLAN view for an overview of procedures and, as the name suggests, to plan your route. For keeping the map centered on your aircraft, please select PPOS mode.
 {% endcapture %}
-{% include question.html id="badlivery" q=issue a=answer %}
+{% include question.html id="plannotcentered" q=issue a=answer %}
 
 {% capture issue %}
 ## I **can't  I can't retrieve weather for non-US airports** via the Datalink function.

@@ -277,8 +277,24 @@ a:hover {
     background: #000;
 }
 
-.whitesection .btn-slanted{
+.whitesection .btn-slanted {
     margin: 15px;
+}
+
+.accordion-item p {
+    margin: 0;
+}
+
+.accordion-item h2 {
+    font-size: 1.25rem;
+}
+
+.accordion h3 {
+    margin-top: 2.5rem;
+}
+
+.accordion-item.active {
+    background: #b9ceff;
 }
 
 .footerbar {
