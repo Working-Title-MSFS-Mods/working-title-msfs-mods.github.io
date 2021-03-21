@@ -145,4 +145,16 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 3) Now you must recall your flightplan.  Go to IDX -> Page 2 -> ROUTE MENU -> FPLN RECALL.  Once the flight plan has been imported, you'll be sent to the FPLN page to execute the changes. 
 {% endcapture %}
 {% include question.html id="wrongpilotid" q=issue a=answer %}
+
+
+
+<h3>Hardware</h3>
+
+{% capture issue %}
+## I **can't control AP with hardware buttons**.
+{% endcapture %}
+{% capture answer %}
+Autopilot modes cannot be triggered via keybindings or controllers and must currently be triggered in the cockpit with the mouse. External binding applications are adding support for LVars and HEvents. Used SimVars are documented in our [Guide on SimVars](/cj4/guides/simvars).
+{% endcapture %}
+{% include question.html id="simvars" q=issue a=answer %}
 </div>

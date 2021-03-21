@@ -1,9 +1,11 @@
 
 function customscroll(type, element = false) {
+    var offset = 120;
     if (type == "content-top") {
         element = document.getElementsByClassName("whitesection")[0];
+        offset = 200;
     }
-    const y = element.getBoundingClientRect().top + window.pageYOffset - 200;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
 
     window.scrollTo({ top: y, behavior: 'smooth' });
     return false;
