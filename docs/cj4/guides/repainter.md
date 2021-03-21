@@ -51,7 +51,7 @@ alias=Asobo_CJ4\panel.noreg
 
 ## SUBMIT
 If you have followed those steps and wish to have your livery featured in our [List of Compatible Liveries](/cj4/repaints), you can fill out the following form.
-{% include button.html text="Submit your livery for review" url="https://forms.gle/kz9mNdQWWxCk1TvDA" blank=true %}
+{% include button.html break=true text="Submit your livery for review" url="https://forms.gle/kz9mNdQWWxCk1TvDA" blank=true %}
 
 
 ## ⚠️ NOTE

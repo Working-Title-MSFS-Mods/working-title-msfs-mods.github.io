@@ -17,34 +17,8 @@
     }
 </style>
 
-{% for post in site.categories["cj4"] limit:1 %}
-{% assign latest = post.title %}
-{% endfor %}
-
-{% capture downloadurl %}
-https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/{{include.category}}-{{include.current}}.zip
-{% endcapture %}
-
-{% capture downloadtext %}
-<span style="padding: 0 1rem">Download This Version<br>({{ include.current }})</span>
-{% endcapture %}
-
-{% if include.category == "gx" %}
-{% assign category = "g3x" %}
-{% else %}
-{% assign category = include.category %}
-{% endif %}
 <div class="releaselist">
-    <p>{% include button.html text=downloadtext url=downloadurl fullwidth=true %}</p>
-    {% if include.current == latest %}
-    <h3>Older Releases</h3>
-    <ul>
-        {% for post in site.categories[category] offset:1 %}
-        <li {% if post.title==include.current %}class="active" {% endif %}><a href="{{ post.url }}">{{ post.title
-                }}</a></b></li>
-        {% endfor %}
-    </ul>
-    {% else %}
+    <p>{% include downloadbutton.html category=include.category version=include.current fullwidth=true %}</p>
     <h3>All Releases</h3>
     <ul>
         {% for post in site.categories[category] %}
@@ -52,5 +26,4 @@ https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/{{includ
                 }}</a></b></li>
         {% endfor %}
     </ul>
-    {% endif %}
 </div>

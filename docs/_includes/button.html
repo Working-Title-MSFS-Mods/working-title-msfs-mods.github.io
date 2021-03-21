@@ -1,1 +1,1 @@
-<br><a href="{{ include.url }}" class="btn btn-slanted btn-sliding{% if include.fullwidth %} w-100{% endif %}" {% if include.blank %}target="_blank"{% endif %}><span>{{ include.text }}</span></a>
+{% if include.break %}<br>{% endif %}<a href="{{ include.url }}" class="btn btn-slanted btn-sliding{% if include.fullwidth %} w-100{% endif %}" {% if include.blank %}target="_blank"{% endif %}><span>{{ include.text }}</span></a>

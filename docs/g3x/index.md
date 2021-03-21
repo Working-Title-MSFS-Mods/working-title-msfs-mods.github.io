@@ -6,9 +6,9 @@ coverimage: g3x.jpg
 ---
 # Working Title G3X
 
-This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.<br>{% for post in site.categories["g3x"] limit:1 %}
-<a class="btn btn-slanted btn-sliding" href="https://github.com/Working-Title-MSFS-Mods/fspackages/archive/refs/tags/gx-{{post.title}}.zip"><span>Download Latest Version ({{post.title}})</span></a> <a class="btn btn-slanted btn-sliding" href="/g3x/releases"><span>Changelog and Older Versions</span></a>
-{% endfor %}
+This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.
+{% include downloadbutton.html category="g3x" %}
+{% include button.html text="Changelog and Older Versions" url="/g3x/releases" %}
 
 
 ## Installation

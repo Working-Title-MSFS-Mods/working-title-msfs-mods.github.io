@@ -32,4 +32,4 @@ This problem usually occurs when a subfolder was created during extraction of th
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
 Please do however read the Guides extensively beforehand.
-{% include button.html text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}
+{% include button.html break=true text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}

@@ -150,4 +150,4 @@ This behaviour is the result of a logical flaw in the way [Microsoft Flight Simu
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
 Please do however read the Guides extensively beforehand.
-{% include button.html text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}
+{% include button.html break=true text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}

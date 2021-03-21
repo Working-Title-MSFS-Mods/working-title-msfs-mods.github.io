@@ -1,0 +1,33 @@
+{% if include.version %}
+    {% assign release = site.categories[{{include.category}}] | find: "title", {{include.version}} %}
+    {% if release.tagdeviation %}
+        {% assign tag = release.tagdeviation %}
+    {% else %}
+        {% assign tag = release.title %}
+    {% endif %}
+    {% assign version = release.title %}
+{% capture downloadtext %}
+<span style="padding: 0 1rem">Download This Version<br>({{ version }})</span>
+{% endcapture %}
+{% else %}
+    {% for post in site.categories[{{include.category}}] limit:1 %}
+        {% if post.tagdeviation %}
+            {% assign tag = post.tagdeviation %}
+        {% else %}
+            {% assign tag = post.title %}
+        {% endif %}
+        {% assign version = post.title %}
+    {% endfor %}
+    {% capture downloadtext %}
+        <span style="padding: 0 1rem">Download Latest Version<br>({{ version }})</span>
+    {% endcapture %}
+{% endif %}
+{% if include.category == "g3x" %}
+    {% assign category = "gx" %}
+{% else %}
+    {% assign category = include.category %}
+{% endif %}
+{% capture downloadurl %}
+    https://github.com/Working-Title-MSFS-Mods/fspackages/releases/download/{{ category }}-{{ tag }}/workingtitle-{{ category }}-{{ version }}.zip
+{% endcapture %}
+<a href="{{ downloadurl }}" class="btn btn-slanted btn-sliding{% if include.fullwidth %} w-100{% endif %}"><span>{{ downloadtext }}</span></a>
