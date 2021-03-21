@@ -34,6 +34,7 @@ This is a limitation of this simulator's CJ4 model. While the necessary animatio
 
 
 <h3>Flight Controls</h3>
+
 {% capture issue %}
 ## My **throttles do not move**.
 {% endcapture %}
@@ -121,6 +122,26 @@ At the moment, it is not possible to have the MFDs at different settings, becaus
 
 
 
+<h3>Navdata</h3>
+
+{% capture issue %}
+## I'm planning an approach but the **airport doesn't have any approaches** in the FMS.
+{% endcapture %}
+{% capture answer %}
+This is a Navdata issue of the Base Simulator.
+{% endcapture %}
+{% include question.html id="noapproaches" q=issue a=answer %}
+
+{% capture issue %}
+## I'm planning an approach but the **RF and DME ARC legs don't render correctly**.
+{% endcapture %}
+{% capture answer %}
+RF and DME ARC legs are not yet supported in the Working Title CJ4, but we are looking to introduce them in a future update.
+{% endcapture %}
+{% include question.html id="dmearcs" q=issue a=answer %}
+
+
+
 <h3>External Connections</h3>
 
 {% capture issue %}
@@ -148,7 +169,15 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 
 
 
-<h3>Hardware</h3>
+<h3>Hardware / Buttons</h3>
+
+{% capture issue %}
+## I **can only increment HDG/ALT/SPD in multiples of 10s/100s**.
+{% endcapture %}
+{% capture answer %}
+This behaviour is the result of a logical flaw in the way [Microsoft Flight Simulator](https://flightsimulator.com) handles buttons. You can find a [Workaround on the official forums](https://forums.flightsimulator.com/t/heading-increment-bug-10-degree-instead-of-1-explained/290173).
+{% endcapture %}
+{% include question.html id="bigincrements" q=issue a=answer %}
 
 {% capture issue %}
 ## I **can't control AP with hardware buttons**.
