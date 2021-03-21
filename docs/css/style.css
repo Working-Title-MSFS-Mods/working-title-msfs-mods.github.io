@@ -209,9 +209,9 @@ h1 {
     font-size: calc( 18px + 4vw);
 }
 
-p {
+/* p {
     margin-bottom: 2.5rem;
-}
+} */
 
 a, a:active, a:focus {
     color: #4586e6;
