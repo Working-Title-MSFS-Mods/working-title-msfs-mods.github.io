@@ -5,25 +5,23 @@ title: Guides
 coverimage: cj4_fms.jpg
 coverposition: 38% 48%
 ---
+
 # Sim Variables
 _This list is always subject to change_
 
-Since our AP runs independent from the sim AP you can no longer use the default K Events to trigger AP modes.
+Since our AP runs independent from the sim AP you can no longer use the default K Events to trigger AP modes.<br>Our AP mode indicators are L-Vars while their triggers for AP modes and other peripheral buttons are H-Events, both of which the stock SimConnect has no access to.<br> External apps seem to be adding modules which would support LVars and HEvents. So ask the developer of your external binding application to add this feature.
 
-**For the AP variables like HDG, Alt preselect, VS you must use the K events with indexes. These should usually go to index '1'**
 
-## AP Mode triggers
-The triggers for AP modes are H Events which stock SimConnect has no access to. External apps seem to be adding modules which would support LVars and HEvents. So ask the developer of your external binding application to add this feature.
+**For the AP variables like HDG, Alt preselect, VS you must use the K events with indexes. These should usually go to index "1".**
 
-* HDG - `H:WT_CJ4_AP_HDG_PRESSED`
-* LNAV - `H:WT_CJ4_AP_NAV_PRESSED`
-* APPR - `H:WT_CJ4_AP_APPR_PRESSED`
-* VNAV - `H:WT_CJ4_AP_VNAV_PRESSED`
-* VS - `H:WT_CJ4_AP_VS_PRESSED`
-* FLC - `H:WT_CJ4_AP_FLC_PRESSED`
 
+<div class="accordion accordion-flush mb-4" id="accordion">
+<h3>L-Vars (read-only)</h3>
+
+{% capture group %}
 ## AP Mode indicators
-The indication for active AP modes is run via LVars (read-only)
+{% endcapture %}
+{% capture details %}
 
 * HDG - `L:WT_CJ4_HDG_ON`
 * LNAV - `L:WT_CJ4_NAV_ON`
@@ -31,8 +29,29 @@ The indication for active AP modes is run via LVars (read-only)
 * VNAV - `L:WT_CJ4_VNAV_ON`
 * VS - `L:WT_CJ4_VS_ON`
 * FLC - `L:WT_CJ4_FLC_ON`
+{% endcapture %}
+{% include question.html id="apmodes" q=group a=details %}
 
+<h3>H-Events</h3>
+
+{% capture group %}
+## AP Mode triggers
+{% endcapture %}
+{% capture details %}
+
+* HDG - `H:WT_CJ4_AP_HDG_PRESSED`
+* LNAV - `H:WT_CJ4_AP_NAV_PRESSED`
+* APPR - `H:WT_CJ4_AP_APPR_PRESSED`
+* VNAV - `H:WT_CJ4_AP_VNAV_PRESSED`
+* VS - `H:WT_CJ4_AP_VS_PRESSED`
+* FLC - `H:WT_CJ4_AP_FLC_PRESSED`
+{% endcapture %}
+{% include question.html id="aptriggers" q=group a=details %}
+
+{% capture group %}
 ## Upper panel (above PFD)
+{% endcapture %}
+{% capture details %}
 * `H:Generic_Upr_Push_NAV`
 * `H:Generic_Upr_Push_PFD_MENU`
 * `H:Generic_Upr_RANGE_INC` (Map Zoom)
@@ -48,8 +67,14 @@ The indication for active AP modes is run via LVars (read-only)
 * `H:Generic_Upr_Push_TERR_WX`
 * `H:Generic_Upr_Push_TFC`
 * `H:Generic_Upr_Push_REFS_MENU`
+{% endcapture %}
+{% include question.html id="upperbuttons" q=group a=details %}
 
+
+{% capture group %}
 ## Lower panel (below MFD)
+{% endcapture %}
+{% capture details %}
 * `H:Generic_Lwr_Push_MEM1_1`
 * `H:Generic_Lwr_Push_MEM2_1`
 * `H:Generic_Lwr_Push_MEM3_1`
@@ -73,8 +98,13 @@ The indication for active AP modes is run via LVars (read-only)
 * `H:Generic_Lwr_Data_INC`
 * `H:Generic_Lwr_DATA_PUSH`
 * `H:Generic_Lwr_DATA_PUSH_LONG`
+{% endcapture %}
+{% include question.html id="lowerbuttons" q=group a=details %}
 
+{% capture group %}
 ## FMC Buttons
+{% endcapture %}
+{% capture details %}
 * `H:CJ4_FMC_1_BTN_IDX`
 * `H:CJ4_FMC_1_BTN_MSG`
 * `H:CJ4_FMC_1_BTN_DIR`
@@ -142,5 +172,8 @@ The indication for active AP modes is run via LVars (read-only)
 * `H:CJ4_FMC_1_BTN_DOT`
 * `H:CJ4_FMC_1_BTN_PLUSMINUS`
 * `H:CJ4_FMC_1_BTN_DIV`
+{% endcapture %}
+{% include question.html id="fmcbuttons" q=group a=details %}
+</div>
 
 _Thanks to Reongard for providing the PFD and FMC events_
