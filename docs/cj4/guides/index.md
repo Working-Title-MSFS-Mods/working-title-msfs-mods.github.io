@@ -2,8 +2,8 @@
 layout: cj4
 permalink: /cj4/guides/
 title: Guides
-coverimage: cockpit.jpg
-coverposition: center 45%
+coverimage: cj4_coldanddark.jpg
+coverposition: 50% 60%
 ---
 
 # Guides

@@ -1,9 +1,9 @@
 ---
 layout: cj4
 permalink: /cj4/guides/simvars
-title: Guide on SimVars
-coverimage: cockpit.jpg
-coverposition: center 45%
+title: Guides
+coverimage: cj4_fms.jpg
+coverposition: 38% 48%
 ---
 # Sim Variables
 _This list is always subject to change_
@@ -75,7 +75,7 @@ The indication for active AP modes is run via LVars (read-only)
 * `H:Generic_Lwr_DATA_PUSH_LONG`
 
 ## FMC Buttons
-* ``H:CJ4_FMC_1_BTN_IDX`
+* `H:CJ4_FMC_1_BTN_IDX`
 * `H:CJ4_FMC_1_BTN_MSG`
 * `H:CJ4_FMC_1_BTN_DIR`
 * `H:CJ4_FMC_1_BTN_TUN`
