@@ -10,7 +10,7 @@
         <div class="accordion-body">
             <div class="accordion-id alert alert-primary" role="alert">
                 <div>
-                    {% capture fullurl %}{{ site.url }}{{ page.url }}#{{ include.id }}{% endcapture %}
+                    {% capture fullurl %}{{ site.url | replace: "http:", "https:" }}{{ page.url }}#{{ include.id }}{% endcapture %}
                     URL for Hotlinking: <a href="{{ fullurl }}">{{ fullurl }}</a>
                 </div>
                 <a class="btn btn-slanted btn-sliding" onclick="copytoclipboard('{{fullurl  | stringify}}', this)">
