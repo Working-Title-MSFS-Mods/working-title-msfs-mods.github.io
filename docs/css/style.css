@@ -297,6 +297,15 @@ a:hover {
     background: #b9ceff;
 }
 
+.accordion-id{
+    display: none;
+}
+
+.showurls .accordion-id{
+    display: block;
+    padding: 1rem 1.25rem;
+}
+
 .footerbar {
     position: relative;
     min-height: 60px;

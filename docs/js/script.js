@@ -28,11 +28,16 @@ document.onreadystatechange = function () {
 
         if (window.location.hash) {
             var hash = window.location.hash.substr(1);
-            var element = document.getElementById(hash)
-            customscroll("element", element);
-            element.classList.add("active");
-            console.log(document.getElementById(hash + "-collapse"));
-            document.getElementById(hash + "-collapse").classList.add("show");
+            if(hash == "showurls"){
+                let accordion = document.getElementsByClassName("accordion")[0];
+                accordion.classList.add("showurls");
+            }else{
+                var element = document.getElementById(hash)
+                customscroll("element", element);
+                element.classList.add("active");
+                console.log(document.getElementById(hash + "-collapse"));
+                document.getElementById(hash + "-collapse").classList.add("show");
+            }
         };
 
         toggle.addEventListener('click', function (e) {
