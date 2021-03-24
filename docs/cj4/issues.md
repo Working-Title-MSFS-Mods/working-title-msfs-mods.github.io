@@ -41,7 +41,7 @@ This problem usually occurs when a subfolder was created during extraction of th
 Check that you are using the latest version ({{latest}}) of the mod.<br>
 v0.8.2 or earlier are no longer compatible with the current version of [Microsoft Flight Simulator](https://flightsimulator.com).
 {% endcapture %}
-{% include accordionitem.html id="test" h=issue c=answer %}
+{% include accordionitem.html id="invisiblecockpit" h=issue c=answer %}
 
 {% capture issue %}
 ## I **can't open then door**.
