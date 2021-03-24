@@ -8,7 +8,16 @@
     <div id="{{ include.id }}-collapse" class="accordion-collapse collapse" aria-labelledby="{{ include.id }}"
         data-bs-parent="#accordion">
         <div class="accordion-body">
-            <div class="accordion-id"><a href="{{ site.url }}{{ page.url }}#{{ include.id }}">{{ site.url }}{{ page.url }}#{{ include.id }}</a></div>
+            <div class="accordion-id alert alert-primary" role="alert">
+                <div>
+                    {% capture fullurl %}{{ site.url }}{{ page.url }}#{{ include.id }}{% endcapture %}
+                    URL for Hotlinking: <a href="{{ fullurl }}">{{ fullurl }}</a>
+                </div>
+                <a class="btn btn-slanted btn-sliding" onclick="copytoclipboard('{{fullurl  | stringify}}', this)">
+                    <input type="text" class="copyinput" value="{{ fullurl }}">
+                    <span>Copy to Clipboard</span>
+                </a>
+            </div>
             {{ include.c | markdownify}}
         </div>
     </div>

@@ -297,13 +297,27 @@ a:hover {
     background: #b9ceff;
 }
 
-.accordion-id{
+.accordion-id {
     display: none;
 }
 
-.showurls .accordion-id{
-    display: block;
-    padding: 1rem 1.25rem;
+.showurls .accordion-id {
+    display: flex;
+    padding: 0 1.25rem;
+    justify-content: space-between;
+}
+
+.showurls .accordion-id>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyinput{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
 }
 
 .footerbar {

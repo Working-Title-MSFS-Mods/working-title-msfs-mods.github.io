@@ -1,3 +1,13 @@
+function copytoclipboard(text, element) {
+    console.log(element.getElementsByTagName("input"));
+    var copyText = element.getElementsByTagName("input")[0];
+  
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+  
+    element.getElementsByTagName("span")[0].innerHTML = "Copied to Clipboard";
+  }
 
 function customscroll(type, element = false) {
     var offset = 120;
