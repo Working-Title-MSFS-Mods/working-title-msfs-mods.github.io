@@ -53,15 +53,22 @@ coverposition: 25% 75%
         <tr>
             <!-- <th>Preview</th> -->
             <th>Name</th>
+            <th>Registration</th>
             <th>Creator</th>
             <th>Download</th>
         </tr>
     </thead>
     <tbody>
+        {% capture dynamic %}*Dynamic*{% endcapture %}
         {% for exterior in site.data.exteriors %}
         <tr>
             <!-- <td></td> -->
             <td>{{ exterior.name }}</td>
+            {% if exterior.registration %}
+            <td>{{ exterior.registration }}</td>
+            {% else %}
+            <td>{{ dynamic | markdownify }}</td>
+            {% endif %}
             <td>{{ exterior.creator }}</td>
             <td><a href="{{ exterior.url }}" target="_blank"
                     class="btn btn-slanted btn-sliding"><span>Download</span></a></td>

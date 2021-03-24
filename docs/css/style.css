@@ -108,6 +108,10 @@ body {
     color: #000;
 }
 
+td p {
+    margin: 0;
+}
+
 .section:last-of-type {
     margin-bottom: 0;
 }
