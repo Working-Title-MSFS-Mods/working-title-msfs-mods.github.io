@@ -30,7 +30,7 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * VS - `L:WT_CJ4_VS_ON`
 * FLC - `L:WT_CJ4_FLC_ON`
 {% endcapture %}
-{% include question.html id="apmodes" q=group a=details %}
+{% include accordionitem.html id="apmodes" h=group c=details %}
 
 <h3>H-Events</h3>
 
@@ -46,7 +46,7 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * VS - `H:WT_CJ4_AP_VS_PRESSED`
 * FLC - `H:WT_CJ4_AP_FLC_PRESSED`
 {% endcapture %}
-{% include question.html id="aptriggers" q=group a=details %}
+{% include accordionitem.html id="aptriggers" h=group c=details %}
 
 {% capture group %}
 ## Upper panel (above PFD)
@@ -68,7 +68,7 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * `H:Generic_Upr_Push_TFC`
 * `H:Generic_Upr_Push_REFS_MENU`
 {% endcapture %}
-{% include question.html id="upperbuttons" q=group a=details %}
+{% include accordionitem.html id="upperbuttons" h=group c=details %}
 
 
 {% capture group %}
@@ -98,8 +98,10 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * `H:Generic_Lwr_Data_INC`
 * `H:Generic_Lwr_DATA_PUSH`
 * `H:Generic_Lwr_DATA_PUSH_LONG`
+* `H:Generic_Lwr_MENU_ADV_DEC`
+* `H:Generic_Lwr_MENU_ADV_INC`
 {% endcapture %}
-{% include question.html id="lowerbuttons" q=group a=details %}
+{% include accordionitem.html id="lowerbuttons" h=group c=details %}
 
 {% capture group %}
 ## FMC Buttons
@@ -173,7 +175,7 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * `H:CJ4_FMC_1_BTN_PLUSMINUS`
 * `H:CJ4_FMC_1_BTN_DIV`
 {% endcapture %}
-{% include question.html id="fmcbuttons" q=group a=details %}
+{% include accordionitem.html id="fmcbuttons" h=group c=details %}
 </div>
 
 _Thanks to Reongard for providing the PFD and FMC events_
