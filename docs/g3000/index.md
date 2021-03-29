@@ -22,8 +22,8 @@ If you want to enable the road display for the navigation map, you must also dow
 Certain mod settings can be customized via a configuration file which is located at `workingtitle-g3000\html_ui\WTg3000.cfg`. Documentation for the various settings can be found in the file itself. If you make changes to the file while the game is running, you must restart the game for the changes to take effect.
 
 ## Credits
-- Custom city database is sourced from [simplemaps](simplemaps.com/data/world-cities) under the CC Attribution 4.0 license.
-- Border data is sourced from [Natural Earth](www.naturalearthdata.com).
+- Custom city database is sourced from [simplemaps](https://simplemaps.com/data/world-cities) under the CC Attribution 4.0 license.
+- Border data is sourced from [Natural Earth](https://naturalearthdata.com).
 - Thank you to StuTozer/ElectrikKar for allowing us to integrate his Touchscreen Restyled Mod.
 - This mod uses the Roboto font (designed by Christian Robertson), licensed under Apache 2.0.
 - This mod uses the d3-array, d3-geo, and topojson libraries.
