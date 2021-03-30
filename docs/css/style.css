@@ -134,14 +134,14 @@ td p {
 .coversection:not(#cover_home) h1 {
     font-size: 10vw;
     position: absolute;
-    bottom: -2.6vw;
+    bottom: calc(-2vw - 6px);
     right: 5%;
 }
 
 @media (max-width: 992px) {
     .coversection:not(#cover_home) h1 {
         font-size: 15vw;
-        bottom: -4.6vw;
+        bottom: calc(-3vw - 6px);
     }
 }
 
