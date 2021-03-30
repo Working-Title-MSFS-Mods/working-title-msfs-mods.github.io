@@ -142,7 +142,7 @@ This is not an issue but intended behaviour. In real life, you would only use PL
 {% include accordionitem.html id="plannotcentered" h=issue c=answer %}
 
 {% capture issue %}
-## I **can't  I can't retrieve weather for non-US airports** via the Datalink function.
+## I **can't retrieve weather for non-US airports** via the Datalink function.
 {% endcapture %}
 {% capture answer %}
 If the non-US airport you are requesting weather for has a published METAR in real life, then it is very likely, that your weather source is set to FAA (Aviation administration limited to the US).
