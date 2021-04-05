@@ -51,7 +51,6 @@ coverposition: 25% 75%
 <table class="table table-striped table-hover align-middle">
     <thead>
         <tr>
-            <!-- <th>Preview</th> -->
             <th>Name</th>
             <th>Registration</th>
             <th>Creator</th>
@@ -62,7 +61,6 @@ coverposition: 25% 75%
         {% capture dynamic %}*Dynamic*{% endcapture %}
         {% for exterior in site.data.exteriors %}
         <tr>
-            <!-- <td></td> -->
             <td>{{ exterior.name }}</td>
             {% if exterior.registration %}
             <td>{{ exterior.registration }}</td>
