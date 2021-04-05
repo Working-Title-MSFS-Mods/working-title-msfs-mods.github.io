@@ -27,16 +27,23 @@ coverposition: 25% 75%
 <table class="table table-striped table-hover align-middle">
     <thead>
         <tr>
-            <!-- <th>Preview</th> -->
+            <th>Preview</th>
             <th>Name</th>
             <th>Creator</th>
             <th>Download</th>
         </tr>
     </thead>
     <tbody>
+        {% capture noimage %}*No image*{% endcapture %}
         {% for interior in site.data.interiors %}
         <tr>
-            <!-- <td></td> -->
+            {% if interior.image %}
+            <td>
+                <img src="{{ interior.image }}" width="275" alt="Picture of this mod">
+            </td>
+            {% else %}
+            <td>{{ noimage | markdownify }}</td>
+            {% endif %}
             <td>{{ interior.name }}</td>
             <td>{{ interior.creator }}</td>
             <td><a href="{{ interior.url }}" target="_blank"
@@ -51,6 +58,7 @@ coverposition: 25% 75%
 <table class="table table-striped table-hover align-middle">
     <thead>
         <tr>
+            <th>Preview</th>
             <th>Name</th>
             <th>Registration</th>
             <th>Creator</th>
@@ -61,6 +69,13 @@ coverposition: 25% 75%
         {% capture dynamic %}*Dynamic*{% endcapture %}
         {% for exterior in site.data.exteriors %}
         <tr>
+            {% if exterior.image %}
+            <td>
+                <img src="{{ exterior.image }}" width="275" alt="Picture of this livery">
+            </td>
+            {% else %}
+            <td>{{ noimage | markdownify }}</td>
+            {% endif %}
             <td>{{ exterior.name }}</td>
             {% if exterior.registration %}
             <td>{{ exterior.registration }}</td>
