@@ -1,5 +1,5 @@
 ---
-layout: g3x
+layout: main
 permalink: /g3x/
 title: Intro
 coverimage: g3x.jpg

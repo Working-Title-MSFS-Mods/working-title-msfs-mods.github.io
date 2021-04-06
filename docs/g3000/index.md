@@ -1,5 +1,5 @@
 ---
-layout: g3000
+layout: main
 permalink: /g3000/
 title: Intro
 coverimage: g3000.jpg

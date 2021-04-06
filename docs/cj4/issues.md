@@ -1,5 +1,5 @@
 ---
-layout: cj4
+layout: main
 permalink: /cj4/issues
 title: Known Issues
 coverimage: masterwarn.jpg

@@ -1,5 +1,5 @@
 ---
-layout: cj4
+layout: main
 permalink: /cj4/guides/
 title: Guides
 coverimage: cj4_coldanddark.jpg

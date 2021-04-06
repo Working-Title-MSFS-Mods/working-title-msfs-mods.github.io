@@ -1,5 +1,5 @@
 ---
-layout: g3x
+layout: main
 permalink: /g3x/issues
 title: Known Issues
 coverimage: masterwarn.jpg
