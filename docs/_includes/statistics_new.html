@@ -43,52 +43,52 @@
         }, frameDuration);
     };
 
-    function parse_link_header(header) {
-        var parts = header.split(',');
-        var links = {};
+    // function parse_link_header(header) {
+    //     var parts = header.split(',');
+    //     var links = {};
 
-        for (i = 0; i < parts.length; i++) {
-            var section = parts[i].split(';');
-            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
-            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
-            links[name] = url;
-        }
+    //     for (i = 0; i < parts.length; i++) {
+    //         var section = parts[i].split(';');
+    //         var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
+    //         var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+    //         links[name] = url;
+    //     }
 
-        return links;
-    }
+    //     return links;
+    // }
 
-    function createBarChart(labels, data) {
-        var ctx = document.getElementById('releaseDownloads').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Downloads per Release',
-                    data: data,
-                    backgroundColor: [
-                        '#0d6efd50'
-                    ],
-                    borderColor: [
-                        '#4586e6'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-    }
+    // function createBarChart(labels, data) {
+    //     var ctx = document.getElementById('releaseDownloads').getContext('2d');
+    //     var myChart = new Chart(ctx, {
+    //         type: 'bar',
+    //         data: {
+    //             labels: labels,
+    //             datasets: [{
+    //                 label: 'Downloads per Release',
+    //                 data: data,
+    //                 backgroundColor: [
+    //                     '#0d6efd50'
+    //                 ],
+    //                 borderColor: [
+    //                     '#4586e6'
+    //                 ],
+    //                 borderWidth: 1
+    //             }]
+    //         },
+    //         options: {
+    //             scales: {
+    //                 y: {
+    //                     beginAtZero: true
+    //                 }
+    //             },
+    //             plugins: {
+    //                 legend: {
+    //                     display: false
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
 
     function handleResponse(response) {
         return response.json()
@@ -137,7 +137,7 @@
             animateCountUp(document.getElementById("downloads"), stats["total"]["downloads"]);
             animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
             animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
-            createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
+            // createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
         })
         .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
 
@@ -149,21 +149,10 @@
         })
         .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
     // fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
-    //     .then(function (response) {
-    //         if (response.ok) {
-    //             stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"])
-    //             return response.json()
-    //         } else {
-    //             return Promise.reject(Object.assign({}, json, {
-    //                 status: response.status,
-    //                 statusText: response.statusText
-    //             }))
-    //         }
-    //     })
+    //     .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
     //     .then(function () {
     //         animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
     //     })
-    //     .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
         .then(handleResponse)
         .then(data => {
