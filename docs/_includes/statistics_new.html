@@ -57,38 +57,38 @@
     //     return links;
     // }
 
-    // function createBarChart(labels, data) {
-    //     var ctx = document.getElementById('releaseDownloads').getContext('2d');
-    //     var myChart = new Chart(ctx, {
-    //         type: 'bar',
-    //         data: {
-    //             labels: labels,
-    //             datasets: [{
-    //                 label: 'Downloads per Release',
-    //                 data: data,
-    //                 backgroundColor: [
-    //                     '#0d6efd50'
-    //                 ],
-    //                 borderColor: [
-    //                     '#4586e6'
-    //                 ],
-    //                 borderWidth: 1
-    //             }]
-    //         },
-    //         options: {
-    //             scales: {
-    //                 y: {
-    //                     beginAtZero: true
-    //                 }
-    //             },
-    //             plugins: {
-    //                 legend: {
-    //                     display: false
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }
+    function createBarChart(labels, data) {
+        var ctx = document.getElementById('releaseDownloads').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Downloads per Release',
+                    data: data,
+                    backgroundColor: [
+                        '#0d6efd50'
+                    ],
+                    borderColor: [
+                        '#4586e6'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
 
     function handleResponse(response) {
         return response.json()
