@@ -13,6 +13,7 @@
         <h4>Downloads</h4>
     </div>
 </div>
+<div id="error" class="bg-danger" style="word-break: break-all;"></div>
 <div class="row mt-4">
     <div class="col text-center">
         <canvas id="releaseDownloads"></canvas>
@@ -42,51 +43,68 @@
         }, frameDuration);
     };
 
-    function parse_link_header(header) {
-        var parts = header.split(',');
-        var links = {};
+    // function parse_link_header(header) {
+    //     var parts = header.split(',');
+    //     var links = {};
 
-        for (i = 0; i < parts.length; i++) {
-            var section = parts[i].split(';');
-            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
-            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
-            links[name] = url;
-        }
+    //     for (i = 0; i < parts.length; i++) {
+    //         var section = parts[i].split(';');
+    //         var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
+    //         var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+    //         links[name] = url;
+    //     }
 
-        return links;
-    }
+    //     return links;
+    // }
 
-    function createBarChart(labels, data) {
-        var ctx = document.getElementById('releaseDownloads').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Downloads per Release',
-                    data: data,
-                    backgroundColor: [
-                        '#0d6efd50'
-                    ],
-                    borderColor: [
-                        '#4586e6'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
+    // function createBarChart(labels, data) {
+    //     var ctx = document.getElementById('releaseDownloads').getContext('2d');
+    //     var myChart = new Chart(ctx, {
+    //         type: 'bar',
+    //         data: {
+    //             labels: labels,
+    //             datasets: [{
+    //                 label: 'Downloads per Release',
+    //                 data: data,
+    //                 backgroundColor: [
+    //                     '#0d6efd50'
+    //                 ],
+    //                 borderColor: [
+    //                     '#4586e6'
+    //                 ],
+    //                 borderWidth: 1
+    //             }]
+    //         },
+    //         options: {
+    //             scales: {
+    //                 y: {
+    //                     beginAtZero: true
+    //                 }
+    //             },
+    //             plugins: {
+    //                 legend: {
+    //                     display: false
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+
+    function handleResponse(response) {
+        return response.json()
+            .then(json => {
+                if (response.ok) {
+                    console.log("TEST1");
+                    return json
+                } else {
+                    console.log("TEST");
+                    console.log(response);
+                    return Promise.reject(Object.assign({}, json, {
+                        status: response.status,
+                        statusText: response.statusText
+                    }))
                 }
-            }
-        });
+            })
     }
 
     var stats = {};
@@ -99,18 +117,53 @@
     stats["{{include.category}}"] = {};
     stats["{{include.category}}"]["releases"] = {};
     stats["{{include.category}}"]["downloads"] = 0;
+    fetch('https://api.github.com/repos/orking-Title-MSFS-Mods/fspackages/releases?per_page=100')
+        .then(handleResponse)
+        .then(data => {
+            data.forEach(element => {
+                stats["total"]["releases"] += 1
+                let downloads = 0
+                if (element["assets"].length > 0) {
+                    downloads = element["assets"][0]["download_count"]
+                }
+                stats["total"]["downloads"] += downloads;
+                if (element["name"].includes("{{include.category}}")) {
+                    let tag = element["name"].replace("{{include.category}}-", "");
+                    stats["{{include.category}}"]["releases"][tag] = {};
+                    stats["{{include.category}}"]["releases"][tag] = downloads;
+                    stats["{{include.category}}"]["downloads"] += downloads;
+                }
+            });
+        })
+        .then(function () {
+            animateCountUp(document.getElementById("releases"), stats["total"]["releases"]);
+            animateCountUp(document.getElementById("downloads"), stats["total"]["downloads"]);
+            animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
+            animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
+            // createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
+        })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = JSON.parse(this.responseText);
-            Object.entries(data).forEach(element => {
-                stats["total"]["languages"][element[0]] = element[1] / 1000
-                stats["total"]["size"] += element[1] / 1000
-            })
-            animateCountUp(document.getElementById("languages"), Object.keys(stats["total"]["languages"]).length);
-        }
-    };
-    xhttp.open("GET", "https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages", true);
-    xhttp.send();
+    // fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/contributors?per_page=100')
+    //     .then(response => response.json())
+    //     .then(data => stats["total"]["contributors"] = data.length)
+    //     .then(function () {
+    //         animateCountUp(document.getElementById("contributors"), stats["total"]["contributors"])
+    //     });
+    // fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
+    //     .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
+    //     .then(function () {
+    //         animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
+    //     })
+    // fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         Object.entries(data).forEach(element => {
+    //             stats["total"]["languages"][element[0]] = element[1] / 1000
+    //             stats["total"]["size"] += element[1] / 1000
+    //         })
+    //     })
+    //     .then(function () {
+    //         animateCountUp(document.getElementById("languages"), Object.keys(stats["total"]["languages"]).length);
+    //     });
 </script>
