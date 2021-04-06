@@ -8,7 +8,7 @@
         <h1 id="{{include.category}}_releases">-</h1>
         <h4>Releases</h4>
     </div>
-    <div class="col text-center">
+    <div class="col text-center" style="min-width: 210px;">
         <h1 id="{{include.category}}_downloads">-</h1>
         <h4>Downloads</h4>
     </div>
@@ -48,8 +48,8 @@
 
         for (i = 0; i < parts.length; i++) {
             var section = parts[i].split(';');
-            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
-            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+            var url = section[0].match(/&page=(\d*)/)[0].replace('&page=', '');
+            var name = section[1].match(/\"(.*?)\"/)[0].replace('"', '').replace('"', '');
             links[name] = url;
         }
 
@@ -89,6 +89,20 @@
         });
     }
 
+    function handleResponse(response) {
+        return response.json()
+            .then(json => {
+                if (response.ok) {
+                    return json
+                } else {
+                    return Promise.reject(Object.assign({}, json, {
+                        status: response.status,
+                        statusText: response.statusText
+                    }))
+                }
+            })
+    }
+
     var stats = {};
     stats["total"] = {};
     stats["total"]["releases"] = 0;
@@ -100,7 +114,7 @@
     stats["{{include.category}}"]["releases"] = {};
     stats["{{include.category}}"]["downloads"] = 0;
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/releases?per_page=100')
-        .then(response => response.json())
+        .then(handleResponse)
         .then(data => {
             data.forEach(element => {
                 stats["total"]["releases"] += 1
@@ -123,20 +137,33 @@
             animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
             animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
             createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
-        });
+        })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
+
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/contributors?per_page=100')
-        .then(response => response.json())
+        .then(handleResponse)
         .then(data => stats["total"]["contributors"] = data.length)
         .then(function () {
             animateCountUp(document.getElementById("contributors"), stats["total"]["contributors"])
-        });
+        })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
-        .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
+        .then(response => {
+            if (response.ok) {
+                stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]);
+            } else {
+                return Promise.reject(Object.assign({}, json, {
+                    status: response.status,
+                    statusText: response.statusText
+                }))
+            }
+        })
         .then(function () {
             animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
         })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
-        .then(response => response.json())
+        .then(handleResponse)
         .then(data => {
             Object.entries(data).forEach(element => {
                 stats["total"]["languages"][element[0]] = element[1] / 1000
@@ -145,5 +172,6 @@
         })
         .then(function () {
             animateCountUp(document.getElementById("languages"), Object.keys(stats["total"]["languages"]).length);
-        });
+        })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
 </script>
