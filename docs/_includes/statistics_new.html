@@ -43,19 +43,19 @@
         }, frameDuration);
     };
 
-    // function parse_link_header(header) {
-    //     var parts = header.split(',');
-    //     var links = {};
+    function parse_link_header(header) {
+        var parts = header.split(',');
+        var links = {};
 
-    //     for (i = 0; i < parts.length; i++) {
-    //         var section = parts[i].split(';');
-    //         var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
-    //         var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
-    //         links[name] = url;
-    //     }
+        for (i = 0; i < parts.length; i++) {
+            var section = parts[i].split(';');
+            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
+            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+            links[name] = url;
+        }
 
-    //     return links;
-    // }
+        return links;
+    }
 
     // function createBarChart(labels, data) {
     //     var ctx = document.getElementById('releaseDownloads').getContext('2d');
@@ -148,11 +148,22 @@
             animateCountUp(document.getElementById("contributors"), stats["total"]["contributors"])
         })
         .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
-    // fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
-    //     .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
-    //     .then(function () {
-    //         animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
-    //     })
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
+        .then(function (response) {
+            if (response.ok) {
+                stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"])
+                return response.json()
+            } else {
+                return Promise.reject(Object.assign({}, json, {
+                    status: response.status,
+                    statusText: response.statusText
+                }))
+            }
+        })
+        .then(function () {
+            animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
+        })
+        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
         .then(handleResponse)
         .then(data => {
