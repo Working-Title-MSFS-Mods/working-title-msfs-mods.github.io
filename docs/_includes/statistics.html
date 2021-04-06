@@ -1,0 +1,172 @@
+<h2>Working Title</h2>
+<div class="row">
+    <div class="col text-center">
+        <h1 id="releases">-</h1>
+        <h4>Releases</h4>
+    </div>
+    <div class="col text-center">
+        <h1 id="downloads">-</h1>
+        <h4>Downloads</h4>
+    </div>
+    <div class="col text-center">
+        <h1 id="commits">-</h1>
+        <h4>Commits</h4>
+    </div>
+    <div class="col text-center">
+        <h1 id="contributers">-</h1>
+        <h4>Contributers</h4>
+    </div>
+    <div class="col text-center">
+        <h1 id="languages">-</h1>
+        <h4>Languages</h4>
+    </div>
+</div>
+{% if include.category == "gx" %}
+<h2 class="mt-5">G3X</h2>
+{% else %}
+<h2 class="mt-5">{{include.category | upcase}}</h2>
+{% endif %}
+<div class="row">
+    <div class="col text-center">
+        <h1 id="{{include.category}}_releases">-</h1>
+        <h4>Releases</h4>
+    </div>
+    <div class="col text-center">
+        <h1 id="{{include.category}}_downloads">-</h1>
+        <h4>Downloads</h4>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col text-center">
+        <canvas id="releaseDownloads"></canvas>
+        <h4>Downloads per Release</h4>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"
+    integrity="sha256-9CKDuBNIQo/dQgrK9nyK+XcD2MBjb0JgnPMANrQw6Cs=" crossorigin="anonymous"></script>
+<script>
+    const animationDuration = 4500;
+    const frameDuration = 1000 / 60;
+    const totalFrames = Math.round(animationDuration / frameDuration);
+    const easeOut = x => 1 - Math.pow(1 - x, 8);
+
+    function animateCountUp(el, countTo) {
+        let frame = 0;
+        const counter = setInterval(() => {
+            frame++;
+            const progress = easeOut(frame / totalFrames);
+            const currentCount = Math.round(countTo * progress);
+            if (parseInt(el.innerHTML, 10) !== currentCount) {
+                el.innerHTML = currentCount;
+            }
+            if (frame === totalFrames) {
+                clearInterval(counter);
+            }
+        }, frameDuration);
+    };
+
+    function parse_link_header(header) {
+        var parts = header.split(',');
+        var links = {};
+
+        for (i = 0; i < parts.length; i++) {
+            var section = parts[i].split(';');
+            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
+            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+            links[name] = url;
+        }
+
+        return links;
+    }
+
+    function createBarChart(labels, data) {
+        var ctx = document.getElementById('releaseDownloads').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Downloads per Release',
+                    data: data,
+                    backgroundColor: [
+                        '#0d6efd50'
+                    ],
+                    borderColor: [
+                        '#4586e6'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+
+    var stats = {};
+    stats["total"] = {};
+    stats["total"]["releases"] = 0;
+    stats["total"]["downloads"] = 0;
+    stats["total"]["lines"] = 0;
+    stats["total"]["size"] = 0;
+    stats["total"]["languages"] = {};
+    stats["{{include.category}}"] = {};
+    stats["{{include.category}}"]["releases"] = {};
+    stats["{{include.category}}"]["downloads"] = 0;
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/releases?per_page=100')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                stats["total"]["releases"] += 1
+                let downloads = 0
+                if (element["assets"].length > 0) {
+                    downloads = element["assets"][0]["download_count"]
+                }
+                stats["total"]["downloads"] += downloads;
+                if (element["name"].includes("{{include.category}}")) {
+                    let tag = element["name"].replace("{{include.category}}-", "");
+                    stats["{{include.category}}"]["releases"][tag] = {};
+                    stats["{{include.category}}"]["releases"][tag] = downloads;
+                    stats["{{include.category}}"]["downloads"] += downloads;
+                }
+            });
+        })
+        .then(function () {
+            animateCountUp(document.getElementById("releases"), stats["total"]["releases"]);
+            animateCountUp(document.getElementById("downloads"), stats["total"]["downloads"]);
+            animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
+            animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
+            createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
+        });
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/contributors?per_page=100')
+        .then(response => response.json())
+        .then(data => stats["total"]["contributers"] = data.length)
+        .then(function () {
+            animateCountUp(document.getElementById("contributers"), stats["total"]["contributers"])
+        });
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
+        .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
+        .then(function () {
+            animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
+        })
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
+        .then(response => response.json())
+        .then(data => {
+            Object.entries(data).forEach(element => {
+                stats["total"]["languages"][element[0]] = element[1] / 1000
+                stats["total"]["size"] += element[1] / 1000
+            })
+        })
+        .then(function () {
+            animateCountUp(document.getElementById("languages"), Object.keys(stats["total"]["languages"]).length);
+        });
+</script>
