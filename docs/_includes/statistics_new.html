@@ -43,19 +43,19 @@
         }, frameDuration);
     };
 
-    // function parse_link_header(header) {
-    //     var parts = header.split(',');
-    //     var links = {};
+    function parse_link_header(header) {
+        var parts = header.split(',');
+        var links = {};
 
-    //     for (i = 0; i < parts.length; i++) {
-    //         var section = parts[i].split(';');
-    //         var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
-    //         var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
-    //         links[name] = url;
-    //     }
+        for (i = 0; i < parts.length; i++) {
+            var section = parts[i].split(';');
+            var url = section[0].match(/(?<=&page=).+?(?=>)/)[0];
+            var name = section[1].match(/(?<=rel=").+?(?=")/)[0];
+            links[name] = url;
+        }
 
-    //     return links;
-    // }
+        return links;
+    }
 
     function createBarChart(labels, data) {
         var ctx = document.getElementById('releaseDownloads').getContext('2d');
