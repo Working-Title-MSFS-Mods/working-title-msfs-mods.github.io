@@ -117,7 +117,7 @@
     stats["{{include.category}}"] = {};
     stats["{{include.category}}"]["releases"] = {};
     stats["{{include.category}}"]["downloads"] = 0;
-    fetch('https://api.github.com/repos/orking-Title-MSFS-Mods/fspackages/releases?per_page=100')
+    fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/releases?per_page=100')
         .then(handleResponse)
         .then(data => {
             data.forEach(element => {
