@@ -1,6 +1,6 @@
 ---
 layout: main
-permalink: /api/
+permalink: /g3x/issues
 title: Known Issues
 coverimage: masterwarn.jpg
 coverposition: left bottom
