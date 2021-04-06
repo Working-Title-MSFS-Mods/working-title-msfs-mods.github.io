@@ -1,5 +1,5 @@
 ---
-layout: g3000
+layout: main
 permalink: /g3000/issues
 title: Known Issues
 coverimage: masterwarn.jpg

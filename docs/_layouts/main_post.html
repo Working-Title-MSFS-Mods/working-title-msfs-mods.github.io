@@ -1,22 +1,10 @@
 <!doctype html>
 <html lang="en">
+{% capture cat %}{{page.categories | first}}{% endcapture cat %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Working Title G1000 - Changelog {{ page.title }}</title>
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" asnyc
-    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-    crossorigin="anonymous"></script>
-  <script src="/js/script.js"></script>
-</head>
-
+{% include head.html mode=cat %}
 <body>
-  {% include menu.html mode="g1000" %}
+      {% include menu.html mode=cat %}
   <div class="contentbar">
     <div id="cover" class="section coversection">
       <h1>{{ page.title }}</h1>
@@ -43,7 +31,7 @@
         </div>
         <div class="col-sm-3">
           {% assign version = page.title %}
-          {% include releaselist.html category="g1000" current=version %}
+          {% include releaselist.html category=cat current=version %}
         </div>
       </div>
       </div>

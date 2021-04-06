@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+{% capture category %}
+{{page.dir | replace: "/", ""}}
+{% endcapture category %}
 
-{% include head.html mode="cj4" %}
-
+{% include head.html mode=category %}
 <body>
-  {% include menu.html mode="cj4" %}
+  {% include menu.html mode=category %}
   <div class="contentbar">
     <div id="cover" class="section coversection">
       <h1>{{ page.title }}</h1>
