@@ -192,6 +192,12 @@ td p {
     transform: rotate(180deg);
 }
 
+.blacksection {
+    padding: 25px;
+    color: #fff;
+    min-height: unset;
+}
+
 .whitesection {
     padding: 25px;
     background: #fff;
