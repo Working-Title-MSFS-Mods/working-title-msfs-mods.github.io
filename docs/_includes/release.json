@@ -1,0 +1,5 @@
+"{{include.title}}": {
+    "date": "{{include.date | date_to_xmlschema}}",
+    "url": "https://github.com/Working-Title-MSFS-Mods/fspackages/releases/download/{{ include.category }}-{{ include.tag }}/workingtitle-{{ include.category }}-{{ include.version }}.zip",
+    "changelog": "{{include.fullurl}}"
+}
