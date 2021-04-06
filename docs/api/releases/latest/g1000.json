@@ -1,16 +1,16 @@
 ---
 layout: null
-permalink: /api/latest/g3x.json
+permalink: /api/releases/latest/g1000.json
 ---
 {
-{% for post in site.categories["g3x"] limit:1 %}
+{% for post in site.categories["g1000"] limit:1 %}
     {% if post.tagdeviation %}
         {% assign tag = post.tagdeviation %}
     {% else %}
         {% assign tag = post.title %}
     {% endif %}
     {% assign version = post.title %}
-    {% assign category = "gx" %}
+    {% assign category = "g1000" %}
     {% capture fullurl %}{{ site.url | replace: "http:", "https:" }}{{ post.url }}{% endcapture %}
     {% include release.json title=post.title date=post.date fullurl=fullurl category=category tag=tag version=version%}
     {% unless forloop.last %},{% endunless %}

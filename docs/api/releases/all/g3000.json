@@ -1,9 +1,9 @@
 ---
 layout: null
-permalink: /api/latest/g3000.json
+permalink: /api/releases/all/g3000.json
 ---
 {
-{% for post in site.categories["g3000"] limit:1 %}
+{% for post in site.categories["g3000"] %}
     {% if post.tagdeviation %}
         {% assign tag = post.tagdeviation %}
     {% else %}
