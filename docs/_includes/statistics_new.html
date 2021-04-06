@@ -137,7 +137,7 @@
             animateCountUp(document.getElementById("downloads"), stats["total"]["downloads"]);
             animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
             animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
-            // createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
+            createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
         })
         .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
 
