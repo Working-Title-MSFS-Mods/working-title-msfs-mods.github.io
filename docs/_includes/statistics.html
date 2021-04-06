@@ -126,9 +126,9 @@
         });
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/contributors?per_page=100')
         .then(response => response.json())
-        .then(data => stats["total"]["contributers"] = data.length)
+        .then(data => stats["total"]["contributors"] = data.length)
         .then(function () {
-            animateCountUp(document.getElementById("contributers"), stats["total"]["contributers"])
+            animateCountUp(document.getElementById("contributors"), stats["total"]["contributors"])
         });
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
         .then(response => stats["total"]["commits"] = parseInt(parse_link_header(response.headers.get('Link'))["last"]))
