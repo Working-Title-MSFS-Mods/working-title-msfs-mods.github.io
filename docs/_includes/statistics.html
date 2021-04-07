@@ -12,6 +12,10 @@
         <h1 id="{{include.category}}_downloads">-</h1>
         <h4>Downloads</h4>
     </div>
+    <div class="col text-center">
+        <h1 id="{{include.category}}_dailydownloads">-</h1>
+        <h4>Daily Downloads</h4>
+    </div>
 </div>
 <div class="row mt-4">
     <div class="col text-center">
@@ -103,15 +107,26 @@
             })
     }
 
+    function getDailyDownloads(first, second, downloads){
+        datediff =  Math.round((second-first)/(1000*60*60*24));
+        try {
+            return Math.abs(downloads / datediff);
+        }catch (e) {
+            return "-";
+        }
+    }
+    
     var stats = {};
     stats["total"] = {};
+    stats["total"]["launch"] = new Date("2020-09-04T21:02:00Z")
     stats["total"]["releases"] = 0;
     stats["total"]["downloads"] = 0;
     stats["total"]["lines"] = 0;
     stats["total"]["size"] = 0;
     stats["total"]["languages"] = {};
     stats["{{include.category}}"] = {};
-    stats["{{include.category}}"]["releases"] = {};
+    stats["{{include.category}}"]["releasedownloads"] = {};
+    stats["{{include.category}}"]["releasedates"] = {};
     stats["{{include.category}}"]["downloads"] = 0;
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/releases?per_page=100')
         .then(handleResponse)
@@ -125,20 +140,25 @@
                 stats["total"]["downloads"] += downloads;
                 if (element["name"].includes("{{include.category}}")) {
                     let tag = element["name"].replace("{{include.category}}-", "");
-                    stats["{{include.category}}"]["releases"][tag] = {};
-                    stats["{{include.category}}"]["releases"][tag] = downloads;
+                    stats["{{include.category}}"]["releasedownloads"][tag] = {};
+                    stats["{{include.category}}"]["releasedownloads"][tag] = downloads;
+                    stats["{{include.category}}"]["releasedates"][tag] = {};
+                    stats["{{include.category}}"]["releasedates"][tag] =  element["published_at"];
                     stats["{{include.category}}"]["downloads"] += downloads;
                 }
             });
+            stats["{{include.category}}"]["launch"] = new Date(Object.values(stats["{{include.category}}"]["releasedates"]).reverse()[0])
+            console.log(stats);
         })
         .then(function () {
             animateCountUp(document.getElementById("releases"), stats["total"]["releases"]);
             animateCountUp(document.getElementById("downloads"), stats["total"]["downloads"]);
-            animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releases"]).length);
+            animateCountUp(document.getElementById("{{include.category}}_dailydownloads"), getDailyDownloads(stats["{{include.category}}"]["launch"], new Date(), stats["{{include.category}}"]["downloads"]));
+            animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releasedownloads"]).length);
             animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
-            createBarChart(Object.keys(stats["{{include.category}}"]["releases"]).reverse(), Object.values(stats["{{include.category}}"]["releases"]).reverse());
+            createBarChart(Object.keys(stats["{{include.category}}"]["releasedownloads"]).reverse(), Object.values(stats["{{include.category}}"]["releasedownloads"]).reverse());
         })
-        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
+        .catch(error => console.log(error))
 
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/contributors?per_page=100')
         .then(handleResponse)
@@ -146,7 +166,7 @@
         .then(function () {
             animateCountUp(document.getElementById("contributors"), stats["total"]["contributors"])
         })
-        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
+        .catch(error => console.log(error))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/commits?per_page=1')
         .then(response => {
             if (response.ok) {
@@ -161,7 +181,7 @@
         .then(function () {
             animateCountUp(document.getElementById("commits"), stats["total"]["commits"]);
         })
-        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
+        .catch(error => console.log(error))
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/languages')
         .then(handleResponse)
         .then(data => {
@@ -173,5 +193,5 @@
         .then(function () {
             animateCountUp(document.getElementById("languages"), Object.keys(stats["total"]["languages"]).length);
         })
-        .catch(error => document.getElementById("error").innerHTML = JSON.stringify(error, null, 2))
+        .catch(error => console.log(error))
 </script>
