@@ -20,7 +20,6 @@
 <div class="row mt-4">
     <div class="col text-center">
         <canvas id="releaseDownloads"></canvas>
-        <h4>Downloads per Release</h4>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"
@@ -60,33 +59,50 @@
         return links;
     }
 
-    function createBarChart(labels, data) {
+    function createBarChart(labels, data1, data2) {
         var ctx = document.getElementById('releaseDownloads').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
-                datasets: [{
+                datasets: [ {
+                    type: 'line',
+                    yAxisID: 'y1',
+                    label: 'Daily Downloads per Release',
+                    data: data2,
+                    backgroundColor: '#dc354575',
+                    borderColor: '#dc354575',
+                    borderWidth: 2
+                },{
+                    type: 'bar',
                     label: 'Downloads per Release',
-                    data: data,
-                    backgroundColor: [
-                        '#0d6efd50'
-                    ],
-                    borderColor: [
-                        '#4586e6'
-                    ],
-                    borderWidth: 1
-                }]
+                    yAxisID: 'y1',
+                    data: data1,
+                    backgroundColor: '#0d6efd75',
+                    borderColor: '#4586e675',
+                }],
             },
             options: {
                 scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+                    y1: {
+                        type: 'linear',
+                        position: 'left',
+                    },
+                    // y2: {
+                    //     type: 'linear',
+                    //     position: 'right',
+                    // },
                 },
                 plugins: {
                     legend: {
-                        display: false
+                        labels: {
+                            font: {
+                                family: 'system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+                                size: '22px'
+                            },
+                            color: '#000'
+                        },
+                        position: 'bottom'
                     }
                 }
             }
@@ -107,15 +123,15 @@
             })
     }
 
-    function getDailyDownloads(first, second, downloads){
-        datediff =  Math.round((second-first)/(1000*60*60*24));
+    function getDailyDownloads(first, second, downloads) {
+        datediff = Math.round((second - first) / (1000 * 60 * 60 * 24));
         try {
-            return Math.abs(downloads / datediff);
-        }catch (e) {
+            return Math.round(Math.abs(downloads / datediff));
+        } catch (e) {
             return "-";
         }
     }
-    
+
     var stats = {};
     stats["total"] = {};
     stats["total"]["launch"] = new Date("2020-09-04T21:02:00Z")
@@ -126,12 +142,15 @@
     stats["total"]["languages"] = {};
     stats["{{include.category}}"] = {};
     stats["{{include.category}}"]["releasedownloads"] = {};
+    stats["{{include.category}}"]["releasedailydownloads"] = {};
     stats["{{include.category}}"]["releasedates"] = {};
     stats["{{include.category}}"]["downloads"] = 0;
     fetch('https://api.github.com/repos/Working-Title-MSFS-Mods/fspackages/releases?per_page=100')
         .then(handleResponse)
         .then(data => {
-            data.forEach(element => {
+            var prev = null;
+            var tag = null;
+            data.reverse().forEach(element => {
                 stats["total"]["releases"] += 1
                 let downloads = 0
                 if (element["assets"].length > 0) {
@@ -139,16 +158,23 @@
                 }
                 stats["total"]["downloads"] += downloads;
                 if (element["name"].includes("{{include.category}}")) {
-                    let tag = element["name"].replace("{{include.category}}-", "");
+                    tag = element["name"].replace("{{include.category}}-", "");
                     stats["{{include.category}}"]["releasedownloads"][tag] = {};
                     stats["{{include.category}}"]["releasedownloads"][tag] = downloads;
                     stats["{{include.category}}"]["releasedates"][tag] = {};
-                    stats["{{include.category}}"]["releasedates"][tag] =  element["published_at"];
+                    stats["{{include.category}}"]["releasedates"][tag] = element["published_at"];
                     stats["{{include.category}}"]["downloads"] += downloads;
+                    if (prev) {
+                        stats["{{include.category}}"]["releasedailydownloads"][prev] = {};
+                        stats["{{include.category}}"]["releasedailydownloads"][prev] = getDailyDownloads(new Date(stats["{{include.category}}"]["releasedates"][prev]), new Date(stats["{{include.category}}"]["releasedates"][tag]), stats["{{include.category}}"]["releasedownloads"][prev])
+                    }
+                    prev = tag;
                 }
+
             });
-            stats["{{include.category}}"]["launch"] = new Date(Object.values(stats["{{include.category}}"]["releasedates"]).reverse()[0])
-            console.log(stats);
+            stats["{{include.category}}"]["releasedailydownloads"][tag] = {};
+            stats["{{include.category}}"]["releasedailydownloads"][tag] = getDailyDownloads(new Date(stats["{{include.category}}"]["releasedates"][tag]), new Date(), stats["{{include.category}}"]["releasedownloads"][tag])
+            stats["{{include.category}}"]["launch"] = new Date(Object.values(stats["{{include.category}}"]["releasedates"])[0]);
         })
         .then(function () {
             animateCountUp(document.getElementById("releases"), stats["total"]["releases"]);
@@ -156,7 +182,7 @@
             animateCountUp(document.getElementById("{{include.category}}_dailydownloads"), getDailyDownloads(stats["{{include.category}}"]["launch"], new Date(), stats["{{include.category}}"]["downloads"]));
             animateCountUp(document.getElementById("{{include.category}}_releases"), Object.keys(stats["{{include.category}}"]["releasedownloads"]).length);
             animateCountUp(document.getElementById("{{include.category}}_downloads"), stats["{{include.category}}"]["downloads"]);
-            createBarChart(Object.keys(stats["{{include.category}}"]["releasedownloads"]).reverse(), Object.values(stats["{{include.category}}"]["releasedownloads"]).reverse());
+            createBarChart(Object.keys(stats["{{include.category}}"]["releasedownloads"]), Object.values(stats["{{include.category}}"]["releasedownloads"]), Object.values(stats["{{include.category}}"]["releasedailydownloads"]));
         })
         .catch(error => console.log(error))
 
