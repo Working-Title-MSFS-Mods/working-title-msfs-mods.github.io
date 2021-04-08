@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-{% capture category %}{{page.dir | replace: "/", ""}}{% endcapture category %}
+{% capture category %}{{page.dir | replace: "/", "" | replace: "guides", ""}}{% endcapture category %}
 
 {% include head.html mode=category %}
   
