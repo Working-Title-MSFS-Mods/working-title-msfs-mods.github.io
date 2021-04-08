@@ -10,6 +10,13 @@ This is an early release of what is intended to eventually be the reworking of s
 {% include downloadbutton.html category="g3x" %}
 {% include button.html text="Changelog and Older Versions" url="/g3x/releases" %}
 
+## Usage in default aircraft
+Because they use the Garmin G3X unit, this mod will affect the following default aircraft:
+- Cub Crafters X CUB
+- Extra EXTRA 330LT
+- ICON A5
+- JMB Aircraft VL-3
+- Pipistrel Virus SW 121 
 
 ## Installation
 To install, copy the `workingtitle-gx` folder from the zip file into your `Community` directory.

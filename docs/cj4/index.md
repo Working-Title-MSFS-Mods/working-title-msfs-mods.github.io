@@ -51,7 +51,7 @@ This is a beta, and as such you will surely encounter bugs and problems with the
 Because of how the Community folder works, this mod will conflict with any other mod that includes one or more of the same files in the package. We have not included aircraft.cfg or any exterior textures so that the livery mods should work along side this mod. We have incorporated mods, such as the lighting mod from Uwajimaya. You can see where we've included these in the release notes.
 
 ### INSTALLATION
-Download the release zip file and extract the enclosed folder workingtitle-aircraft-cj4 into your Community folder to enable this mod.
+Download the release zip file and extract the enclosed folder workingtitle-aircraft-cj4 into your Community folder to enable this mod. An installation of other Working Title packages is not necessary for this mod to function.
 
 ### OPERATING NOTES
 Thanks to our amazing QA team, and especially to community member Slip for crafting, curating and maintaining the Working Title CJ4 User Guide:
