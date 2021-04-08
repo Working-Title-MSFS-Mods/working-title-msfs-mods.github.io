@@ -22,13 +22,17 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 ## AP Mode indicators
 {% endcapture %}
 {% capture details %}
-
 * HDG - `L:WT_CJ4_HDG_ON`
+* HDG SELECT - `AUTOPILOT HEADING LOCK DIR:1`
 * LNAV - `L:WT_CJ4_NAV_ON`
 * APPR - n/a
 * VNAV - `L:WT_CJ4_VNAV_ON`
 * VS - `L:WT_CJ4_VS_ON`
+* V/S SELECT - `AUTOPILOT VERTICAL LOCK DIR:1`
 * FLC - `L:WT_CJ4_FLC_ON`
+* IAS SELECT - `AUTOPILOT AIRSPEED LOCK DIR:1`
+* ALT - `L:WT_CJ4_ALT_HOLD`
+* ALT SELECT - `AUTOPILOT ALTITUDE LOCK VAR:1`
 {% endcapture %}
 {% include accordionitem.html id="apmodes" h=group c=details %}
 
@@ -38,13 +42,14 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 ## AP Mode triggers
 {% endcapture %}
 {% capture details %}
-
 * HDG - `H:WT_CJ4_AP_HDG_PRESSED`
 * LNAV - `H:WT_CJ4_AP_NAV_PRESSED`
 * APPR - `H:WT_CJ4_AP_APPR_PRESSED`
 * VNAV - `H:WT_CJ4_AP_VNAV_PRESSED`
 * VS - `H:WT_CJ4_AP_VS_PRESSED`
 * FLC - `H:WT_CJ4_AP_FLC_PRESSED`
+* FD - `H:WT_CJ4_AP_FD_TOGGLE`
+* ALT - `H:WT_CJ4_AP_ALT_PRESSED`
 {% endcapture %}
 {% include accordionitem.html id="aptriggers" h=group c=details %}
 
@@ -96,12 +101,20 @@ Since our AP runs independent from the sim AP you can no longer use the default 
 * `H:Generic_Lwr_Push_Chart_1`
 * `H:Generic_Lwr_Data_DEC`
 * `H:Generic_Lwr_Data_INC`
-* `H:Generic_Lwr_DATA_PUSH`
-* `H:Generic_Lwr_DATA_PUSH_LONG`
 * `H:Generic_Lwr_MENU_ADV_DEC`
 * `H:Generic_Lwr_MENU_ADV_INC`
+* `H:Generic_Lwr_DATA_PUSH`
+* `H:Generic_Lwr_DATA_PUSH_LONG`
 {% endcapture %}
 {% include accordionitem.html id="lowerbuttons" h=group c=details %}
+
+{% capture group %}
+## LIGHT
+{% endcapture %}
+{% capture details %}
+* `L:LIGHTING_Knob_Master` from 0-100 (100 is default) for Cockpit Panel lights
+{% endcapture %}
+{% include accordionitem.html id="light" h=group c=details %}
 
 {% capture group %}
 ## FMC Buttons
