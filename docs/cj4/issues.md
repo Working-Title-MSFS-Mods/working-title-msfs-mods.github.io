@@ -158,6 +158,14 @@ At the moment, it is not possible to have the MFDs at different settings, becaus
 {% endcapture %}
 {% include accordionitem.html id="mfdsmirrored" h=issue c=answer %}
 
+{% capture issue %}
+## The **drawn flightplan has a kink when approach the dateline**.
+{% endcapture %}
+{% capture answer %}
+This is a known simulator issue. It does however only have an optical effect and the plane continues through that glitch without any negative effects.
+{% endcapture %}
+{% include accordionitem.html id="dateline" h=issue c=answer %}
+
 
 
 <h3>Navdata</h3>

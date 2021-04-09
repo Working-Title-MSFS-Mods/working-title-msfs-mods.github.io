@@ -134,6 +134,14 @@ When NEXRAD is enabled for the navigation map in the right MFD pane, the weather
 {% endcapture %}
 {% include accordionitem.html id="wxartifacts" h=issue c=answer %}
 
+{% capture issue %}
+## The **drawn flightplan has a kink when approach the dateline**.
+{% endcapture %}
+{% capture answer %}
+This is a known simulator issue. It does however only have an optical effect and the plane continues through that glitch without any negative effects.
+{% endcapture %}
+{% include accordionitem.html id="dateline" h=issue c=answer %}
+
 
 <h3>Hardware / Buttons</h3>
 
