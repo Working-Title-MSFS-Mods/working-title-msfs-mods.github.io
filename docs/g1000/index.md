@@ -10,7 +10,7 @@ Welcome to the latest version of the Working Title G1000 for [Microsoft Flight S
 {% include downloadbutton.html category="g1000" %}
 {% include button.html text="Changelog and Older Versions" url="/g1000/releases" %}
 
-Version 0.3.0 is developed for version 1.9.3.0 of the base sim, the version released on 29 September 2020.  Previous versions of the G1000 mod will not work with this version of the sim.
+Version 0.5.1 is developed for version 1.15.7.0 of the base sim.  Previous versions of the G1000 mod will not work with this version of the sim.
 
 ## Usage in default aircraft
 Because they use the Garmin G1000 unit, this mod will affect the following default aircraft:
