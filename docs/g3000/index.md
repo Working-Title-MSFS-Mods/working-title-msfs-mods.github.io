@@ -13,7 +13,6 @@ This is a mod for [Microsoft Flight Simulator](https://flightsimulator.com) that
 ## Usage in default aircraft
 Because they use the Garmin G3000 unit, this mod will affect the following default aircraft:
 - Daher TBM930
-- Textron Aviation Beechcraft King Air 350i
 - Textron Aviation Cessna Citation Longitude
 
 This mod was created with cross-compatibility in mind. It modifies the minimum number of base files possible to achieve its goals, so it should be compatible with most other mods, including all other WorkingTitle mods. However, because of the nature of the mod, it will conflict with other mods that make changes to the G3000.
