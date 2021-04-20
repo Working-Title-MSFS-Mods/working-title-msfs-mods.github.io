@@ -26,7 +26,6 @@ This is a Windows issue. By default, Windows limits file paths to 260 characters
 This problem usually occurs when a subfolder was created during extraction of the archive. You can check this by opening the mod folder in your Community directory. It should contain a `layout.json` and  a `manifest.json` file. If it only contains a subfolder, copy the contents of that one level up, until the beforementioned criteria are met.
 {% endcapture %}
 {% include accordionitem.html id="folderstructure" h=issue c=answer %}
-</div>
 
 
 <h3>NavMap</h3>
@@ -37,6 +36,7 @@ This problem usually occurs when a subfolder was created during extraction of th
 This is a known simulator issue. It does however only have an optical effect and the plane continues through that glitch without any negative effects.
 {% endcapture %}
 {% include accordionitem.html id="dateline" h=issue c=answer %}
+</div>
 
 
 ## Discord
