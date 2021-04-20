@@ -45,9 +45,14 @@ body {
         margin-left: -5px;
         transition: all ease-in-out 400ms;
     }
+    
     .topbar.dark img {
         height: 50px;
         margin-left: -5px;
+    }
+
+    .menubar{
+        width: calc(100% - 200px);
     }
 }
 
