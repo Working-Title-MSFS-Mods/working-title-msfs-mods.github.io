@@ -1,0 +1,24 @@
+---
+layout: package
+permalink: /packages/cj4/releases
+title: Releases
+coverimage: landing.jpg
+coverposition: 50% 60%
+---
+
+<div class="row">
+  <div class="col-sm-9">
+    {% for post in site.categories["cj4"] limit:1 %}
+    <script type="text/javascript">
+      window.location.href = "{{ post.url }}"
+    </script>
+    <noscript>
+      Usually we redirect to the latest release changelog, but it seems you have JavaScript disabled, so you will have to click the button below or choose a release from the list.<br>
+      <a class="btn btn-slanted btn-sliding" href="{{post.url}}"><span>Latest Version ({{post.title}})</span></a>
+    </noscript>
+    {% endfor %}
+  </div>
+  <div class="col-sm-3">
+    {% include releaselist.html category="cj4" mode="all" %}
+  </div>
+</div>

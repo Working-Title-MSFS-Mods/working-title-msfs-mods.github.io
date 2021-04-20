@@ -1,0 +1,41 @@
+<div class="topbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <a href="/"><img src="/img/logo_512_w.png"></a>
+            </div>
+            <div class="col col-md-6 d-lg-none text-end">
+                <span class="menutoggle">Menu</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menubar">
+    <div class="menu container-fluid">
+        <div class="row justify-content-end">
+            <div class="menuitem col-12 active">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}"><span>Intro</span></a>
+            </div>
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}/releases"><span>Releases</span></a>
+            </div>
+            {% if include.mode == "packagescj4" || include.mode == "cj4" %}
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}/guides"><span>Guides</span></a>
+            </div>
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}/repaints"><span>Repaints</span></a>
+            </div>
+            {% endif %}
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}/issues"><span>Known Issues</span></a>
+            </div>
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' }}/statistics"><span>Statistics</span></a>
+            </div>
+            <div class="menuitem col-12">
+                <a class="btn btn-slanted btn-sliding" href="https://github.com/Working-Title-MSFS-Mods/fspackages/" target="_blank"><span>Github</span></a>
+            </div>
+        </div>
+    </div>
+</div>
