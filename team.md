@@ -8,10 +8,10 @@ coverposition: 30% 45%
 
 <div class="container-fluid">
     <div class="row" id="matt">
-        <div class="col-md-4 p-0">
-            <img class="headshot img-slanted-r w-100 h-100" src="/img/matt.webp" alt="Photo of Matt Nischan">
+        <div class="col-lg-4 p-0 text-center">
+            <img class="headshot img-slanted-r" src="/img/matt.webp" alt="Photo of Matt Nischan">
         </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Matt Nischan</h1>
             <p>
                 Matt, aka the Nishmaster and the DiploMatt, has been a flight sim nerd since the 90s and he has been a
@@ -24,11 +24,14 @@ coverposition: 30% 45%
                 Languages: <code>C, C++, C#, Java, Scala, JS, TS.</code>
             </p>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-lg-2"></div>
     </div>
     <div class="row" id="sean">
-        <div class="col-md-2"></div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 p-0 text-center order-lg-last">
+            <img class="headshot img-slanted-l" src="/img/sean.jpg" alt="Photo of Sean Gipe">
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Sean Gipe</h1>
             <p>
                 Sean, AKA K2 AKA K20017, has been a flight sim nerd for about 20 years (deep flight sim nerdy roots, he
@@ -41,15 +44,12 @@ coverposition: 30% 45%
                 Languages: <code>English, SVG.</code>
             </p>
         </div>
-        <div class="col-md-4 p-0">
-            <img class="headshot img-slanted-l w-100 h-100" src="/img/sean.jpg" alt="Photo of Sean Gipe">
-        </div>
     </div>
     <div class="row" id="dominik">
-        <div class="col-md-4 p-0">
-            <img class="headshot img-slanted-r w-100 h-100" src="/img/dominik.jpg" alt="Photo of Dominik Gallus">
+        <div class="col-lg-4 p-0 text-center">
+            <img class="headshot img-slanted-r" src="/img/dominik.jpg" alt="Photo of Dominik Gallus">
         </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Dominik Gallus</h1>
             <p>
                 Dominik, or just DG, or DGA or DGA711, is an fpv drone pilot, new flight sim nerd and also, he’s German.  He’s a software developer and architect with 13+ years of experience mostly in developing enterprise software frameworks for car and machine manufacturers. He’s most proficient in Microsoft environments using C# and .NET and an allrounder in different kinds of web technologies.
@@ -58,11 +58,14 @@ coverposition: 30% 45%
                 Languages: <code>C#, C++, Java, JS, TS.</code>
             </p>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-lg-2"></div>
     </div>
     <div class="row" id="rob">
-        <div class="col-md-2"></div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 p-0 text-center order-lg-last">
+            <img class="headshot img-slanted-l" src="/img/rob.jpg" alt="Photo of Rob Jones">
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Rob Jones</h1>
             <p>
                 Rob, or kaosfere, is another long-time flight sim nerd. Rob is a systems expert, polyglot developer, and devops dude with 20+ years of experience, the past 13 years being in fintech and big data.  His past six or so years has focused heavily on cloud architecture, serverless compute, and high-performance streaming data and ETL systems.
@@ -74,15 +77,12 @@ coverposition: 30% 45%
                 Oh, and Rob tells it like it is on Avsim.
             </p>
         </div>
-        <div class="col-md-4 p-0">
-            <img class="headshot img-slanted-l w-100 h-100" src="/img/rob.jpg" alt="Photo of Rob Jones">
-        </div>
     </div>
     <div class="row" id="chris">
-        <div class="col-md-4 p-0">
-            <img class="headshot img-slanted-r w-100 h-100" src="/img/chris.png" alt="Photo of Chris Burnett">
+        <div class="col-lg-4 p-0 text-center">
+            <img class="headshot img-slanted-r" src="/img/chris.png" alt="Photo of Chris Burnett">
         </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Chris Burnett</h1>
             <p>
                 Chris, aka cwburnett, or just cwb, is yet another long-term flight sim nerd, dating back to FS4. While
@@ -93,6 +93,6 @@ coverposition: 30% 45%
                 DG says he’s now officially an ‘okay’ developer 😉.
             </p>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-lg-2"></div>
     </div>
 </div>

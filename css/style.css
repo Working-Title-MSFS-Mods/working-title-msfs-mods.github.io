@@ -312,6 +312,20 @@ a:hover {
 
 .headshot {
     min-height: 40vh;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .headshot {
+        min-height: unset;
+        border-radius: 40vw;
+        height: 40vw;
+        width: 40vw;
+        -webkit-clip-path: none;
+        clip-path: none;
+        margin-top: 3rem;
+    }
 }
 
 .row.active{
