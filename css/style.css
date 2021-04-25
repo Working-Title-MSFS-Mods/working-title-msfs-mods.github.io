@@ -296,6 +296,29 @@ a:hover {
     margin: 15px;
 }
 
+.img-slanted-l, .img-slanted-r{
+    object-fit: cover;
+}
+
+.img-slanted-r {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+.img-slanted-l{
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.headshot {
+    min-height: 40vh;
+}
+
+.row.active{
+    background: black;
+    color: white;
+}
+
 .accordion-item p {
     margin: 0;
 }
