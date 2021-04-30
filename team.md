@@ -9,7 +9,7 @@ coverposition: 30% 45%
 <div class="container-fluid">
     <div class="row" id="matt">
         <div class="col-lg-4 p-0 text-center">
-            <img class="headshot img-slanted-r" src="/img/matt.webp" alt="Photo of Matt Nischan">
+            <img class="headshot img-slanted-r" src="/img/matt.png" alt="Photo of Matt Nischan">
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Matt Nischan</h1>
@@ -29,7 +29,7 @@ coverposition: 30% 45%
     <div class="row" id="sean">
         <div class="col-lg-2"></div>
         <div class="col-lg-4 p-0 text-center order-lg-last">
-            <img class="headshot img-slanted-l" src="/img/sean.jpg" alt="Photo of Sean Gipe">
+            <img class="headshot img-slanted-l" src="/img/sean.png" alt="Photo of Sean Gipe">
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Sean Gipe</h1>
@@ -63,7 +63,7 @@ coverposition: 30% 45%
     <div class="row" id="rob">
         <div class="col-lg-2"></div>
         <div class="col-lg-4 p-0 text-center order-lg-last">
-            <img class="headshot img-slanted-l" src="/img/rob.jpg" alt="Photo of Rob Jones">
+            <img class="headshot img-slanted-l" src="/img/rob.png" alt="Photo of Rob Jones">
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Rob Jones</h1>
