@@ -89,6 +89,9 @@ coverposition: 30% 45%
                 technology services and management for the fintech space. He started learning Javascript last August and
                 DG says he’s now officially an ‘okay’ developer 😉.
             </p>
+            <p>
+                Languages: <code>JS, TS, English, Business</code>
+            </p>
         </div>
         <div class="col-lg-2"></div>
     </div>
