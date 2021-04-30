@@ -26,6 +26,6 @@ The Software Developer helps build Working Title’s avionics and systems simula
 The Senior Software Developer plays a key role in designing and build Working Title’s avionics and systems simulation software. You will participate in the full lifecycle of development projects, including leading some development efforts. In addition, you will collaborate with our lead developers in short- and long-term planning and provide leadership and mentorship to our more junior developers. The primary tech stack for most projects will be JavaScript/HTML/CSS, but there may be opportunities for development in C++ as well. Our software must operate with minimal impact on simulator performance, so prior experience with optimization or development for constrained systems would be a big plus.
 {% include button.html break=true text="View position on Indeed" url="https://www.indeed.com/cmp/Working-Title-Simulations" blank=true %}
 {% endcapture %}
-{% include accordionitem.html id="dev1" h=jobtitle c=jobdetails %}
+{% include accordionitem.html id="dev2" h=jobtitle c=jobdetails %}
 
 </div>
