@@ -11,7 +11,7 @@ coverposition: 30% 45%
 <h3>Development (group of jobs)</h3>
 
 {% capture jobtitle %}
-## First Dev Job.
+## Software Developer.
 {% endcapture %}
 {% capture jobdetails %}
 Job description.
