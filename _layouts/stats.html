@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+{% capture category %}{{page.dir | replace: "/", ""}}{% endcapture category %}
+
+{% include head.html mode=category %}
+<body>
+  {% include packagemenu.html mode=category %}
+  <div class="contentbar">
+    <div id="cover" class="section coversection">
+      <h1>{{ page.title }}</h1>
+      <!-- <img src="../img/bottom.png" class="scroll" onclick="customscroll('content-top')" title="Scroll down"> -->
+    </div>
+    <style>
+      #cover {
+        background: rgba(0, 0, 0, 0.2) url(/img/{{ page.coverimage }});
+        background-size: cover;
+        background-blend-mode: multiply;
+        {% if page.coverposition %}
+        background-position: {{ page.coverposition}};
+        {% else %}
+        background-position: center;
+        {% endif %}
+      }
+    </style>
+  </div>
+  <div class="section blacksection">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="contentbox col">
+          {% include statistics_total.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section whitesection">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="contentbox col">
+          {{ content }}
+        </div>
+      </div>
+      <img src="/img/bottom.png" class="scroll up" onclick="customscroll('content-top')" title="Scroll Up">
+    </div>
+  </div>
+</body>
+
+</html>
