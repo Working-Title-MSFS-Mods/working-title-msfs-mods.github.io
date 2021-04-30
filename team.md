@@ -80,7 +80,7 @@ coverposition: 30% 45%
     </div>
     <div class="row" id="chris">
         <div class="col-lg-4 p-0 text-center">
-            <img class="headshot img-slanted-r" src="/img/chris.png" alt="Photo of Chris Burnett">
+            <img class="headshot img-slanted-r" src="/img/chris.webp" alt="Photo of Chris Burnett">
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1>Chris Burnett</h1>
