@@ -45,7 +45,7 @@ The Working Title CJ4 is an improvement mod for the default Citation CJ4 that co
     *   Added lighting and functionality to many buttons and knobs in the cockpit model.
 
 ## BETA
-This is a beta, and as such you will surely encounter bugs and problems with the aircraft and functions. Please log these bugs under Issues at the [Working Title Github Repo](https://github.com/Working-Title-MSFS-Mods/fspackages/issues), and please **TAG THEM** as CJ4 issues. 
+This is a beta, and as such you will surely encounter bugs and problems with the aircraft and functions. Please log these bugs under Issues at the [Working Title Github Repo](https://github.com/Working-Title-MSFS-Mods/fspackages/issues), and please **TAG THEM** as CJ4 issues.
 
 ## OTHER MODS
 Because of how the Community folder works, this mod will conflict with any other mod that includes one or more of the same files in the package. We have not included aircraft.cfg or any exterior textures so that the livery mods should work along side this mod. We have incorporated mods, such as the lighting mod from Uwajimaya. You can see where we've included these in the release notes.
@@ -60,7 +60,7 @@ Thanks to our amazing QA team, and especially to community member Slip for craft
 By popular demand, there is also a matching SimBrief profile for this mod available.
 {% include button.html break=true text="Download SimBrief Profile" url="https://www.simbrief.com/system/dispatch.php?sharefleet=eyJ0cyI6IjE2MDI1MzkxMTUxODMiLCJiYXNldHlwZSI6IkMyNUMiLCJjb21tZW50cyI6IldPUktJTkcgVElUTEUgQ0o0IiwiaWNhbyI6IkMyNUMiLCJuYW1lIjoiQ0lUQVRJT04gQ0o0IiwiZW5naW5lcyI6IkZKNDQtNEEiLCJyZWciOiJONTI1V1QiLCJmaW4iOiIyNTQiLCJzZWxjYWwiOiIiLCJoZXhjb2RlIjoiIiwiY2F0IjoiTSIsInBlciI6IkIiLCJlcXVpcCI6IlNERTJFM0ZHSFJXWFlaIiwidHJhbnNwb25kZXIiOiJMQjEiLCJwYm4iOiJBMUIyQzJEMkQzTzJPM1MyIiwiZXh0cmFybWsiOiIiLCJtYXhwYXgiOiI3Iiwid2d0dW5pdHMiOiJMQlMiLCJvZXciOiIxMDI4MCIsIm16ZnciOiIxMjUwMCIsIm10b3ciOiIxNzExMCIsIm1sdyI6IjE1NjYwIiwibWF4ZnVlbCI6IjU3NjIiLCJwYXh3Z3QiOiIxNzAiLCJkZWZhdWx0Y2kiOiIiLCJmdWVsZmFjdG9yIjoiUDAwIiwiY3J1aXNlb2Zmc2V0IjoiUDAwMDAifQ--" blank=true %}
 
-Thanks to TheFlieger we have a new guide for painters available here that helps address the panel.cfg problems with some liveries: [Repainter's Guide](/cj4/guides/repainter)
+Thanks to TheFlieger we have a new guide for painters available here that helps address the panel.cfg problems with some liveries: [Repainter's Guide](/packages/cj4/guides/repainter)
 
 ### CREDITS
 This list is incomplete, but thanks to everyone that contributed from inside and outside the Working Title team.

@@ -19,74 +19,74 @@ coverposition: 25% 75%
 
 <p>If you are a repainter and wish to learn more about working with the Working Title CJ4, visit our Repainter's Guide
     below.
-    {% include button.html break=true text="Repainter's Guide" url="/cj4/guides/repainter" %}
+    {% include button.html break=true text="Repainter's Guide" url="/packages/cj4/guides/repainter" %}
 </p>
 
 <h2>Interior Repaints</h2>
 <div class="table-responsive">
-<table class="table table-striped table-hover align-middle">
-    <thead>
-        <tr>
-            <th>Preview</th>
-            <th>Name</th>
-            <th>Creator</th>
-            <th>Download</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% capture noimage %}*No image*{% endcapture %}
-        {% for interior in site.data.interiors %}
-        <tr>
-            {% if interior.image %}
-            <td>
-                <img src="{{ interior.image }}" width="275" alt="Picture of this mod">
-            </td>
-            {% else %}
-            <td>{{ noimage | markdownify }}</td>
-            {% endif %}
-            <td>{{ interior.name }}</td>
-            <td>{{ interior.creator }}</td>
-            <td><a href="{{ interior.url }}" target="_blank"
-                    class="btn btn-slanted btn-sliding"><span>Download</span></a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+    <table class="table table-striped table-hover align-middle">
+        <thead>
+            <tr>
+                <th>Preview</th>
+                <th>Name</th>
+                <th>Creator</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% capture noimage %}*No image*{% endcapture %}
+            {% for interior in site.data.interiors %}
+            <tr>
+                {% if interior.image %}
+                <td>
+                    <img src="{{ interior.image }}" width="275" alt="Picture of this mod">
+                </td>
+                {% else %}
+                <td>{{ noimage | markdownify }}</td>
+                {% endif %}
+                <td>{{ interior.name }}</td>
+                <td>{{ interior.creator }}</td>
+                <td><a href="{{ interior.url }}" target="_blank"
+                        class="btn btn-slanted btn-sliding"><span>Download</span></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 <h2 class="mt-5">Exterior Repaints</h2>
 <div class="table-responsive">
-<table class="table table-striped table-hover align-middle">
-    <thead>
-        <tr>
-            <th>Preview</th>
-            <th>Name</th>
-            <th>Registration</th>
-            <th>Creator</th>
-            <th>Download</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% capture dynamic %}*Dynamic*{% endcapture %}
-        {% for exterior in site.data.exteriors %}
-        <tr>
-            {% if exterior.image %}
-            <td>
-                <img src="{{ exterior.image }}" width="275" alt="Picture of this livery">
-            </td>
-            {% else %}
-            <td>{{ noimage | markdownify }}</td>
-            {% endif %}
-            <td>{{ exterior.name }}</td>
-            {% if exterior.registration %}
-            <td>{{ exterior.registration }}</td>
-            {% else %}
-            <td>{{ dynamic | markdownify }}</td>
-            {% endif %}
-            <td>{{ exterior.creator }}</td>
-            <td><a href="{{ exterior.url }}" target="_blank"
-                    class="btn btn-slanted btn-sliding"><span>Download</span></a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+    <table class="table table-striped table-hover align-middle">
+        <thead>
+            <tr>
+                <th>Preview</th>
+                <th>Name</th>
+                <th>Registration</th>
+                <th>Creator</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% capture dynamic %}*Dynamic*{% endcapture %}
+            {% for exterior in site.data.exteriors %}
+            <tr>
+                {% if exterior.image %}
+                <td>
+                    <img src="{{ exterior.image }}" width="275" alt="Picture of this livery">
+                </td>
+                {% else %}
+                <td>{{ noimage | markdownify }}</td>
+                {% endif %}
+                <td>{{ exterior.name }}</td>
+                {% if exterior.registration %}
+                <td>{{ exterior.registration }}</td>
+                {% else %}
+                <td>{{ dynamic | markdownify }}</td>
+                {% endif %}
+                <td>{{ exterior.creator }}</td>
+                <td><a href="{{ exterior.url }}" target="_blank"
+                        class="btn btn-slanted btn-sliding"><span>Download</span></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>

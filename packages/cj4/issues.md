@@ -68,7 +68,7 @@ There are a lot of variables the Working Title CJ4 mod relies on that are not sa
 {% endcapture %}
 {% capture answer %}
 This issue can be caused by two different things.<br>
-a) You are using an incompatible livery. Use the grey [Microsoft Flight Simulator](https://flightsimulator.com) default livery or one of those listed [here](/cj4/repaints). For more details on why some liveries are incompatible, you can visit the [Repainter's Guide](/cj4/guides/repainter)<br>
+a) You are using an incompatible livery. Use the grey [Microsoft Flight Simulator](https://flightsimulator.com) default livery or one of those listed [here](/packages/cj4/repaints). For more details on why some liveries are incompatible, you can visit the [Repainter's Guide](/packages/cj4/guides/repainter)<br>
 b) Check the `Documents` folder on your PC for a file called `SimConnect.cfg` and delete it.
 {% endcapture %}
 {% include accordionitem.html id="throttlestuck" h=issue c=answer %}
@@ -129,7 +129,7 @@ This is an issue introduced by one of the last Sim Updates. There is no way to f
 ## My MFD is red and says **LIVERY INCOMPATIBLE**.
 {% endcapture %}
 {% capture answer %}
-This might come as a surprise, but you are using an incompatible livery. Use the grey [Microsoft Flight Simulator](https://flightsimulator.com) default livery or one of those listed [here](/cj4/repaints). For more details on why some liveries are incompatible, you can visit the [Repainter's Guide](/cj4/guides/repainter)
+This might come as a surprise, but you are using an incompatible livery. Use the grey [Microsoft Flight Simulator](https://flightsimulator.com) default livery or one of those listed [here](/packages/cj4/repaints). For more details on why some liveries are incompatible, you can visit the [Repainter's Guide](/packages/cj4/guides/repainter)
 {% endcapture %}
 {% include accordionitem.html id="badlivery" h=issue c=answer %}
 
@@ -210,13 +210,13 @@ When you hit `CHART`, which will always show NO CHART AVAILABLE, because you hav
 ## I can't connect to **SimBrief**, because I always get the message **WRONG PILOTID**.
 {% endcapture %}
 {% capture answer %}
-1) When creating a Simbrief flight, you can get your PILOT ID in the Optional Entries section.  Your SimBrief username is not the same as your PILOT ID.  
+1) When creating a Simbrief flight, you can get your PILOT ID in the Optional Entries section.  Your SimBrief username is not the same as your PILOT ID.
 
 ![](https://media.discordapp.net/attachments/767173307681341464/767333228528271400/unknown.png)
 
 2) Once you have your ID, you will need to enter it into the FMC.  Press IDX -> Page 2 -> MOD SET -> Enter PILOT ID into scratchpad and drop on L2 Line select key (LSK).
 
-3) Now you must recall your flightplan.  Go to IDX -> Page 2 -> ROUTE MENU -> FPLN RECALL.  Once the flight plan has been imported, you'll be sent to the FPLN page to execute the changes. 
+3) Now you must recall your flightplan.  Go to IDX -> Page 2 -> ROUTE MENU -> FPLN RECALL.  Once the flight plan has been imported, you'll be sent to the FPLN page to execute the changes.
 {% endcapture %}
 {% include accordionitem.html id="wrongpilotid" h=issue c=answer %}
 
@@ -245,7 +245,7 @@ This behaviour is the result of a logical flaw in the way [Microsoft Flight Simu
 ## I **can't control AP with hardware buttons**.
 {% endcapture %}
 {% capture answer %}
-Autopilot modes cannot be triggered via keybindings or controllers and must currently be triggered in the cockpit with the mouse. External binding applications are adding support for LVars and HEvents. Used SimVars are documented in our [Guide on SimVars](/cj4/guides/simvars).
+Autopilot modes cannot be triggered via keybindings or controllers and must currently be triggered in the cockpit with the mouse. External binding applications are adding support for LVars and HEvents. Used SimVars are documented in our [Guide on SimVars](/packages/cj4/guides/simvars).
 {% endcapture %}
 {% include accordionitem.html id="simvars" h=issue c=answer %}
 </div>

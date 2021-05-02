@@ -114,7 +114,7 @@ Because messing with fallbacks is relatively complicated, and can break your liv
 {% endcomment %}
 
 ## Submit Your Repaint
-If you have made your repaint compatible and wish to have your livery featured in our [List of Compatible Liveries](/cj4/repaints), you can fill out the following form.
+If you have made your repaint compatible and wish to have your livery featured in our [List of Compatible Liveries](/packages/cj4/repaints), you can fill out the following form.
 {% include button.html break=true text="Submit your livery for review" url="https://forms.gle/kz9mNdQWWxCk1TvDA" blank=true %}
 
 
