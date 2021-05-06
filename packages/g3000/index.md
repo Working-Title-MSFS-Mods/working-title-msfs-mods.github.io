@@ -20,7 +20,7 @@ This mod was created with cross-compatibility in mind. It modifies the minimum n
 ## Installation
 To install, copy the `workingtitle-g3000` folder from the zip file into your `Community` directory.
 
-If you want to enable the road display for the navigation map, you must also download `workingtitle-g3000-roaddata-v0.1.0.zip` from the Github release page. To install the road data package, copy the `workingtitle-g3000-roaddata` folder from the zip file into your `Community` directory. Requires 1.3 GB of hard drive space.
+If you want to enable the road display for the navigation map, you must also download [`workingtitle-g3000-roaddata-v0.2.0.zip`](https://github.com/Working-Title-MSFS-Mods/fspackages/releases/download/g3000-v0.6.1/workingtitle-g3000-roaddata-v0.2.0.zip)) from the Github release page. To install the road data package, copy the `workingtitle-g3000-roaddata` folder from the zip file into your `Community` directory. Requires 1.3 GB of hard drive space.
 
 ## Configuration File
 Certain mod settings can be customized via a configuration file which is located at `workingtitle-g3000\html_ui\WTg3000.cfg`. Documentation for the various settings can be found in the file itself. If you make changes to the file while the game is running, you must restart the game for the changes to take effect.
