@@ -35,8 +35,7 @@ coverposition: 30% 45%
             <h1>Sean Gipe</h1>
             <p>
                 Sean, AKA K2 AKA K20017, has been a flight sim nerd for about 20 years (deep flight sim nerdy roots, he
-                says) and he’s our prized real-world ATP (Airline Transport Pilot). He’s the one that gets paid to fly
-                American Airlines pax around North America. Sean is scrappy and has some impressive JS/HTML skills as
+                says) and he’s our prized real-world ATP (Airline Transport Pilot). Sean is scrappy and has some impressive JS/HTML skills as
                 well; he’s not just a pretty face. We also make him do all the SVGs.  Sean flew the CJ4 and now flies
                 the E175.
             </p>
