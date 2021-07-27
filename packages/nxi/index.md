@@ -79,6 +79,3 @@ Flight Plan Manager:
 
 ## Comments, issues, bug reports
 If you run any any trouble, want to make suggestions for further improvements, or just have something to say about this mod, you can reach the creators via our [Discord](https://discord.com/invite/Fa6w2xK). We also generally hang out on Avsim and the official MSFS forum.
-
-<!-- ## Credits
-...? -->
