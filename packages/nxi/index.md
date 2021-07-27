@@ -5,7 +5,7 @@ title: Intro
 coverimage: g1000.jpg
 ---
 
-# Working Title G1000 NXi1
+# Working Title G1000 NXi
 Welcome to the Early Access Beta of our G1000 NXi for [Microsoft Flight Simulator](https://flightsimulator.com).<br>
 This mod replaces the stock G1000 in planes that use that panel package with a new G1000 NXi, written from the ground up by Working Title Simulations.
 
