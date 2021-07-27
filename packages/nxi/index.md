@@ -6,17 +6,22 @@ coverimage: g1000.jpg
 ---
 
 # Working Title G1000 NXi
-Welcome to the Early Access of our G1000 NXi for [Microsoft Flight Simulator](https://flightsimulator.com).<br>
-This mod provides the stock G1000 planes with the newer G1000 NXi unit, written from the ground up by Working Title.
+Welcome to the Early Access Beta of the Working Title G1000 NXi for [Microsoft Flight Simulator](https://flightsimulator.com).<br>
+
+This package replaces the stock G1000 in planes that use that panel package with a new G1000 NXi, written from the ground up by Working Title Simulations.
+
+This is an early access beta and there are many features of the real-world unit that have not yet been implemented, and you will surely find more than a few bugs here and there. It is our intention to keep a cadence of weekly or bi-weekly updates for this package, so we will be quickly adding features as well as squashing bugs that our wider open-beta audience help identify.
+
+Let’s reiterate – this is an early-access beta, released with the intent to help find bugs with the existing code as quickly as possible – if you find that it doesn’t work well for you, simply uninstall the package and use the default G1000 instrument.
 <div class="alert alert-info">
     <h4>Attention!</h4>
-    This mod can exclusively be downloaded and installed via the ingame Marketplace.<br>
-    We have still decided to provide you with a dedicated changelog for all our updates.
+    This package is exclusively offered via the ingame Marketplace – go there to download the latest version.<br>
+    Because of the update cadence, we will maintain the dedicated changelog for each update here on the packages.workingtitle.aero site.
 </div>
 {% include button.html text="Changelog" url="/packages/nxi/releases" %}
 
 ## Usage in default aircraft
-Because they use the Garmin G1000 unit, this mod will affect the following default aircraft:
+Because they use the Garmin G1000 unit, this package will affect the following default aircraft:
 - Cirrus SR22
 - Diamond Aircraft DA40NG
 - Diamond Aircraft DA62
@@ -26,7 +31,7 @@ Because they use the Garmin G1000 unit, this mod will affect the following defau
 - Textron Aviation Cessna 208B Grand Caravan EX
 
 ## Installation
-This mod can be installed automatically when selected in the ingame Marketplace.
+This package will be installed automatically when ‘purchased’ (for free) in the ingame Marketplace.
 
 ## Key features
 Flight Plan Manager:
@@ -72,10 +77,11 @@ Flight Plan Manager:
 ### Nav Radios
 - Automatically identifies localizers and VORs when tuned in. 
 
-<!-- 
 ## What's next?
-... -->
+We will be updating this package on a weekly/bi-weekly basis, and we will announce on our discord server, and here, when a new package version is available for download. We will be focusing on adding depth to many of the systems, as well as squashing bugs found by our open beta audience.
 
 
-## Comments, issues, bug reports
-If you run any any trouble, want to make suggestions for further improvements, or just have something to say about this mod, you can reach the creators via our [Discord](https://discord.com/invite/Fa6w2xK). We also generally hang out on Avsim and the official MSFS forum.
+## Bug Reporting
+We are asking everyone that downloads this package to help us make it better. You can do that by logging genuine bugs with the features we’ve implemented in our [Discord](https://discord.com/invite/Fa6w2xK) server in the dedicated #g1000-nxi-issues channel.
+
+But…we need your help to make this work – we do NOT need you to report missing features. We have the manual, we have the official Garmin trainer, we have real-world NXi examples, so we know what features we haven’t implemented. What we NEED is to know about bugs that you encounter with the features we HAVE implemented. Please, please, please limit your feedback to bugs, issues or problems you encounter with existing features. Thanks!
