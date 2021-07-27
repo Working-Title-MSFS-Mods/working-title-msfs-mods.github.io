@@ -32,7 +32,11 @@
         </div>
         <div class="col-sm-3">
           {% assign version = page.title %}
-          {% include releaselist.html category=cat current=version %}
+          {% if cat=="nxi" %}
+            {% include releaselist.html category=cat current=version downloadbutton="hide" %}
+          {% else %}
+            {% include releaselist.html category=cat current=version %}
+          {% endif %}
         </div>
       </div>
       </div>
