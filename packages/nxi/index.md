@@ -97,6 +97,6 @@ We will be updating this package on a weekly/bi-weekly basis, and we will announ
 
 
 ## Comments, issues, bug reports
-We are asking everyone that downloads this package to help us make it better. You can do that by logging genuine bugs with the features we’ve implemented in our [Discord](https://discord.com/invite/Fa6w2xK) server in the dedicated #g1000-nxi-issues channel.
+We are asking everyone that downloads this package to help us make it better. You can do that by logging genuine bugs with the features we’ve implemented in our [Discord](https://discord.com/invite/Fa6w2xK) server in the dedicated #nxi-early-access channel.
 
 But…we need your help to make this work – we do NOT need you to report missing features. We have the manual, we have the official Garmin trainer, we have real-world NXi examples, so we know what features we haven’t implemented. What we NEED is to know about bugs that you encounter with the features we HAVE implemented. Please, please, please limit your feedback to bugs, issues or problems you encounter with existing features. Thanks!
