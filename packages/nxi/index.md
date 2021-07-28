@@ -7,7 +7,7 @@ coverimage: g1000.jpg
 
 # Working Title G1000 NXi
 Welcome to the Early Access Beta of our G1000 NXi for [Microsoft Flight Simulator](https://flightsimulator.com).<br>
-This mod replaces the stock G1000 in planes that use that panel package with a new G1000 NXi, written from the ground up by Working Title Simulations.
+This package replaces the stock G1000 in planes that use that panel package with a new G1000 NXi, written from the ground up by Working Title Simulations.
 
 This is an early access beta and there are many features of the real-world unit that have not yet been implemented, and you will surely find more than a few bugs here and there. It is our intention to keep a cadence of weekly or bi-weekly updates for this package, so we will be quickly adding features as well as squashing bugs that our wider open-beta audience help identify.
 
@@ -21,7 +21,7 @@ Let’s reiterate – this is an early-access beta, released with the intent to 
 {% include button.html text="Changelog" url="/packages/nxi/releases" %}
 
 ## Usage in default aircraft
-Because they use the Garmin G1000 unit, this mod will affect the following default aircraft:
+Because they use the Garmin G1000 unit, this package will affect the following default aircraft:
 - Cirrus SR22
 - Diamond Aircraft DA40NG
 - Diamond Aircraft DA62
