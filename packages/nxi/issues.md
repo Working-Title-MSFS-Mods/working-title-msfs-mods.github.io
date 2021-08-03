@@ -29,6 +29,16 @@ This is a known issue; for version 0.2.0 we recommend not using VNAV or setting 
 {% include accordionitem.html id="vnavunexpectedclimb" h=issue c=answer %}
 </div>
 
+<h3>RNAV Approaches</h3>
+{% capture issue %}
+I can't see my glidepath indicator
+{% endcapture %}
+{% capture answer %}
+New bug introduced, in order to see it you must have VNAV turned on.
+{% endcapture %}
+{% include accordionitem.html id="hiddenGP" h=issue c=answer %}
+</div>
+
 
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
