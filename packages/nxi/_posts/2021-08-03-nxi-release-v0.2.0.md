@@ -53,6 +53,7 @@ VNAV is still a work-in-progress. We’re in the midst of some changes on it and
 ## Known Issues
 
 - There are problems with VNAV climbing when hitting ALT mode, which we're still troubleshooting. Be prepared to disable VNAV upon reaching the Bottom of Descent, or do not use VNAV with this version.
+- RNAV approaches will not show the vertical deviation window (Where GP and GS diamonds are) unless you have VNAV turned on.
 - Outer large COM knob only reduces frequency no matter the direction the knob is turned. This is an issue with the cockpit panel behaviors in the sim and has been logged with the MSFS team, but will not be able to be addressed in the NXi package as it is an issue with the base planes.
 - Sometimes the flight plan loading from the world map screen is loaded incompletely; this can usually be solved by restarting the flight - we are working on nailing this down.
 
