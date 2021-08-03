@@ -47,7 +47,7 @@ This package will be installed automatically when ‘purchased’ (for free) in 
 - Inputting waypoints can be done by keyboard by clicking the input field, and exited from keyboard mode by clicking anywhere else 
 
 
-### Vertical Navigation:
+### Vertical Navigation - WORK IN PROGRESS:
 - Full VNAV path navigation simulation with correct VPTH arm and active behavior
 - Correct vertical deviation indications for VNV active profile deviation, GP, and GS
 - Accurate VNAV path calculation from vectorized plan includes path guidance through turns and arcs
