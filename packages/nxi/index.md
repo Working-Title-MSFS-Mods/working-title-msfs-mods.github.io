@@ -16,7 +16,7 @@ Let’s reiterate – this is an early-access beta, released with the intent to 
 <div class="alert alert-info">
     <h4>Attention!</h4>
     This package is exclusively offered via the ingame Marketplace – go there to download the latest version.<br>
-    Because of the update cadence, we will maintain the dedicated changelog for each update here on the packages.workingtitle.aero site.
+    Because of the update cadence, we will maintain the dedicated changelog for each update here on the <a href="https://packages.workingtitle.aero">packages.workingtitle.aero</a> site.
 </div>
 {% include button.html text="Changelog" url="/packages/nxi/releases" %}
 

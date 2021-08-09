@@ -7,6 +7,20 @@ coverimage: g1000.jpg
 
 # Working Title G1000
 Welcome to the latest version of the Working Title G1000 for [Microsoft Flight Simulator](https://flightsimulator.com). This mod provides a raft of bug-fixes and enhancements to the stock G1000 used in many of the sim's general aviation planes.
+
+<div class="alert alert-warning">
+    <div class="row">
+        <div class="col">
+            <h4>Attention!</h4>
+            This is a legacy package. <b>THIS IS NOT THE NXi!</b><br>
+            The download below may no longer be working with the current simulator version.
+        </div>
+        <div class="col-auto text-end d-flex align-items-center">
+            <a href="/packages/nxi" class="btn btn-slanted btn-sliding"><span>To the G1000 NXi</span></a>
+        </div>
+    </div>
+</div>
+
 {% include downloadbutton.html category="g1000" %}
 {% include button.html text="Changelog and Older Versions" url="/packages/g1000/releases" %}
 
