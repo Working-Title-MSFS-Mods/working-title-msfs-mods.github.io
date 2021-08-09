@@ -12,8 +12,8 @@ Welcome to the latest version of the Working Title G1000 for [Microsoft Flight S
     <div class="row">
         <div class="col">
             <h4>Attention!</h4>
-            This is a legacy package. <b>THIS IS NOT THE NXi!</b><br>
-            The download below may no longer be working with the current simulator version.
+            <b>THIS IS NOT THE NXi!</b><br>
+            This is a mod to the default G1000 that adds only our legacy engine management pages. This should only be used if you <b>ARE NOT</b> using the G1000NXi from the Marketplace. Neither this package, nor the G1000NXi will work correctly if installed at the same time.
         </div>
         <div class="col-auto text-end d-flex align-items-center">
             <a href="/packages/nxi" class="btn btn-slanted btn-sliding"><span>To the G1000 NXi</span></a>

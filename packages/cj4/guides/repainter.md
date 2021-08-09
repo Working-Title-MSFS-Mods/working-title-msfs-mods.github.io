@@ -7,7 +7,16 @@ coverposition: 10% 50%
 ---
 
 # Repainter's Guide
-Because of certain techniques, not all published CJ4 repaints are compatible with the Working Title CJ4 Mod. This guide gives a short outline of why that is the case and how liveries can be made compatible starting with **v0.11.0**.
+Because of certain techniques, not all published CJ4 repaints are compatible with the Working Title CJ4 Mod. This guide gives a short outline of why that is the case and how liveries can be made compatible starting with **v0.11.0**, as well as providing a heads up on current developments of interest to CJ4 repainters.
+
+## Current developments
+### Pink interiors
+Sim Update 5 introduced a number of optimizations, including a more extensive texture fallback management. All repaints which were created before that update miss one fallback line. Because of this, the sim fails to load some textures and shows the pink model beneath.
+1. In the respective livery texture folder, open the file called `texture.cfg`.
+2. Add the following line at the end of that file, replace the `X` with the next number in line and save.
+```
+fallback.X=..\..\..\..\texture\Planes_Generic
+```
 
 ## Handling of Dynamic Registrations
 ### Current State
@@ -16,7 +25,6 @@ At the moment, the flags `atc_id_enable` or `atc_id_color` are existing in the `
 painting00=Registration/Registration.html?font_color=black, 0, 0, 1024, 256
 ```
 The five variables in the end are `font-color`, `left`, `top`, `width` and `height`.
-
 
 ### Implications
 For any manual changes to this line, you will need to create a custom panel. However, by doing so, you cannot include the custom panel and gauges provided by the Working Title CJ4 Mod. Therefore, the livery will break the mod and a red "LIVERY INCOMPATIBLE" warning will show on the MFD.
@@ -93,6 +101,7 @@ fallback.3=..\..\..\..\texture\AudioPanel
 fallback.4=..\..\..\..\texture\Glass
 fallback.5=..\..\..\..\texture\Livery
 fallback.6=..\..\Asobo_CJ4\texture
+fallback.7=..\..\..\..\texture\Planes_Generic
 ```
 Now we need to add the fallback line of our selected cabin in the first position. For all fallbacks to still work, we need to increment all other values by one.<br>
 The following is an example of how a finished `texture.cfg` file could look. Obviously, the final file depends on the cabin you have selected.
@@ -106,6 +115,7 @@ fallback.4=..\..\..\..\texture\AudioPanel
 fallback.5=..\..\..\..\texture\Glass
 fallback.6=..\..\..\..\texture\Livery
 fallback.7=..\..\Asobo_CJ4\texture
+fallback.8=..\..\..\..\texture\Planes_Generic
 ```
 
 ### Test Your Repaint
