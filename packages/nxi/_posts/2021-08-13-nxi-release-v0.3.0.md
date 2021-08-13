@@ -15,7 +15,6 @@
 - The maps in MFD Waypoint Info and MFD Direct To can now be zoomed.
 - Implemented automatic map resizing on the MFD when the FPL page is open
 - Adds world map airway import (note that Navigraph and Simbrief exports do not have airways when loaded into the world map), so if airways are included in the routing on the world map, they will be imported.
-- Adds DME window to PFD.
 
 ## Issues Resolved
 - Implemented fixes and precautions against possible CTD scenarios.
@@ -40,6 +39,7 @@
 - Fixed issue where VNAV TOD calculation would end in infinite loop in certain situations
 - Fixed issue where map Track Up mode would not properly engage.
 - Fixed issue where the PFD marker beacon indicator was not displaying.
+- Fixed DME window visibility in HSI Map mode.
 
 ## Known Issues
 - Outer large COM knob only reduces frequency no matter the direction the knob is turned. This is an issue with the cockpit panel behaviors in the sim and has been logged with the MSFS team, but will not be able to be addressed in the NXi package as it is an issue with the base planes.
