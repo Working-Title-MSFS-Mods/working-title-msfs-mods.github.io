@@ -13,6 +13,7 @@
 - The active flight plan information section no longer hides part of the map.
 - The PFD range knob no longer changes map range when neither the PFD inset map nor the HSI map are open.
 - The maps in MFD Waypoint Info and MFD Direct To can now be zoomed.
+- Implemented automatic map resizing on the MFD when the FPL page is open
 - Adds world map airway import (note that Navigraph and Simbrief exports do not have airways when loaded into the world map), so if airways are included in the routing on the world map, they will be imported.
 - Adds DME window to PFD.
 
