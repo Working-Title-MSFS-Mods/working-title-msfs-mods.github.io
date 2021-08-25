@@ -19,26 +19,35 @@ Yes, there's a keyboard input option on the waypoint info page. Click on the inp
 {% endcapture %}
 {% include accordionitem.html id="keyboardentry" h=issue c=answer %}
 
-<h3>VNAV</h3>
 {% capture issue %}
-VNAV is climbing when it shouldn't
+Why does my world map plan not show up in the GPS?
 {% endcapture %}
 {% capture answer %}
-This is a known issue; for version 0.2.0 we recommend not using VNAV or setting your altitude preselector to 0 feet if you do use it.
+Sometimes the flight plan loading from the world map screen is loaded incompletely; this can usually be solved by restarting the flight - we are working on nailing this down.
 {% endcapture %}
-{% include accordionitem.html id="vnavunexpectedclimb" h=issue c=answer %}
-</div>
-
-<h3>RNAV Approaches</h3>
+  
 {% capture issue %}
-I can't see my glidepath indicator
+I made a plan with Navigraph or Simbrief, but I don't see my airways.
 {% endcapture %}
 {% capture answer %}
-New bug introduced, in order to see it you must have VNAV turned on.
+World Map imports from Navigraph and Simbrief do not include airways, so airways will not be added to the G1000NXi flight plan when the plan was imported to the World Map from one of these sources.
 {% endcapture %}
-{% include accordionitem.html id="hiddenGP" h=issue c=answer %}
-</div>
 
+<h3>COM Tuning</h3>
+{% capture issue %}
+The outer large COM knob only decreases my frequency.
+{% endcapture %}
+{% capture answer %}
+Outer large COM knob only reduces frequency no matter the direction the knob is turned. This is an issue with the cockpit panel behaviors in the sim and has been logged with the MSFS team, but will not be able to be addressed in the NXi package as it is an issue with the base planes.
+{% endcapture %}
+  
+<h3>External View HUD</h3>
+{% capture issue %}
+Why does the external view HUD HSI not follow the GPS plan?
+{% endcapture %}
+{% capture answer %}
+The NXi uses a brand new flight plan and navigation system that are currently external to the simulator. In time, APIs will be added to the simulator that will allow us to synchronize the HSI with the new flight plan system.
+{% endcapture %}
 
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
