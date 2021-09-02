@@ -41,11 +41,10 @@ This package will be installed automatically when ‘purchased’ (for free) in 
 - Full real time flight path vectorization and on-map visualization matching the real unit
 - Full support of direct-to with proper matching behavior and waypoint sequencing
 - Automatic and authentic NAV CDI scaling depending on flight phase (Departure, Terminal, APPR, LPV, etc.)
-
+- User controlled holds as well as published holds.
 
 ### Accessibility
 - Inputting waypoints can be done by keyboard by clicking the input field, and exited from keyboard mode by clicking anywhere else 
-
 
 ### Vertical Navigation - WORK IN PROGRESS:
 - Full VNAV path navigation simulation with correct VPTH arm and active behavior
@@ -54,7 +53,6 @@ This package will be installed automatically when ‘purchased’ (for free) in 
 - Provides vertical guidance from loaded procedures such as departures, arrivals, approaches  
 - Full simulation of RNAV LPV approaches including angular distance CDI scaling
 - Glideslope/Glidepath preview to easily transition from VNAV descent into approach.  
-
 
 ### PFD:
 - Selectable between artificial horizon and synthetic vision
@@ -68,7 +66,7 @@ This package will be installed automatically when ‘purchased’ (for free) in 
 - Nearest airports (Allows easy direct-to and radio tuning capabilities)
 - Select HPA or IN for altimeter units
 - Standard BARO option  
-
+- ADF bearing pointer option and tuning in ADF/DME menu
 
 ### MFD:
 - Improved engine instrument displays (Still WIP)
@@ -80,21 +78,20 @@ This package will be installed automatically when ‘purchased’ (for free) in 
 - Procedure selection with accurate leg parsing and waypoint deduplication
 - Flight plan menu with ability to activate leg, delet plan, invert plan, and remove procedures
 
- 
 ### Mapping:
 - Entirely revamped high performance map system
 - Authentic collision based waypoint label culling system for auto-declutter
 - Brand new waypoint, navigation fix, and airport icons
 - Highly accurate TOD and BOD marker placement
 - Airspace rendering
+- Traffic, terrain and weather displays
 
 ### Nav Radios
-- Automatically identifies localizers and VORs when tuned in. 
-
+- Automatically identifies localizers and VORs when tuned in
+- Auto tuning approach frequencies and auto-switching HSI for ILS approaches
 
 ## What's next?
 We will be updating this package on a weekly/bi-weekly basis, and we will announce on our discord server, and here, when a new package version is available for download. We will be focusing on adding depth to many of the systems, as well as squashing bugs found by our open beta audience.
-
 
 ## Comments, issues, bug reports
 We are asking everyone that downloads this package to help us make it better. You can do that by logging genuine bugs with the features we’ve implemented in our [Discord](https://discord.com/invite/Fa6w2xK) server in the dedicated #nxi-early-access channel.
