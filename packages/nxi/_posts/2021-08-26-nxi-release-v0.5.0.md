@@ -3,8 +3,7 @@ layout: post
 title: v0.5.0
 coverimage: g1000.jpg
 ---
-# Working Title Garmin G1000 NXi v0.5.0
-
+# Working Title G1000 NXi v0.5.0
 ## New Features
 
 - Automatic CDI switching for ILS approaches
