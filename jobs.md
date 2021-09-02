@@ -15,11 +15,11 @@ coverposition: 30% 45%
 {% endcapture %}
 {% capture jobdetails %}
 As a member of our dev team, you will work in coordination with the company’s founders and your colleagues to imagine, design, build and test aircraft and avionics packages for Microsoft Flight Simulator.
-
+<p>
 You will be expected to participate in the full lifecycle of development projects, from the design phase to completion, including QA. The tech stack for the base simulation software is primarily C++, and there are projects that will focus in this area, but the vast majority of projects will be TypeScript/HTML/CSS projects.
-
+<p>
 You will be expected to have or develop a strong knowledge of aviation (real or simulated), including what various instruments do and how they work. You will spend your entire day, every day, working with virtual airplanes and their cockpits, building them to look and work just like their real-world counterparts do, so knowledge of real-world aviation technologies and procedures is required to do the job right. This will often include poring over hundreds of pages of real-world avionics and aircraft manuals, as well as tediously testing scenarios in avionics simulators.
-
+<p>
 This work is incredibly detail-oriented; be prepared to thoughtfully plan, document and test your work – if you’re not inclined towards these activities, you won’t be a good fit for Working Title.
 
 {% include button.html break=true text="View position on Indeed" url="https://www.indeed.com/viewjob?jk=16e8a7be8f136d93" blank=true %}
