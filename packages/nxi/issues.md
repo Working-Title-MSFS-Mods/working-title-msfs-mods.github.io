@@ -10,6 +10,14 @@ coverposition: left bottom
 
 <div class="accordion accordion-flush mb-4" id="accordion">
 
+<h3>Hardware Compatibility</h3>
+{% capture issue %}
+Selected Altitude in SteamDeck is showing the wrong value.
+{% endcapture %}
+{% capture answer %}
+If you are using Flight Tracker StreamDeck from Github (https://github.com/nguyenquyhy/Flight-Tracker-StreamDeck) for your Autopilot Panel, make sure that the Display value for Selected Altitude is using 'AUTOPILOT_ALTITUDE_LOCK_VAR__1' instead of 'AUTOPILOT_ALTITUDE_LOCK_VAR'.
+{% endcapture %}
+
 <h3>Flight Planning</h3>
 {% capture issue %}
 Using the scroll knobs to enter waypoints is hard. Can I use my keyboard?
