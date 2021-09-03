@@ -17,6 +17,7 @@ Selected Altitude in SteamDeck is showing the wrong value.
 {% capture answer %}
 If you are using Flight Tracker StreamDeck from Github (https://github.com/nguyenquyhy/Flight-Tracker-StreamDeck) for your Autopilot Panel, make sure that the Display value for Selected Altitude is using 'AUTOPILOT_ALTITUDE_LOCK_VAR__1' instead of 'AUTOPILOT_ALTITUDE_LOCK_VAR'.
 {% endcapture %}
+{% include accordionitem.html id="keyboardentry" h=issue c=answer %}
 
 <h3>Flight Planning</h3>
 {% capture issue %}
@@ -33,6 +34,7 @@ Why does my world map plan not show up in the GPS?
 {% capture answer %}
 Sometimes the flight plan loading from the world map screen is loaded incompletely; this can usually be solved by restarting the flight - we are working on nailing this down.
 {% endcapture %}
+{% include accordionitem.html id="keyboardentry" h=issue c=answer %}
   
 {% capture issue %}
 I made a plan with Navigraph or Simbrief, but I don't see my airways.
@@ -40,6 +42,7 @@ I made a plan with Navigraph or Simbrief, but I don't see my airways.
 {% capture answer %}
 World Map imports from Navigraph and Simbrief do not include airways, so airways will not be added to the G1000NXi flight plan when the plan was imported to the World Map from one of these sources.
 {% endcapture %}
+{% include accordionitem.html id="keyboardentry" h=issue c=answer %}
 
 <h3>COM Tuning</h3>
 {% capture issue %}
@@ -48,6 +51,7 @@ The outer large COM knob only decreases my frequency.
 {% capture answer %}
 Outer large COM knob only reduces frequency no matter the direction the knob is turned. This is an issue with the cockpit panel behaviors in the sim and has been logged with the MSFS team, but will not be able to be addressed in the NXi package as it is an issue with the base planes.
 {% endcapture %}
+{% include accordionitem.html id="keyboardentry" h=issue c=answer %}
   
 <h3>External View HUD</h3>
 {% capture issue %}
@@ -56,6 +60,7 @@ Why does the external view HUD HSI not follow the GPS plan?
 {% capture answer %}
 The NXi uses a brand new flight plan and navigation system that are currently external to the simulator. In time, APIs will be added to the simulator that will allow us to synchronize the HSI with the new flight plan system.
 {% endcapture %}
+{% include accordionitem.html id="keyboardentry" h=issue c=answer %}
 
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
