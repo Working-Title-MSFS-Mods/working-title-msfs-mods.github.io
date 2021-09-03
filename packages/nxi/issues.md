@@ -18,6 +18,15 @@ Selected Altitude in SteamDeck is showing the wrong value.
 If you are using Flight Tracker StreamDeck from Github (https://github.com/nguyenquyhy/Flight-Tracker-StreamDeck) for your Autopilot Panel, make sure that the Display value for Selected Altitude is using 'AUTOPILOT_ALTITUDE_LOCK_VAR__1' instead of 'AUTOPILOT_ALTITUDE_LOCK_VAR'.
 {% endcapture %}
 {% include accordionitem.html id="steamdeck" h=issue c=answer %}
+{% capture issue %}
+Selected Altitude in Saitek/Logitech AP Multipanel is showing the wrong value.
+{% endcapture %}
+{% capture answer %}
+We are researching this issue, but right now it appears that without using a third party software to configure this correctly, there is not an immediate solution to this. The core of the problem is that the sim (as did P3D and FSX) uses multiple altitude slots for different modes - alt slot 1 is typically used for the pilot Selected Altitude, while slot 2 and 3 are used usually by vnav and alt hold. In order to set and read the pilot selected altitude, hardware needs to read/write from slot 1. However, the Logitech Multipanel does not do this - instead, it reads/writes from/to the default value, or slot 0. Reading the altitude from slot 0 is incorrect for any aircraft with VNAV. If you use third party software to control your panel, you can specify to read from AUTOPILOT_ALTITUDE_LOCK_VAR_1 instead of from AUTOPILOT_ALTITUDE_LOCK_VAR; but without added software, there does not appear to be a way to fix this error. Users can, and should, ask Logitech to update their software to either provide configuration options or change their default settings to use the correct slot for selected altitude.
+
+The good news is that we have added a feature to the sim for SU6 that will allow us to get users around this bug, so after the next sim update, this should not be an issue anymore.
+{% endcapture %}
+{% include accordionitem.html id="saitekmultipanel" h=issue c=answer %}
 
 <h3>Flight Planning</h3>
 {% capture issue %}
