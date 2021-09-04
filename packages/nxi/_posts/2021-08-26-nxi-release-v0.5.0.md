@@ -59,7 +59,7 @@ coverimage: g1000.jpg
 - Outer large COM knob only reduces frequency no matter the direction the knob is turned. This is an issue with the cockpit panel behaviors in the sim and has been logged with the MSFS team, but will not be able to be addressed in the NXi package as it is an issue with the base planes.
 - Sometimes the flight plan loading from the world map screen is loaded incompletely; this can usually be solved by restarting the flight - we are working on nailing this down.
 - World Map imports from Navigraph and Simbrief do not include airways, so airways will not be added to the G1000 NXi flight plan when the plan was imported to the World Map from one of these sources.
-- User holds are currently supported for the destination or for runways; this is coming in the future.
+- User holds are currently not supported for the destination or for runways; this is coming in the future.
 
 ## Heads Up!
 - **GPS, LOC, and VOR modes now ARM!** Be aware that you will need to be on an intercept course and within capture distance of the desired flight path before those modes will become active.
