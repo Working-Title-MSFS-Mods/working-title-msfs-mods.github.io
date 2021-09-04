@@ -16,6 +16,7 @@ coverimage: g1000.jpg
 - World Map imports from Navigraph and Simbrief do not include airways, so airways will not be added to the G1000 NXi flight plan when the plan was imported to the World Map from one of these sources.
 - User holds are currently not supported for the destination or for runways; this is coming in the future.
 - External camera view HUD does not sync properly with the NXi and may show strange or incorrect data. We expect to be able to resolve this after Sim Update 6.
+- Hardware autopilot peripherals may display the selected altitude as 99000. If you can configure it, you must set the altitude to read from index/slot 1 instead of index/slot 0. If it is not possible to configure using the manufacturer software, you may be able to configure it using third party software such as AxisAndOhs, Mobiflight, or spad.next. We expect to be able to remove this workaround after Sim Update 6.
 
 ## Heads Up!
 - **GPS, LOC, and VOR modes now ARM!** Be aware that you will need to be on an intercept course and within capture distance of the desired flight path before those modes will become active.
