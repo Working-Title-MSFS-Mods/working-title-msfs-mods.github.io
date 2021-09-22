@@ -1,6 +1,6 @@
 ---
 layout: package
-permalink: /packages/nxi/guides/test
+permalink: /packages/nxi/guides/eisguide
 title: Test Guide
 coverimage: g1000.jpg
 ---
