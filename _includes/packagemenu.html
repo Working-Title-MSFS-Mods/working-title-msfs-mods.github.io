@@ -19,10 +19,12 @@
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/releases"><span>Releases</span></a>
             </div>
-            {% if include.mode == "packages/cj4" or include.mode == "packagescj4" or include.mode == "cj4" %}
+            {% if include.mode == "packages/cj4" or include.mode == "packagescj4" or include.mode == "cj4" or include.mode == "packages/nxi" or include.mode == "packagesnxi" or include.mode == "nxi" %}
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/guides"><span>Guides</span></a>
             </div>
+            {% endif %}
+            {% if include.mode == "packages/cj4" or include.mode == "packagescj4" or include.mode == "cj4" %}
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/repaints"><span>Repaints</span></a>
             </div>
