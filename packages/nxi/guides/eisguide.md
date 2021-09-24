@@ -7,7 +7,7 @@ coverimage: g1000.jpg
 
 # G1000 NXi EIS Enhancements
 
-The NXi, starting with verison 0.7.0, comes with a couple of enhancements to the EIS display system.  The biggest is that it now has optional support for the "Lean" and "System" pages seen on many G1000 installations.  Additionally, a new guage type meant to represent cylinder temperatures has been added.
+The NXi, starting with verison 0.7.0, comes with a couple of enhancements to the EIS display system.  The biggest is that it now has optional support for the "Lean" and "System" pages seen on many G1000 installations.  Additionally, a new guage type meant to represent cylinder temperatures has been added.  Finally, developers modifying the panels of stock planes have to take one extra step for now, which is detailed at the bottom.
 
 ## New Pages
 
@@ -80,3 +80,19 @@ Also, if no `TempOrder` tag is found, cylinders will be assigned a rank in simpl
 #### Redline
 
 At the moment, the redline cannot be configured at a value other than the `Maximum` of the gauge.  This is an additional option that will come in a future version.
+
+## Developer Hint: Default Overrides
+
+Finally, there is one thing for developers who are working on modifications to the stock plane to take note of.   Currently, the new panels for the default planes are shipped along with the NXi, and it uses them in place of the stock `panel.xml` that comes with the base game.   Developers who are modifying the panels of the stock planes will need to take one extra step to make their mods work with the NXi.  Specifically, they will need to add an `override` attribute to the `EngineDisplay` tag in their modded panel.   It should now look like this:
+
+    <EngineDisplay override="true">
+      <EnginePage>
+      ...
+      </EnginePagn>
+     ...
+    </EngineDisplay>
+
+Without this, the NXi will not load the custom logic.  Please note two things:
+
+1. This only applies to mods to the panels of the stock planes.  Developers working on completely new planes do not need to worry about this.
+2. This will only be the case until the new NXi-enhanced panels are moved into the base game.  Once that's done this will no longer be needed.
