@@ -6,10 +6,18 @@ coverimage: g1000.jpg
 # Working Title G1000 NXi v0.7.1
 
 ## Issues Resolved
-
-- Fixed logic around adding of destination airport to en route segment.
-- Fixed MFD fuel reset target value; now uses usable fuel rather than total capacity.
-- Fixed G36 fuel quantity gauge incorrectly using values from the C172.
+* Fixes bug with APR button press not sending the correct input value to the approachPressed method in AP with certain key events.
+* Fixes bug where in a climb the current altitude, and not the selected altitude, was displayed in the MFD FPL page for cruise advisory altitudes.
+* Fixes bug with GS/GP activation causing VNAV to set alt hold when VNAV remained on or armed.
+* Fixes bug with Vertical Deviation Indicator showing VNAV deviation even when GP is active.
+* Fixes bug where VNAV would not descend to a constraint if the next constraint was only 100 feet below the current constraint.
+* Fixes bug where VNAV would remain armed after the LOC autoswitch.
+* Fixes bug with Altitude Capture when capture is actived when level or near level
+* Fixes bug where after a missed approach from an ILS/LOC approach and resequencing to an RNAV approach for the same runway would incorrectly switch to LOC again.
+* Fixes calculation and display of vertical direct FPA and advisory altitudes when constraint is not the direct-to target, but is in the current constraint segment.
+* DA40NG system page now shows engine load gauge instead of manifold pressure.
+* Adjusted display of EGT gauge on DA40NG, SR22, G36 to show the EGT range better since these 3 aircraft strangely max out at 1200F compared to the normal 1600 of the other piston aircraft.
+* Fix DA62 aux tank display to show the level instead of the capacity.
 
 ## Heads Up!
 * VNAV now deactivates upon reaching the last constraint (cyan altitude in FPL) prior to a VNAV ineligible leg, such as a MANSEQ, Procedure Turn or Hold. Be aware that if you have a MANSEQ leg at the end of your arrival procedure, without manual intervention, you can (and likely will) end up too high to reasonable descend for the approach. You have three options to navigate this: (1) Manually descend as is reasonable at your discretion; (2) delete the MANSEQ leg to allow VNAV to recalculate by directly connecting the end of the arrival with the beginning of the approach or (3) activate the approach (or proceed direct to the IAF) and VNAV will attempt to calculate a path up to 6 degrees from your current position to the next constraint.
