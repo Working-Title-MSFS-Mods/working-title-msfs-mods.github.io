@@ -1,5 +1,9 @@
-# Working Title Garmin G1000 NXi v0.3.0
-
+---
+layout: post
+title: v0.3.0
+coverimage: g1000.jpg
+---
+# Working Title G1000 NXi v0.3.0
 ## New Features
 
 - Added support for user waypoints, custom arrival and departure waypoints and POIs in the world map flight plan import (foundation for user/pilot waypoints is now in place, but interface for adding/removing is not yet complete).
