@@ -12,6 +12,7 @@ This is an early release of what is intended to eventually be the reworking of s
 
 ## Usage in default aircraft
 Because they use the Garmin G3X unit, this mod will affect the following default aircraft:
+- Beechcraft King Air 350i
 - Cub Crafters X CUB
 - Extra EXTRA 330LT
 - ICON A5
