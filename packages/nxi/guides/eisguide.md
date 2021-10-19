@@ -7,7 +7,9 @@ coverimage: g1000.jpg
 
 # G1000 NXi EIS Enhancements
 
-The NXi, starting with verison 0.7.0, comes with a couple of enhancements to the EIS display system.  The biggest is that it now has optional support for the "Lean" and "System" pages seen on many G1000 installations.  Additionally, a new guage type meant to represent cylinder temperatures has been added.  Finally, developers modifying the panels of stock planes have to take one extra step for now, which is detailed at the bottom.
+The NXi, starting with verison 0.7.0, comes with a couple of enhancements to the EIS display system.  The biggest is that it now has optional support for the "Lean" and "System" pages seen on many G1000 installations.  Additionally, a new gauge type meant to represent cylinder temperatures has been added.
+
+Further, 0.8.0 adds new support for discrete margins on each side of a gauge.
 
 ## New Pages
 
@@ -58,18 +60,18 @@ With this configuration, the NXi will see the `EnginePage` tag and ignore the le
 
 Version 0.7.0 also introduces a new gauge meant to display CHT and EGT information in the style of the real NXi.  This can be created by using a new gauge with `Cylinder` as the value in the `Type` tag.  In addition to the standard configuration properties, the following have been added specifically for the cylinder gauge:
 
-| Tag      | Meaning                                                           |
-|----------|-------------------------------------------------------------------|
-|Columns   |The number of columns (_ie_, cylinders) to draw on the gauge.      |
-|Rows      |The number of individual "boxes" that make up each cylinder column.|
-|TempOrder |The order of the cylinders from hottest to coldest.                |
+| Tag       | Meaning                                                             |
+| --------- | ------------------------------------------------------------------- |
+| Columns   | The number of columns (_ie_, cylinders) to draw on the gauge.       |
+| Rows      | The number of individual "boxes" that make up each cylinder column. |
+| TempOrder | The order of the cylinders from hottest to coldest.                 |
 
 Additionally, the `Style` section has two new possible parameters.
 
-| Tag        | Meaning                                                                       |
-|------------|-------------------------------------------------------------------------------|
-|ShowPeak    |Show a horizontal blue bar for peak temperature on a cylinder, for lean assist.|
-|ShowRedline |Draw the temperature redline at the top of the gauge.                          |
+| Tag         | Meaning                                                                         |
+| ----------- | ------------------------------------------------------------------------------- |
+| ShowPeak    | Show a horizontal blue bar for peak temperature on a cylinder, for lean assist. |
+| ShowRedline | Draw the temperature redline at the top of the gauge.                           |
 
 #### Temperature Order
 
@@ -80,6 +82,22 @@ Also, if no `TempOrder` tag is found, cylinders will be assigned a rank in simpl
 #### Redline
 
 At the moment, the redline cannot be configured at a value other than the `Maximum` of the gauge.  This is an additional option that will come in a future version.
+
+## New Style Elements
+
+It is now possible to specify individual margins on any gauge, to allow for finer control of the spacing of elements on the EIS display.   This is accomplished by adding a `Margin` tag in the `Style` section.   This tag can contain up to four further tags, `Top`, `Bottom`, `Left`, and `Right`, each of which takes a numerical argument representing the desired size of the respective margin in pixels.
+
+An example which will add extra space above and below the given gauge:
+
+    <Gauge>
+      <Style>
+        <Margins>
+          <Top>10</Top>
+          <Bottom>10</Bottom>
+        </Margins>
+      </Style>
+      ...
+    </Gauge>
 
 ## Developer Hint: Default Overrides
 
