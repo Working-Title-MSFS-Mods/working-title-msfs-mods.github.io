@@ -85,7 +85,7 @@ At the moment, the redline cannot be configured at a value other than the `Maxim
 
 ## New Style Elements
 
-It is now possible to specify individual margins on any gauge, to allow for finer control of the spacing of elements on the EIS display.   This is accomplished by adding a `Margin` tag in the `Style` section.   This tag can contain up to four further tags, `Top`, `Bottom`, `Left`, and `Right`, each of which takes a numerical argument representing the desired size of the respective margin in pixels.
+It is now possible to specify individual margins on any gauge, to allow for finer control of the spacing of elements on the EIS display.   This is accomplished by adding a `Margins` tag in the `Style` section.   This tag can contain up to four further tags, `Top`, `Bottom`, `Left`, and `Right`, each of which takes a numerical argument representing the desired size of the respective margin in pixels.
 
 An example which will add extra space above and below the given gauge:
 
@@ -106,7 +106,7 @@ Finally, there is one thing for developers who are working on modifications to t
     <EngineDisplay override="true">
       <EnginePage>
       ...
-      </EnginePagn>
+      </EnginePage>
      ...
     </EngineDisplay>
 
