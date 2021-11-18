@@ -40,6 +40,7 @@ coverimage: g1000.jpg
   * Added the ability to create a hold directly from the direct-to page
   * Added setting of inbound course for a direct-to
   * Added MFD FPL-page-specific soft key menu
+  * Added shortcut to WPT Information page by pressing ENT on non-relative legs that terminate at a navaid
 
 ### EIS
   * Add EIS support for ColorLine and ReferenceBug
@@ -71,7 +72,7 @@ coverimage: g1000.jpg
 * Fixed non-functional lean assist on the SR22 and Baron
 * Fixed issue where the cancel button on FPL Waypoint Remove did not close the dialog
 * Fixed DTO menu not automatically advancing to activate button in certain situations
-* Fixed a bug with initializing DTO menu waypoint from a DTO random.
+* Fixed a bug where the direct-to page would not accept waypoints input from other pages, such as the nearest airports page
 * Fixed bug where the direct-to waypoint did not have the proper altitude constraint assigned
 * Fixed an issue where both the TOD and BOD markers were drawn on the map simultaneously
 * Fixed bug where deleting a hold origin fix does not delete the hold for that fix
@@ -93,4 +94,4 @@ coverimage: g1000.jpg
 * Changing the CDI source drops the autopilot into ROL mode. This is the correct behavior, intended to keep the airplane held in the same attitude until the pilot reselects appropriate guidance.
 * The NXi’s traffic advisory system (TAS) will now start in STANDBY mode by default. While in this mode it will not issue any advisories nor will traffic be displayed on any maps. The system will automatically switch from STANDBY to OPERATING mode after takeoff (and back to STANDBY after landing). You can also manually switch TAS to OPERATING mode through the MFD Traffic Map page (use the MFD FMS knobs to change the open MFD page).
 * The fuel quantity information on the MFD's sytem page simulates an authentic totalizer. This means it does not actually track the fuel in your tanks, it simply counts how much has been burned and relies on you to tell it what the original quantity was. This means if you add or remove fuel in flight you'll need to manually adjust the starting quantity in the tanks with the buttons on the GAL REM submenu.
-* The displayed METAR information on the MFD FPL page reflects real-world weather, so they may not always match in-game conditions, especially if using a weather preset or custom weather.
+* The displayed METAR information on the MFD FPL page reflects real-world weather from the sim live weather METARs, so they may not always match in-game conditions, especially if using a weather preset or custom weather.
