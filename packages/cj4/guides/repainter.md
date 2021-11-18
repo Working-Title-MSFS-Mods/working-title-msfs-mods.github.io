@@ -9,14 +9,19 @@ coverposition: 10% 50%
 # Repainter's Guide
 Because of certain techniques, not all published CJ4 repaints are compatible with the Working Title CJ4 Mod. This guide gives a short outline of why that is the case and how liveries can be made compatible starting with **v0.11.0**, as well as providing a heads up on current developments of interest to CJ4 repainters.
 
-## Current developments
-### Pink interiors
-Sim Update 5 introduced a number of optimizations, including a more extensive texture fallback management. All repaints which were created before that update miss one fallback line. Because of this, the sim fails to load some textures and shows the pink model beneath.
-1. In the respective livery texture folder, open the file called `texture.cfg`.
-2. Add the following line at the end of that file, replace the `X` with the next number in line and save.
-```
-fallback.X=..\..\..\..\texture\Planes_Generic
-```
+<div class="alert alert-info">
+  <h3 id="white-displays">White displays (SU7)</h3>
+  <p>Sim Update 7 introduced a change in how the CJ4 LCD screens are mapped. All repaints which were created before that update and use a <code>panel.cfg</code> containing a <code>[VCockpitXX]</code> entry will no longer show the PFD, MFD and FMS screens. The guide below will fix this problem.</p>
+
+  <h3 id="pink-interiors">Pink interiors (SU5)</h3>
+  <p>Sim Update 5 introduced a number of optimizations, including a more extensive texture fallback management. All repaints which were created before that update miss one fallback line. Because of this, the sim fails to load some textures and shows the pink model beneath.</p>
+  <ol>
+    <li>In the respective livery texture folder, open the file called <code>texture.cfg</code>.</li>
+    <li>Add the following line at the end of that file, replace the <code>X</code> with the next number in line and save.<br>
+      <code>fallback.X=..\..\..\..\texture\Planes_Generic</code>
+    </li>
+  </ol>
+</div>
 
 ## Handling of Dynamic Registrations
 ### Current State
@@ -33,10 +38,10 @@ For any manual changes to this line, you will need to create a custom panel. How
 ### Workaround
 We have provided three panel variations, that should cover most liveries out there. These panels can be aliased by your custom panels and are updated automatically, so that your integration won't break in the future.
 
-##### Black Registration
+- #### Black Registration
 This is the default. Make sure no custom panel is present in your package and the `panel=` line of the `aircraft.cfg` looks like this: `panel=""`.
 
-#### White Registration
+- #### White Registration
 Users can still change the registration on your paint, but it now appears in white. Use this option if your paint features are dark tailfin.
 1. Create a custom panel folder in your package.
 2. Reference this custom panel in the `panel=` line of the `aircraft.cfg` in your package.
@@ -47,7 +52,7 @@ Users can still change the registration on your paint, but it now appears in whi
 alias=Asobo_CJ4\panel.whitereg
 ```
 
-#### No Registration
+- #### No Registration
 Removes the dynamically set registration altogether. Use this option if you want to explicitly paint a registration onto the textures and don't want the default registration displayed.
 1. Create a custom panel folder in your package.
 2. Reference this custom panel in the `panel=` line of the `aircraft.cfg` in your package.
@@ -130,4 +135,4 @@ If you have made your repaint compatible and wish to have your livery featured i
 
 ## ⚠️ Note
 Be aware, that if you decide to use a `panel.whitereg` or `panel.noreg` fallback, your liveries will **not** work with the default CJ4 anymore.<br>
-<!-- Regarding cabins: If you implement the texture fallback correctly, your livery will still work flawlessly with the default interiors even if the cabin is not installed. -->
+There is an effort underway to allow for repaints that work on both the default and WT CJ4s. We will adjust this guide accordingly, once that method becomes available.

@@ -212,6 +212,10 @@ td p {
     filter: invert(1);
 }
 
+ul{
+    list-style-type: square;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: 400;
 }
@@ -385,4 +389,8 @@ a:hover {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+pre code {
+    color: #d63384;
 }
