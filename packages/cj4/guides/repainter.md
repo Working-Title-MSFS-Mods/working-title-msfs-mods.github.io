@@ -10,8 +10,8 @@ coverposition: 10% 50%
 Because of certain techniques, not all published CJ4 repaints are compatible with the Working Title CJ4 Mod. This guide gives a short outline of why that is the case and how liveries can be made compatible starting with **v0.11.0**, as well as providing a heads up on current developments of interest to CJ4 repainters.
 
 <div class="alert alert-info">
-  <h3 id="white-displays">White displays (SU7)</h3>
-  <p>Sim Update 7 introduced a change in how the CJ4 LCD screens are mapped. All repaints which were created before that update and use a <code>panel.cfg</code> containing a <code>[VCockpitXX]</code> entry will no longer show the PFD, MFD and FMS screens. The guide below will fix this problem.</p>
+  <h3 id="white-displays">White displays (GOTY)</h3>
+  <p>The "Game of the Year" Update introduced a change in how the CJ4 LCD screens are mapped. All repaints which were created before that update and use a <code>panel.cfg</code> containing a <code>[VCockpitXX]</code> entry will no longer show the PFD, MFD and FMS screens. The guide below will fix this problem.</p>
 
   <h3 id="pink-interiors">Pink interiors (SU5)</h3>
   <p>Sim Update 5 introduced a number of optimizations, including a more extensive texture fallback management. All repaints which were created before that update miss one fallback line. Because of this, the sim fails to load some textures and shows the pink model beneath.</p>
