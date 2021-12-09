@@ -21,7 +21,7 @@ coverposition: 30% 45%
                 serialization, etc).
             </p>
             <p>
-                Languages: <code>C, C++, C#, Java, Scala, JS, TS.</code>
+                Languages: <code>C, C++, C#, Java, Scala, JS, TS</code>
             </p>
         </div>
         <div class="col-lg-2"></div>
@@ -40,7 +40,7 @@ coverposition: 30% 45%
                 the E175.
             </p>
             <p>
-                Languages: <code>English, SVG.</code>
+                Languages: <code>English, SVG</code>
             </p>
         </div>
     </div>
@@ -54,7 +54,7 @@ coverposition: 30% 45%
                 Dominik, or just DG, or DGA or DGA711, is an fpv drone pilot, new flight sim nerd and also, he’s German.  He’s a software developer and architect with 13+ years of experience mostly in developing enterprise software frameworks for car and machine manufacturers. He’s most proficient in Microsoft environments using C# and .NET and an allrounder in different kinds of web technologies.
             </p>
             <p>
-                Languages: <code>C#, C++, Java, JS, TS.</code>
+                Languages: <code>C#, C++, Java, JS, TS</code>
             </p>
         </div>
         <div class="col-lg-2"></div>
