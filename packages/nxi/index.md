@@ -25,6 +25,7 @@ Because they use the Garmin G1000 unit, this package will affect the following d
 - Cirrus SR22
 - Diamond Aircraft DA40NG
 - Diamond Aircraft DA62
+- Pilatus PC-6
 - Textron Aviation Beechcraft Baron G58
 - Textron Aviation Beechcraft Bonanza G36
 - Textron Aviation Cessna 172 Skyhawk (G1000)
