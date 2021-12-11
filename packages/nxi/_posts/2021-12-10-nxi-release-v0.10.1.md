@@ -14,7 +14,7 @@ coverimage: g1000.jpg
 ## Known Issues
 * Vectors To Final auto-switching the CDI will only work if you have not chosen VECTORS as the transition and you select 'ACTIVATE VECTORS TO FINAL' from the PFD; this will be fixed in the next release. For now, if you don't follow this flow, you will need to manually switch the CDI source for LOC/ILS approaches when VTF is activated.
 * Activating VTF when you are past the FAF (as measured along the final approach course) will cause LNAV to sequence the active leg beyond the FAF. To avoid this, do not activate VTF until you are in a position to intercept the inbound course to the FAF.
-* World Map imports from Navigraph and Simbrief do not include airways, so airways will not be added to the G1000 NXi flight plan when the plan was imported to the World Map from one of these sources.
+* World Map imports from some third party tools may sometimes not load correctly into the NXi.
 
 ## Heads Up!
 * VNAV now deactivates upon reaching the last constraint (cyan altitude in FPL) prior to a VNAV ineligible leg, such as a MANSEQ, Procedure Turn or Hold. Be aware that if you have a MANSEQ leg at the end of your arrival procedure, without manual intervention, you can (and likely will) end up too high to reasonable descend for the approach. You have three options to navigate this: (1) Manually descend as is reasonable at your discretion; (2) delete the MANSEQ leg to allow VNAV to recalculate by directly connecting the end of the arrival with the beginning of the approach or (3) activate the approach (or proceed direct to the IAF) and VNAV will attempt to calculate a path up to 6 degrees from your current position to the next constraint.
