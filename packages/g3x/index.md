@@ -22,7 +22,7 @@ Because they use the Garmin G3X unit, this mod will affect the following default
 ## Installation
 To install, copy the `workingtitle-gx` folder from the zip file into your `Community` directory.
 
-Note that this is a working release, not a final one.  Everything should be stable and functional but there may be a few rough edges encountered.  Part of the reason we want to get this into folks hands is to help discover those rough edges since there is less knowledge and documentation available on these systems than on the more popular G1000 and G3000.  Please make liberal use of our usual haunts of the [Avsim](https://www.avsim.com/forums/forum/863-microsoft-flight-simulator-2020/) and [MSFS](https://forums.flightsimulator.com/c/aircraft/propellers-twin-props/151) forums, our [Discord server](https://discord.gg/UFbpQsu) and our [Github Issue Board](https://github.com/Working-Title-MSFS-Mods/fspackages/issues) for feedback and suggestions.
+Note that this is a working release, not a final one.  Everything should be stable and functional but there may be a few rough edges encountered.  Part of the reason we want to get this into folks hands is to help discover those rough edges since there is less knowledge and documentation available on these systems than on the more popular G1000 and G3000.  Please make liberal use of our usual haunts of the [Avsim](https://www.avsim.com/forums/forum/863-microsoft-flight-simulator-2020/) and [MSFS](https://forums.flightsimulator.com) forums, our [Discord server](https://discord.gg/UFbpQsu) and our [Github Issue Board](https://github.com/Working-Title-MSFS-Mods/fspackages/issues) for feedback and suggestions.
 
 
 ## G3X Touch Main Enhancements
