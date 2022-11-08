@@ -1,7 +1,7 @@
 ---
 layout: post
 title: v0.9.0
-coverimage: g1000.jpg
+coverimage: nxi.jpg
 ---
 # Working Title Garmin G1000 NXi v0.9.0
 

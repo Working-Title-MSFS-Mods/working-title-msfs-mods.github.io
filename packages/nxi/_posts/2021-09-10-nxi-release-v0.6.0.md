@@ -1,7 +1,7 @@
 ---
 layout: post
 title: v0.6.0
-coverimage: g1000.jpg
+coverimage: nxi.jpg
 ---
 # Working Title G1000 NXi v0.6.0
 

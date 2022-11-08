@@ -2,8 +2,7 @@
 layout: package
 permalink: /packages/nxi/issues
 title: Known Issues
-coverimage: masterwarn.jpg
-coverposition: left bottom
+coverimage: nxi.jpg
 ---
 
 # Known Issues
