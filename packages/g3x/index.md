@@ -6,7 +6,11 @@ coverimage: g3x.jpg
 ---
 # Working Title G3X
 
-This is an early release of what is intended to eventually be the reworking of several of the smaller Garmin units in the game.  At the moment the only thing that has been updated is the G3X Touch, but future modifications to the non-touch G3X, and to the touch-based Aera which uses much of the same code, are possible.
+<div class="alert alert-info">
+    <h4>Attention!</h4>
+    This package is considered obsolete, as updates to the stock G3X Touch have enhanced it beyond the level of our mod.  We provide it here for legacy users only.  Users are now generally encouraged to use the stock G3X Touch as this one will no longer be updated.<br/>
+</div>
+
 {% include downloadbutton.html category="g3x" %}
 {% include button.html text="Changelog and Older Versions" url="/packages/g3x/releases" %}
 
@@ -17,7 +21,7 @@ Because they use the Garmin G3X unit, this mod will affect the following default
 - Extra EXTRA 330LT
 - ICON A5
 - JMB Aircraft VL-3
-- Pipistrel Virus SW 121 
+- Pipistrel Virus SW 121
 
 ## Installation
 To install, copy the `workingtitle-gx` folder from the zip file into your `Community` directory.

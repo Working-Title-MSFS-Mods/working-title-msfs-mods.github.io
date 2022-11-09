@@ -7,11 +7,10 @@ coverposition: center bottom
 ---
 
 # Guides
-## Operator's Guide
+## Developer Notes
 
-## Guide on SimVars
+There are several things that aircraft developers need to be aware of when adapting their aircraft for the new GNS units.  This information is available in the <a href="GNS_Developer_Notes.pdf">GNS Developer Notes</a> PDF document.
 
 ## Discord
-If those guides do not answer your questions, you can always pose them on our Discord server below.
-Please do however read the Guides extensively beforehand.
+If that guide does not answer your questions, you can always pose them on our Discord server below.
 {% include button.html break=true text="Discord" url="https://discord.com/invite/Fa6w2xK" blank=true %}
