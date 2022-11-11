@@ -8,7 +8,7 @@ coverposition: center bottom
 
 # Known Issues
 
-* Only the wheels version of the steam-gauge 172 is configured for the new CDI behavior.
+* Only the wheeled version of the steam-gauge 172 is configured for the new CDI behavior.
 
 ## Discord
 If the answers on this page can not help you solve your problem, you can always pose your questions on our Discord server below.
