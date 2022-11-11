@@ -2,7 +2,7 @@
 layout: package
 permalink: /packages/nxi/
 title: Intro
-coverimage: g1000.jpg
+coverimage: nxi.jpg
 ---
 
 # Working Title G1000 NXi

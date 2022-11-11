@@ -2,7 +2,7 @@
 layout: package
 permalink: /packages/nxi/guides/
 title: Guides
-coverimage: g1000.jpg
+coverimage: nxi.jpg
 ---
 
 # Guides

@@ -19,7 +19,9 @@
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/releases"><span>Releases</span></a>
             </div>
-            {% if include.mode == "packages/cj4" or include.mode == "packagescj4" or include.mode == "cj4" or include.mode == "packages/nxi" or include.mode == "packagesnxi" or include.mode == "nxi" %}
+            {% if include.mode == "packages/cj4" or include.mode == "packagescj4" or include.mode == "cj4"
+            or include.mode == "packages/nxi"or include.mode == "packagesnxi" or include.mode == "nxi"
+            or include.mode == "packages/gns"or include.mode == "packagesgns" or include.mode == "gns" %}
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/guides"><span>Guides</span></a>
             </div>
@@ -32,7 +34,8 @@
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/issues"><span>Known Issues</span></a>
             </div>
-            {% if include.mode != "packages/nxi" and include.mode != "packagesnxi" and  include.mode != "nxi" %}
+            {% if include.mode != "packages/nxi" and include.mode != "packagesnxi" and  include.mode != "nxi"
+            and include.mode != "packages/gns" and include.mode != "packagesgns" and  include.mode != "gns" %}
             <div class="menuitem col-12">
                 <a class="btn btn-slanted btn-sliding" href="/{{include.mode | replace: 'packages', 'packages/' | replace: '//', '/' }}/statistics"><span>Statistics</span></a>
             </div>

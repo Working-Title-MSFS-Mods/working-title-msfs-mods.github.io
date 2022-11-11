@@ -2,7 +2,7 @@
 layout: package
 permalink: /packages/nxi/guides/eisguide
 title: NXi EIS Guide
-coverimage: g1000.jpg
+coverimage: nxi.jpg
 ---
 
 # G1000 NXi EIS Enhancements
