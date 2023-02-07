@@ -8,6 +8,18 @@ coverposition: 30% 45%
 
 # Working Title CJ4
 The Working Title CJ4 is an improvement mod for the default Citation CJ4 that comes with the [Microsoft Flight Simulator](https://flightsimulator.com).
+
+<div class="alert alert-warning">
+    <div class="row">
+        <div class="col">
+            <h4>Attention!</h4>
+            <b>DEPRECATED AS OF AAU1!</b><br>
+            We have reworked and improved the default CJ4 and its Avionics in the base simulator with AAU1 in January 2023.<br />
+            This mod is not compatible and should <b>not be used</b> anymore. 
+        </div>
+    </div>
+</div>
+
 {% include downloadbutton.html category="cj4" %}
 {% include button.html text="Changelog and Older Versions" url="/packages/cj4/releases" %}
 

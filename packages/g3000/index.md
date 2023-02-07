@@ -7,6 +7,18 @@ coverimage: g3000.jpg
 
 # Working Title G3000
 This is a mod for [Microsoft Flight Simulator](https://flightsimulator.com) that aims to improve the in-game G3000 and G5000. The goal is to bring functionality closer to the real-life units, with a focus on both features and layout/UI.
+
+<div class="alert alert-warning">
+    <div class="row">
+        <div class="col">
+            <h4>Attention!</h4>
+            <b>DEPRECATED AS OF AAU1!</b><br>
+            We have reworked and improved the default G3000 and related aircraft in the base simulator with AAU1 in January 2023.<br />
+            This mod is not compatible and should <b>not be used</b> anymore. 
+        </div>
+    </div>
+</div>
+
 {% include downloadbutton.html category="g3000" %}
 {% include button.html text="Changelog and Older Versions" url="/packages/g3000/releases" %}
 
