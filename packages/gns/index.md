@@ -17,8 +17,3 @@ Because this is an Early Access product, you may notice functionality bugs and/o
 _Please note that aircraft developers may need to bring their aircraft in line with the latest autopilot code and CDI SimVar recommendations before the aircraft will be fully compatible with the GNS units._  Aircraft that support a hot-swap between the GNS and other avionics systems (such as a third-party GTN navigator) are not currently supported, and users of those aircraft must either remove the third-party addon from the community folder or this version of the GNS from their Content Manager in MSFS.  Developers should look at the <a href="guides/">GNS developer notes</a> in the Guides section of our website.
 
 Please <a href="https://discord.gg/T6m24uz">visit our Discord</a> to report issues you may find or to chat with other users of the GNS units. You can also find us on the Flight Simulator forums.
-
-<div class="alert alert-info">
-    <h4>Attention!</h4>
-    This package is exclusively offered via the ingame Marketplace – go there to download the latest version.<br/>
-</div>

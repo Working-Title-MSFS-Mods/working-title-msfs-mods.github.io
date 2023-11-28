@@ -13,11 +13,6 @@ This is an early access beta and there are many features of the real-world unit 
 
 Let’s reiterate – this is an early-access beta, released with the intent to help find bugs with the existing code as quickly as possible – if you find that it doesn’t work well for you, simply uninstall the package and use the default G1000 instrument.
 
-<div class="alert alert-info">
-    <h4>Attention!</h4>
-    This package is exclusively offered via the ingame Marketplace – go there to download the latest version.<br>
-    Because of the update cadence, we will maintain the dedicated changelog for each update here on the <a href="https://packages.workingtitle.aero">packages.workingtitle.aero</a> site.
-</div>
 {% include button.html text="Changelog" url="/packages/nxi/releases" %}
 
 ## Usage in default aircraft
